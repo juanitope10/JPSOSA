@@ -10,6 +10,7 @@
           {
             "id": "de22c126239c6a92",
             "type": "tabs",
+            "dimension": 28.49002849002849,
             "children": [
               {
                 "id": "a7daf51eb7238ca2",
@@ -30,6 +31,7 @@
           {
             "id": "987c19d1e6817171",
             "type": "tabs",
+            "dimension": 71.50997150997152,
             "children": [
               {
                 "id": "06522aa006e0b16f",
@@ -100,7 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "f476e021b40f031a",
@@ -188,8 +190,8 @@
   "active": "a7daf51eb7238ca2",
   "lastOpenFiles": [
     "Mes 1 Alg Mat.md",
-    "Mes 1 Cal Vec.md",
     "Mes 1 Prob.md",
+    "Mes 1 Cal Vec.md",
     "Mes 1 ProDLE.md"
   ]
 }
