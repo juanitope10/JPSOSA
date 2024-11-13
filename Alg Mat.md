@@ -1,5 +1,4 @@
-# Álgebra Matricial
-
+# Teorico
 ## 1. Vectores Característicos y Valores Característicos
 ### 1.1 Valores Propios y Vectores Propios
 - Definición: Si \(A\) es una matriz cuadrada y \(\lambda\) es un número tal que existe un vector no nulo \(v\) que satisface \(A v = \lambda v\), entonces:
@@ -28,7 +27,8 @@
 - Definición: Cuando una matriz no es diagonalizable, se utilizan vectores propios generalizados para extender la diagonalización.
 - Aplicación: Forma canónica de Jordan.
 
----
+### 1.6 Matriz de Proyeccion Espectral
+- Una matriz de proyección espectral es una matriz que se utiliza para descomponer una matriz cuadrada en términos de sus valores propios y los subespacios asociados. En el contexto de la teoría espectral, la matriz de proyección espectral se define como parte de la descomposición de una matriz en función de sus valores propios
 
 ## 2. Descomposición de Matrices
 ### 2.1 Triangularización de una Matriz
@@ -95,3 +95,8 @@
 - Extiende la descomposición en valores singulares (SVD) al caso de matrices complejas.
 - Aplicación: Procesamiento de señales, compresión de imágenes y análisis de datos complejos.
 
+# Operable - Quices 
+## Complemento de Schur 
+## Matriz de proyeccion espectral
+## Descomposicion de Sylvester
+## Diagonalizacion 

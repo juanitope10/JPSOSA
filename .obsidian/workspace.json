@@ -4,43 +4,43 @@
     "type": "split",
     "children": [
       {
-        "id": "964d54f9d7fd972b",
+        "id": "531fcd2275f1df72",
         "type": "split",
         "children": [
           {
             "id": "de22c126239c6a92",
             "type": "tabs",
-            "dimension": 28.49002849002849,
+            "dimension": 27.247956403269757,
             "children": [
               {
-                "id": "a7daf51eb7238ca2",
+                "id": "1f751617e975ee10",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Mes 1 Prob.md",
+                    "file": "Prob.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "Mes 1 Prob"
+                  "title": "Prob"
                 }
               }
             ]
           },
           {
-            "id": "987c19d1e6817171",
+            "id": "e111e4397e450e36",
             "type": "tabs",
-            "dimension": 71.50997150997152,
+            "dimension": 72.75204359673025,
             "children": [
               {
-                "id": "06522aa006e0b16f",
+                "id": "fb8c272571b3c01d",
                 "type": "leaf",
                 "state": {
                   "type": "mindmap",
                   "state": {},
                   "icon": "dot-network",
-                  "title": "Mind Map of Mes 1 Prob"
+                  "title": "Mind Map of Narraccion Grafica"
                 }
               }
             ]
@@ -187,11 +187,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a7daf51eb7238ca2",
+  "active": "1f751617e975ee10",
   "lastOpenFiles": [
-    "Mes 1 Alg Mat.md",
-    "Mes 1 Prob.md",
-    "Mes 1 Cal Vec.md",
+    "Narraccion Grafica.md",
+    "Prob.md",
+    "Alg Mat.md",
+    "Cal Vec.md",
+    "Grafica Interactica.md",
     "Mes 1 ProDLE.md"
   ]
 }
