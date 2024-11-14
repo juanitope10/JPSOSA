@@ -100,3 +100,5 @@
 ## Matriz de proyeccion espectral
 ## Descomposicion de Sylvester
 ## Diagonalizacion 
+- ![[Pasted image 20241114004604.png]]
+- 

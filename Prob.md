@@ -186,6 +186,18 @@
 
 # Operable - Parciales
 ## Probabilidad de un evento
-## Combinacion y Permutacion 
-- Degroot 1986 Pag 25
+- ![[Pasted image 20241113235901.png]]
+## Metodos de conteo
+### Combinacion
+- Binomial coefficients
+- ![[Pasted image 20241113235627.png]]
+- ![[Pasted image 20241113235652.png]]
+- Multinomial coefficients
+- ![[Pasted image 20241113235231.png]]
+### Permutacion
+- ![[Pasted image 20241113234602.png]]
+
+## Eventos independientes 
+### Independencia de dos eventos 
+- ![[Pasted image 20241114001622.png]]
 
