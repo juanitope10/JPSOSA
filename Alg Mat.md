@@ -102,3 +102,7 @@
 ## Diagonalizacion 
 - ![[Pasted image 20241114004604.png]]
 - 
+## Raiz cuadrada 2*2 y 3*3
+## Facotirzaciones 
+### LDU
+

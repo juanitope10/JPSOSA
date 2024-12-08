@@ -201,3 +201,8 @@
 ### Independencia de dos eventos 
 - ![[Pasted image 20241114001622.png]]
 
+# Parcial - 4 diciembre 
+## Operadores logicos 
+## Ejercicios de sigmas 
+## Combinatoria y permutacion 
+## Condicional

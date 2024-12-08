@@ -1,0 +1,302 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f4f7fb;
+    color: #333;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 1.5rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Main Content */
+main {
+    max-width: 85%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+main:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    color: #003366;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+section p {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* Images */
+main img {
+    display: block;
+    margin: 2rem auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid for sections */
+#sections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto; /* Esto centra el grid horizontalmente */
+    max-width: 1200px; /* Ajusta el tamaño máximo del contenedor */
+    padding: 0 1rem; /* Asegura que no haya espacio extra en los márgenes */
+}
+
+.grid-container {
+    text-align: center;
+}
+
+.grid-item {
+    position: relative;
+    height: 250px;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item a {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.grid-item a:hover {
+    background-color: rgba(255, 102, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Explore More Button */
+.explore-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.explore-button:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    margin-top: 3rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Ajustamos las principales de nuestro html */
+@media (max-width: 768px) {
+    main {
+        max-width: 95%;
+    }
+
+    #sections-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul li {
+        margin: 0 0.5rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
+/* Utilizamos grid para ajustar en bloques para un mejor diseño */
+#sections-grid {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 2rem 0;
+}
+
+.grid-wrapper {
+    max-width: 1200px; /* Limita el ancho máximo */
+    width: 100%;
+    text-align: center; /* Centra el texto */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.grid-item {
+    position: relative;
+    height: 250px;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item a {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.grid-item a:hover {
+    background-color: rgba(255, 102, 0, 0.8);
+    transform: scale(1.05);
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+/* Trabajamos en los botones de la seccion de personajes*/
+button {
+    margin: 30px;
+    padding: 200px 140px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    background-color: #003366;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.equipos-locales-btn {
+    background-image: url('Imagenes/WhatsApp Image 2024-12-01 at 4.33.02 PM (2).jpeg');  
+}
+
+.torneos-microfutbol-btn {
+    background-image: url('Imagenes/WhatsApp Image 2024-12-01 at 1.53.33 PM.jpeg'); 
+}
+
+button:hover {
+    background-color: #ff6600;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
