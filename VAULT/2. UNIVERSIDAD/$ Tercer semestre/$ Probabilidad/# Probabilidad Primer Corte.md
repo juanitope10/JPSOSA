@@ -160,37 +160,4 @@ Primer corte
 ## Combinatoria y permutacion 
 ## Condicional
 
---- 
----
-
-# Variables aleatorias y sus distribuciones / Segundo corte
-
-## 3.1 Variables Aleatorias Discretas
-### 3.1.1 Definición
-- Función que asigna a cada evento un valor numérico.
-
-### 3.1.2 Ejemplos
-1. **Distribución Binomial**:
-   - Experimento: Lanzar una moneda 3 veces.
-   - Probabilidades calculadas para cada número posible de caras.
-
-2. **Distribución Hipergeométrica**:
-   - Experimento: Seleccionar cartas de una caja con cartas rojas y blancas.
-   - Probabilidad de obtener un cierto número de cartas rojas.
-
-### 3.1.3 Función de Masa de Probabilidad (fmp)
-- \(f_X(x) = P(X = x)\) para una variable aleatoria discreta.
-
-## 3.2 Variables Aleatorias Continuas
-### 3.2.1 Definición
-- Función de densidad de probabilidad \(f_X(x)\) tal que \(P(X \in B) = \int_B f_X(x) \, dx\).
-
-### 3.2.2 Función de Distribución Acumulada (FDA)
-- \(F_X(x) = P(X \leq x)\)
-
-### 3.2.3 Ejemplos
-1. **Distribución Exponencial**:
-   - Tiempo de vida de un bombillo: \(f(x) = \frac{1}{2} e^{-x/2}\) para \(x > 0\).
-   - Calcula \(P(0.5 \leq X \leq 2.5)\) mediante integración.
-
 

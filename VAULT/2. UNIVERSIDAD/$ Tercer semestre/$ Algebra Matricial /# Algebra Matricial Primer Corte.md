@@ -106,5 +106,3 @@
 ## Factorizaciones 
 ### LDU
 
-# Segundo corte diciembre 
-##

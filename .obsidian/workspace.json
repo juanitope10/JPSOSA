@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra Matricial.md",
+                "file": "# Calculo Vectorial Segundo Corte.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algebra Matricial"
+              "title": "# Calculo Vectorial Segundo Corte"
             }
           }
         ]
@@ -164,6 +164,9 @@
   },
   "active": "1f751617e975ee10",
   "lastOpenFiles": [
+    "# Probabilidad Segundo corte.md",
+    "# Algebra Matricial Segundo corte.md",
+    "# Calculo Vectorial Segundo Corte.md",
     "Calculo Vectorial.md",
     "Narraccion Grafica.md",
     "Algebra Matricial.md",

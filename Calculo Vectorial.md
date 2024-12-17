@@ -1,3 +1,0 @@
-
-# Segundo corte / Integracion 
-## 
