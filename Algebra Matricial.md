@@ -1,4 +1,4 @@
-# Teorico
+# Primer corte post diciembre
 ## 1. Vectores Característicos y Valores Característicos
 ### 1.1 Valores Propios y Vectores Propios
 - Definición: Si \(A\) es una matriz cuadrada y \(\lambda\) es un número tal que existe un vector no nulo \(v\) que satisface \(A v = \lambda v\), entonces:
@@ -95,7 +95,7 @@
 - Extiende la descomposición en valores singulares (SVD) al caso de matrices complejas.
 - Aplicación: Procesamiento de señales, compresión de imágenes y análisis de datos complejos.
 
-# Operable - Quices 
+## Operable - Quices 
 ## Complemento de Schur 
 ## Matriz de proyeccion espectral
 ## Descomposicion de Sylvester
@@ -103,6 +103,8 @@
 - ![[Pasted image 20241114004604.png]]
 - 
 ## Raiz cuadrada 2*2 y 3*3
-## Facotirzaciones 
+## Factorizaciones 
 ### LDU
 
+# Segundo corte diciembre 
+##

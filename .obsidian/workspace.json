@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prob.md",
+                "file": "Algebra Matricial.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prob"
+              "title": "Algebra Matricial"
             }
           }
         ]
@@ -162,14 +162,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "62518d55fbe34f60",
+  "active": "1f751617e975ee10",
   "lastOpenFiles": [
-    "Alg Mat.md",
-    "VAULT/Resources/Pasted image 20241114004604.png",
-    "Cal Vec.md",
-    "Grafica Interactica.md",
+    "Calculo Vectorial.md",
     "Narraccion Grafica.md",
-    "Prob.md",
+    "Algebra Matricial.md",
+    "Probabilidad.md",
+    "VAULT/Resources/Pasted image 20241114004604.png",
+    "Grafica Interactica.md",
     "VAULT/Resources/Pasted image 20241113235627.png",
     "VAULT/Resources/Pasted image 20241114001622.png",
     "VAULT/Resources/Pasted image 20241113235901.png",
