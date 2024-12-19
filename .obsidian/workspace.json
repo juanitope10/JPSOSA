@@ -4,24 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "de22c126239c6a92",
-        "type": "tabs",
+        "id": "b3745817504af640",
+        "type": "split",
         "children": [
           {
-            "id": "1f751617e975ee10",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "# Calculo Vectorial Segundo Corte.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "# Calculo Vectorial Segundo Corte"
-            }
+            "id": "de22c126239c6a92",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1f751617e975ee10",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "# Algebra Matricial Segundo corte.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "# Algebra Matricial Segundo corte"
+                }
+              }
+            ]
+          },
+          {
+            "id": "41a318cf14d5022c",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1173d72f3690e729",
+                "type": "leaf",
+                "state": {
+                  "type": "mindmap",
+                  "state": {},
+                  "icon": "dot-network",
+                  "title": "Mind Map of # Algebra Matricial Segundo corte"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -167,6 +190,8 @@
     "# Probabilidad Segundo corte.md",
     "# Algebra Matricial Segundo corte.md",
     "# Calculo Vectorial Segundo Corte.md",
+    "# Algebra Matricial Segundo corte.md~",
+    "# Probabilidad Segundo corte.md~",
     "Calculo Vectorial.md",
     "Narraccion Grafica.md",
     "Algebra Matricial.md",

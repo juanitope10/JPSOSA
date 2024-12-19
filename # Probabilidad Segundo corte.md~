@@ -62,8 +62,8 @@ $$
 - P(a < X <= b) = Fx(b)-Fx(a)
 - Fy(Y) = P(Y <= y)
 
-### *DIAGRAMA*         
-#### Funcion de densidad fx(X)  
+## *DIAGRAMA*         
+### Funcion de densidad fx(X)  
 - Dado una funcion de densidad podemos determinar dos cosas 
  $$ Fx(X) $$
 #### Integrando
