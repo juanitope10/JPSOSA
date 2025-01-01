@@ -1,0 +1,14 @@
+# Python 
+## Pandas
+## Numpy 
+## Matplotlib 
+## Seaborn 
+## 
+
+# Visualizacion 
+## Power bi
+## Tableau
+
+# Bases de datos 
+## Sql, bigquery
+## Pyspark y spyder 

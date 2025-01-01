@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Configura el juego de caracteres del documento como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que el diseño sea adaptable a diferentes tamaños de pantalla -->
+    <title>Detrás del Silbato</title>
+    <!-- Título de la página -->
+    <link rel="stylesheet" href="../styles.css">
+    <!-- Vincula el archivo CSS externo para los estilos -->
+</head>
+<body>
+    <header>
+        <div class="tittle">
+            <!-- Título principal de la página -->
+            <h1>DETRAS DEL SILBATO</h1>
+        </div>
+        <nav>
+            <ul>
+                <!-- Enlace al inicio de la página -->
+                <li><a href="../index.html">Inicio</a></li>
+            </ul>
+            <div class="principal-navegation">
+                <div class="menu-icon" onclick="toggleMenu()">☰ Menú</div>
+                <ul id="menu" class="hidden">
+                    <!-- Enlaces del menú de navegación -->
+                    <li><a href="ElCorazonDelBarrio.html">El Corazón del Barrio</a></li>
+                    <li><a href="LasEstrellasDelPavimento.html">Las Estrellas del Pavimento</a></li>
+                    <li><a href="MasQueUnJuego.html">Más Que un Juego</a></li>
+                    <li><a href="MemoriasDelCampo.html">Memorias del Campo</a></li>
+                    <li><a href="DetrasDelSilbato.html">Detrás del Silbato</a></li>
+                </ul>
+                </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <!-- Sección principal del contenido -->
+            <h2>Créditos y Mapa de Navegación</h2>
+            <!-- Subtítulo de la sección -->
+            
+            <article>
+                <!-- Artículo de créditos -->
+                <h3>Créditos</h3>
+                <!-- Subtítulo del artículo -->
+                <ul>
+                    <!-- Lista de créditos -->
+                    <li>Imágenes: Fotografías del barrio o extraídas de redes sociales de la localidad</li>
+                    <li><a href="https://facebook.com/groups/854697374608474/" target="_blank">Grupo de Facebook de la localidad --Clickear--</a></li>
+                    <li><a href="https://www.facebook.com/IMRDS" target="_blank">IMRDS en Facebook --Clickear--</a></li>
+                    <li>Fuentes de información: Historias recopiladas de vecinos y jugadores.</li>
+                    <li>Diseño y desarrollo web: <strong>Juan Pablo Sosa Camargo</strong>.</li>
+                </ul>
+            </article>
+            
+            <article>
+                <!-- Artículo de mapa de navegación -->
+                <h3>Mapa de Navegación</h3>
+                <!-- Subtítulo del artículo -->
+                <ul>
+                    <!-- Lista de enlaces del mapa de navegación -->
+                    <li><a href="ElCorazonDelBarrio.html">El Corazón del Barrio</a></li>
+                    <li><a href="LasEstrellasDelPavimento.html">Las Estrellas del Pavimento</a></li>
+                    <li><a href="MasQueUnJuego.html">Más Que un Juego</a></li>
+                    <li><a href="MemoriasDelCampo.html">Memorias del Campo</a></li>
+                    <li><a href="DetrasDelSilbato.html">Detrás del Silbato</a></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Pie de página -->
+        <p>&copy; 2024 La come carne. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            // Función para mostrar u ocultar el menú
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("visible");
+        }
+    </script>
+</body>
+</html>

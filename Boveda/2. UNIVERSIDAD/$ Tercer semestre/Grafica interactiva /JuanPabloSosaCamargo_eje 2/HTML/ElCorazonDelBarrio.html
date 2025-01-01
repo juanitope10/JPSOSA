@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Configura el juego de caracteres del documento como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que el diseño sea adaptable a diferentes tamaños de pantalla -->
+    <title>El Corazón del Barrio</title>
+    <!-- Título de la página -->
+    <link rel="stylesheet" href="../styles.css">
+    <!-- Vincula el archivo CSS externo para los estilos -->
+</head>
+<body>
+    <header>
+        <div class="tittle">
+            <!-- Título principal de la página -->
+            <h1>EL CORAZON DEL BARRIO</h1>
+        </div>
+        <nav>
+            <ul>
+                <!-- Enlace al inicio de la página -->
+                <li><a href="../index.html">Inicio</a></li>
+            </ul>
+            <!-- Ícono de menú para dispositivos móviles -->
+            <div class="principal-navegation">
+            <div class="menu-icon" onclick="toggleMenu()">☰ Menú</div>
+            <ul id="menu" class="hidden">
+                <!-- Enlaces del menú de navegación -->
+                <li><a href="ElCorazonDelBarrio.html">El Corazón del Barrio</a></li>
+                <li><a href="LasEstrellasDelPavimento.html">Las Estrellas del Pavimento</a></li>
+                <li><a href="MasQueUnJuego.html">Más Que un Juego</a></li>
+                <li><a href="MemoriasDelCampo.html">Memorias del Campo</a></li>
+                <li><a href="DetrasDelSilbato.html">Detrás del Silbato</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="corazon-del-barrio">
+            <!-- Sección principal del contenido -->
+            <div>
+                <h2>El Corazón del Barrio</h2>
+                <!-- Subtítulo de la sección -->
+                <p>
+                    La cancha <strong>"La Come Carne"</strong> es más que un espacio deportivo; es el epicentro de la vida comunitaria en el barrio. Ubicada en la <strong>Cra. 3, Soacha, Cundinamarca</strong>, esta emblemática cancha de microfútbol ha sido testigo de innumerables momentos que han unido a vecinos, amigos y familias a lo largo de los años. Construida en los años 2000, junto al conjunto residencial cercano, este espacio público ha evolucionado desde sus inicios como una cancha de cemento con pavimento áspero hasta convertirse en un lugar renovado, con graderías modernas, donde los sueños cobran vida y las historias se entrelazan con cada partido.
+                </p>
+                <p>
+                    Una cancha no es solo un espacio delimitado para jugar al fútbol; es un lugar de encuentro, un espacio donde los niños aprenden los valores del trabajo en equipo, los jóvenes forjan amistades duraderas y los adultos encuentran un refugio para compartir su amor por el deporte. En <strong>"La Come Carne"</strong>, el eco de los goles, las risas y los aplausos resuena como un recordatorio de que este no es solo un lugar físico, sino el corazón que late al ritmo del barrio.
+                </p>
+            </div>
+            <img src="../Imagenes/WhatsApp Image 2024-12-01 at 1.53.32 PM.jpeg" alt="Cancha La Come Carne">
+            <!-- Imagen de la cancha "La Come Carne" -->
+            <img src="../Imagenes/WhatsApp Image 2024-12-01 at 1.53.33 PM (1).jpeg" alt="Cancha La Come Carne">
+            <!-- Otra imagen de la cancha "La Come Carne" -->
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 La Come Carne. Todos los derechos reservados.</p>
+        <!-- Información de derechos de autor -->
+    </footer>
+    <script>
+        function toggleMenu() {
+            // Función para mostrar u ocultar el menú
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("visible");
+        }
+    </script>
+</body>
+</html>
