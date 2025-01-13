@@ -1,3 +1,26 @@
+:root {
+    --main-color: #003366; /* Color predeterminado */
+  }
+  
+  @media (max-width: 800px) {
+    :root {
+      --main-color: #005cb8; /* Color para pantallas de teléfono */
+    }
+  }
+  
+  @media (min-width: 801px) and (max-width: 1200px) {
+    :root {
+      --main-color:  #01478d; /* Color para tabletas o portátiles sencillos */
+    }
+  }
+  
+  @media (min-width: 1234px) {
+    :root {
+      --main-color: #003366; /* Color para pantallas de escritorio */
+    }
+  }
+
+
 /* General Styles */
 * {
     box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño total del elemento */
@@ -23,7 +46,7 @@ a {
 
 /* Header */
 header {
-    background-color: #003366; /* Fondo oscuro para el encabezado */
+    background-color: var(--main-color); /* Fondo oscuro para el encabezado */
     padding: 1.5rem 2rem; /* Espaciado interno del encabezado */
     text-align: center; /* Centra el contenido */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo del encabezado */
@@ -76,7 +99,7 @@ main:hover {
 }
 
 section h2 {
-    color: #003366; /* Color azul oscuro para subtítulos */
+    color: var(--main-color); /* Color azul oscuro para subtítulos */
     font-size: 2.2rem; /* Tamaño grande para subtítulos */
     font-weight: 700; /* Negrita fuerte */
     text-align: center; /* Centra los subtítulos */
@@ -175,7 +198,7 @@ main img:hover {
 
 /* Footer */
 footer {
-    background-color: #003366; /* Fondo oscuro para el pie de página */
+    background-color: var(--main-color); /* Fondo oscuro para el pie de página */
     padding: 1.5rem; /* Espaciado interno del pie de página */
     text-align: center; /* Centra el texto */
     color: white; /* Texto blanco */
@@ -216,13 +239,13 @@ footer p {
 }
 
 /* Tabletas o portátiles sencillos (800px - 1200px) */
-@media only screen and (min-width: 800px) and (max-width: 1200px) {
+@media only screen and (min-width: 800px) and (max-width: 1234px) {
     body {
         font-size: 15px; /* Ajusta ligeramente el tamaño de fuente */
     }
 
     main {
-        max-width: 95%; /* Incrementa ligeramente el ancho máximo */
+        max-width: 80%; /* Incrementa ligeramente el ancho máximo */
         padding: 1.5rem; /* Ajusta el padding interno */
     }
 
@@ -236,7 +259,7 @@ footer p {
 }
 
 /* Pantallas de escritorio (>1200px) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1236px) {
     body {
         font-size: 16px; /* Tamaño de fuente estándar para escritorio */
     }
@@ -265,7 +288,7 @@ button {
     font-size: 1.5rem; /* Tamaño de fuente de 1.5rem */
     font-weight: 700; /* Negrita en el texto */
     color: white; /* Color del texto blanco */
-    background-color: #003366; /* Color de fondo azul oscuro */
+    background-color: var(--main-color); /* Color de fondo azul oscuro */
     border: none; /* Sin borde */
     border-radius: 8px; /* Bordes redondeados */
     padding: 1rem 2rem; /* Relleno interno de 1rem en la parte superior e inferior y 2rem a los lados */
@@ -281,12 +304,11 @@ button {
 
 /* Efectos al pasar el cursor por encima del botón */
 button:hover {
-    background-color: #ff6600; /* Cambia el color de fondo a naranja */
     transform: scale(1.05); /* Aumenta el tamaño del botón ligeramente */
 }
 
 /* Media query para pantallas pequeñas (celulares y tabletas) */
-@media (max-width: 800px) {
+@media (max-width: 1234px) {
     .button-container {
         flex-direction: column; /* Coloca los botones en una columna */
         align-items: center; /* Centra los botones horizontalmente */
@@ -299,7 +321,7 @@ button:hover {
 }
 
 /* Media query para pantallas medianas (tabletas y portátiles) */
-@media (min-width: 801px) and (max-width: 1200px) {
+@media (min-width: 950px) and (max-width: 1200px) {
     .button-container {
         flex-direction: row; /* Mantiene los botones en una fila */
         justify-content: center; /* Centra los botones horizontalmente */
@@ -360,7 +382,7 @@ button:hover {
 #sections-grid h2 {
     font-size: 2.5rem; /* Tamaño de fuente de 2.5rem */
     margin-bottom: 2rem; /* Margen inferior de 2rem */
-    color: #003366; /* Color de texto azul oscuro */
+    color: var(--main-color); /* Color de texto azul oscuro */
     text-align: center; /* Alineación centrada del texto */
 }
 
@@ -458,7 +480,7 @@ button:hover {
 
 /* Estilos generales para el menú de navegación */
 nav {
-    background-color: #003366; /* Fondo azul oscuro para el menú */
+    background-color: var(--main-color); /* Fondo azul oscuro para el menú */
     color: white; /* Color blanco para el texto */
     padding: 10px; /* Espacio alrededor del contenido del menú */
 }
@@ -489,7 +511,7 @@ nav ul li a {
     cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
     font-size: 20px; /* Tamaño de la fuente del ícono */
     color: white; /* Color blanco para el ícono */
-    background-color: #003366; /* Fondo azul oscuro para el ícono */
+    background-color: var(--main-color); /* Fondo azul oscuro para el ícono */
     padding: 10px; /* Espacio alrededor del ícono */
     border-radius: 5px; /* Bordes redondeados para el ícono */
 }
@@ -500,52 +522,42 @@ nav ul li a {
     justify-content: center; /* Centra el contenido horizontalmente */
     width: 100%; /* Ancho completo */
     height: 100px; /* Altura fija para el título */
-    background-color: #012d5888; /* Fondo azul oscuro semi-transparente */
     margin: auto; /* Centra el título horizontalmente */
     text-align: center; /* Alinea el texto en el centro */
     align-items: center; /* Centra el contenido verticalmente */
 }
 
-/* Estilo para la navegación principal */
 .principal-navegation, .menu12 {
     display: flex; /* Usa flexbox para organizar los elementos */
     justify-content: center; /* Centra el contenido horizontalmente */
     text-align: center; /* Alinea el texto en el centro */
     align-items: center; /* Centra el contenido verticalmente */
-    margin: auto; /* Centra horizontalmente */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    margin: 0 auto; /* Centra horizontalmente */
+    gap: 2000px; /* Añade espacio entre los botones */
+}
+
+
+/* Estilo para la navegación principal */
+
+@media (max-width: 1200px) {
+    .principal-navegation, .menu12 {
+        font-size: 0.9rem; /* Reduce un poco el tamaño del texto */
+    }
 }
 
 /* Estilo para el menú en pantallas pequeñas */
 #menu {
     display: flex; /* Muestra el menú como una fila */
     flex-direction: row; /* Organiza las opciones en una fila */
-    background-color: #003366; /* Fondo azul oscuro para el menú */
+    background-color: var(--main-color); /* Fondo azul oscuro para el menú */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    gap : 20px
 }
 
-/* Estilos responsive para pantallas más pequeñas */
-@media (max-width: 800px) {
-    .menu-icon {
-        display: block; /* Muestra el ícono del menú en pantallas pequeñas */
-    }
-  
-    #menu {
-        display: none; /* Oculta el menú por defecto en pantallas pequeñas */
-        flex-direction: column; /* Organiza las opciones en una columna cuando se muestre */
-        background-color: #003366; /* Fondo azul oscuro para el menú desplegable */
-    }
 
-    #menu.visible {
-        display: flex; /* Muestra el menú cuando tiene la clase 'visible' */
-    }
-
-    #menu li {
-        border-bottom: 1px solid #004080; /* Agrega un separador entre las opciones */
-    }
-
-    .tittle {
-        width: 100%; /* Ancho completo para el título en pantallas pequeñas */
-    }
-}
 .search-bar {
     margin-top: 10px;
     display: flex;
@@ -577,3 +589,154 @@ h1 {
         transform: translateY(0);
     }
 }
+.button {
+    --color: #ffffff;
+    padding: 0.8em 30em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 20px;
+    border: 0.2px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+}
+
+   
+.button {
+    --color: #ffffff;
+    padding: 1VW 29vw; /* El padding horizontal se ajusta al 5% del ancho de la pantalla */
+    background-color: transparent;
+    border-radius: 1VW;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 2.3vw; /* Ajusta el tamaño de la fuente según el ancho de la pantalla */
+    border: 0.2px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    text-align: center; /* Asegura que el texto esté centrado */
+    width: 100vw; /* El ancho del botón ocupa el 100% del ancho de la pantalla */
+    height: 10vh; /* Ajusta la altura del botón al 10% de la altura de la pantalla */
+    font-weight: 800;
+}
+
+/* Estilos responsive para pantallas más pequeñas */
+@media (max-width: 1234px) {
+    .menu-icon {
+        display: block; /* Muestra el ícono del menú en pantallas pequeñas */
+    }
+  
+    #menu {
+        display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+        flex-direction: column; /* Organiza las opciones en una columna cuando se muestre */
+        background-color: var(--main-color); /* Fondo azul oscuro para el menú desplegable */
+    }
+
+    #menu.visible {
+        display: flex; /* Muestra el menú cuando tiene la clase 'visible' */
+    }
+
+    #menu li {
+        border-bottom: 1px solid #004080; /* Agrega un separador entre las opciones */
+    }
+
+    .tittle {
+        width: 100%; /* Ancho completo para el título en pantallas pequeñas */
+    }
+    .button{
+        font-size: 3.6vw; /* Ajusta el tamaño de la fuente según el ancho de la pantalla */
+        padding: 0.5px 35vw; /* El padding horizontal se ajusta al 5% del ancho de la pantalla */
+        border-radius: 1VW;
+    }
+}
+@media (max-width: 800px){
+    .button{
+        font-size: 5vw; /* Ajusta el tamaño de la fuente según el ancho de la pantalla */
+        border-radius: 3VW;
+        padding: 0.5px 32vw;
+    }
+}
+
+
+.button::before, .button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 200%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1.5s ease;
+}
+
+.button::before {
+    top: -1em;
+    left: -1em;
+}
+
+.button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.button:hover::before, .button:hover::after {
+    height: 22vw;
+    width: 25vw;
+}
+
+.button:hover {
+    color: rgb(255, 255, 255);
+}
+
+.button:active {
+    filter: brightness(.8);
+}
+
+
+   .button2 {
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    padding: 1rem;
+  }
+  
+  .button2:before {
+    background-color: #fff;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    margin-right: 10px;
+    transition: all .42s cubic-bezier(.25,.8,.25,1);
+    width: 0;
+  }
+  
+  .button2:hover:before {
+    background-color: #fff;
+    width: 3rem;
+  }
