@@ -61,10 +61,10 @@ $$ A = \sum_{n=1}^{k} λ_n E(λ_n) $$ (Similar a matrices normales pero con comp
 ## Descomposicion espectral para hermitianas:  (Analogo a complejas, pero con hermitianas)
 - Restriccion dado que A = A^H por ser hermitianas y tendrian los mismos vectores propios
 
-## Forma canonica de Jordan 
-- 
+## Forma canonica de Jordan: (J=(P^-1)AP) 
+- Analogo a Jordan pero ocupando valores propios imaginarios.
 ## Descomposicion en valores singulares
--
+- 
 ## Descomposicion polar
 - 
 ### A izquierda
@@ -93,17 +93,24 @@ $$ A = \sum_{n=1}^{k} λ_n E(λ_n) $$ (Similar a matrices normales pero con comp
 ## Definicion 5.4: Rango de una forma bilineal
 - El rango de una forma bilineal g sobre V, escrito ρ(g), se deﬁne como el rango de la matriz que representa a g. Se dice que g es degenerada o no degenerada según si ρ(g) < dim V o ρ(g) = dim V .
 - Definicion 5.5: Sea g : V × V → R una forma bilineal sobre V. Entonces g es simétrica si para todo v^ , w^ ∈ V, se cumple que: 
-$$ g(v,w) = g (w,v) $$
+$$ g(v,w) = g (w,v) $$   g es simétrica 
 
 ## Definicion 5.5:
+- G es simétrica para cualquier vector v y w del V
 
 ## Definicion 5.6:
-
-## Definicion 5.6: 
+- g es alternada sinoara todo v y w pertenece a V se cumple que:
+g(v,v) = 0 y g(v,w) = -g(w,v)
 
 ## Definicion 5.7: Inercia
 
+- ln(A) = (cantidad de positivos, cantidad de negativos, cantidad de nulos)
+
 ## Definicion 5.8: Signatura
+
+- La diferencia entre la cantidad de valores propios positivos a diferencia de la cantidad de valores propios negativos. 
+
+Sig(A) = i-j
 
 ---
 
