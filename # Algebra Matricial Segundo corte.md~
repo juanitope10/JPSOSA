@@ -1,8 +1,8 @@
 # Matrices complejas
 ## Clases especiales de matrices complejas
-### 1. Matrices hermitiana
+### 1. Matrices hermitianas
 - Sea A perteneciente C^(n*n) matriz cuadrada con entredas de numeros complejos. 
-- A es una matriz hermitiana si satisface A = A^†     
+- A es una matriz hermitiana si satisface A = A^† Cuando hablamos de su conjugado   
 - Adjunto hermitiano: 
 $$
 A^\dagger = A
@@ -26,41 +26,45 @@ $$
 - Sea A una matriz hermitiana de tamaño n*n. Entonces, los vectores propios correspondientes a
 - valores propios distintos de A son ortogonales.
 ### 2. Matrices de proyeccion espectral compleja 
-- Sea A una matriz compleja de tamaño n × n que no tiene valores propios múltiples y sean vk⁻, 
-- wk⁻ los vectores propios a derecha e izquierda de A, es decir, los vectores propios de A 
+- Sea A una matriz compleja de tamaño n × n que no tiene valores propios múltiples y sean vk⁻, wk⁻ los vectores propios a derecha e izquierda de A, es decir, los vectores propios de A 
 - y A^H asociados a los valores propios λk y λk , respectivamente; se deﬁne la matriz de 
 - proyección espectral compleja correspondiente para cada λk como:
 
 
-### Matrices antihermitianas
-- Una matriz antisimetrica es una matriz que tiene la propiedad de A^t = -A, las antihermitianas son el analogo para el caso complejo $$ A^H = -A  $$
+### Matrices antihermitianas (Analogo antisimetrica, pero con el ocnjugado)
+- Una matriz antisimetrica es una matriz que tiene la propiedad de A^† = -A, las antihermitianas son el analogo para el caso complejo $$ A^H = -A  $$
+- Teorema 4.8 Si A es antihermitiana, entonces para todos los vectores complejos z, zHAz, es cero o imaginario puro. Los valores porpios de una antihermitiana deben ser cero o imaginarios puros.
 
-### Matrices unitaria
+### Matrices unitarias (Analogo ortogonal, pero con el conjugado)
 - Recordemos que una matriz ortogonal A es una matriz real que tiene la propiedad de que A^t = A-1, las matrices unitarias son el analogo para el caso complejo
 - Una matriz cuadrada U de componentes complejas se dice que es una matriz unitaria si $$ U^H*U = I $$ En consecuencia, U es no singular y se tiene que $$ U⁻¹ = U^H $$
 
-### Matrices normales
+### Matrices normales  (Conmutan en relacion al conjugado)
 - Se dice que la matriz de componentes complejos N de tamaño n*n es normal si conmuta N^H, es decir: $$ N N^H = N^H N $$
 - Las matrices hermitianas, las antihermitianas y las unitarias son matrices normales.
 
 ---
 # Factorizaciones
-## Matrices complejas semejantes:
+## Matrices complejas semejantes: (B = (P^-1)AP    Analogo a matriz semejante pero las tres matrices son complejas)
 - Una matriz de componentes complejas A de tamaño n×n es semejante a una matriz de componentes complejas B de tamaño n × n si existe una matriz de componentes complejas no singular P de tamaño n × n tal que: $$ B = P⁻¹ A P $$
 - De manera analoga se dice que A y B son semejantes si y solo si eciste una matriz de componentes complejos no singular P, tal que $$ PB=AP $$
 - Teorema: Las matrices semejantes tienen el mismo polinomio, y por tanto mismos valores propios.
-## Matrices congruentes hermitianas:
+## Matrices congruentes hermitianas: (A = (P^H)BP  A y B son congruentes hermitianas si y solo si P es de componentes complejas)
 - Dos matrices hermitianas A y B de tamaño n × n son congruentes hermitianas si existe una matriz P no singular de componentes complejas de tamaño n × n tal que $$ A = P^HBP $$
 ## Descomposicion de Sylvester:
 - Sea A una matriz compleja de tamaño n × n con valores propios distintos λ1 , λ2 , . . . , λn , entonces A se puede escribir como:
-$$ A = \sum_{n=1}^{k} λ_n E(λ_n) $$
-## Teorema de Schur:
+$$ A = \sum_{n=1}^{k} λ_n E(λ_n) $$ (Similar a matrices normales pero con complejas. utilizando la matriz de proyeccion espectral de la forma correcta)
+## Teorema de Schur: (T = (U^H)AU   Donde U es una matriz unitarias y podemos decir que A una compleja es semejante a una triangular superior T)
 - Sea A una matriz compleja de tamaño n×n. Entonces A es semejante a una matriz triangular superior T , mediante una matriz unitaria U, es decir $$ T = U^HAU $$
 - Entonces, se dice que A es triangularizable por una matriz unitaria U.
-## Forma canonica de Jordan 
-- 
+
+## Descomposicion espectral para hermitianas:  (Analogo a complejas, pero con hermitianas)
+- Restriccion dado que A = A^H por ser hermitianas y tendrian los mismos vectores propios
+
+## Forma canonica de Jordan: (J=(P^-1)AP) 
+- Analogo a Jordan pero ocupando valores propios imaginarios.
 ## Descomposicion en valores singulares
--
+- 
 ## Descomposicion polar
 - 
 ### A izquierda
@@ -89,17 +93,24 @@ $$ A = \sum_{n=1}^{k} λ_n E(λ_n) $$
 ## Definicion 5.4: Rango de una forma bilineal
 - El rango de una forma bilineal g sobre V, escrito ρ(g), se deﬁne como el rango de la matriz que representa a g. Se dice que g es degenerada o no degenerada según si ρ(g) < dim V o ρ(g) = dim V .
 - Definicion 5.5: Sea g : V × V → R una forma bilineal sobre V. Entonces g es simétrica si para todo v^ , w^ ∈ V, se cumple que: 
-$$ g(v,w) = g (w,v) $$
+$$ g(v,w) = g (w,v) $$   g es simétrica 
 
 ## Definicion 5.5:
+- G es simétrica para cualquier vector v y w del V
 
 ## Definicion 5.6:
-
-## Definicion 5.6: 
+- g es alternada sinoara todo v y w pertenece a V se cumple que:
+g(v,v) = 0 y g(v,w) = -g(w,v)
 
 ## Definicion 5.7: Inercia
 
+- ln(A) = (cantidad de positivos, cantidad de negativos, cantidad de nulos)
+
 ## Definicion 5.8: Signatura
+
+- La diferencia entre la cantidad de valores propios positivos a diferencia de la cantidad de valores propios negativos. 
+
+Sig(A) = i-j
 
 ---
 
