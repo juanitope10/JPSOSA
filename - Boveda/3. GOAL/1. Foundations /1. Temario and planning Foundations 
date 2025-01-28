@@ -1,0 +1,60 @@
+# Foundations Roadmap
+
+## Temario
+[x] 1. **Matemáticas**:
+   - Álgebra lineal (vectores, matrices, descomposición).
+   - Cálculo (derivadas, integrales, gradientes).
+   - Probabilidad (distribuciones, teorema de Bayes).
+   - Estadística (pruebas de hipótesis, intervalos de confianza).
+
+2. **Ética en ciencia de datos**:
+   - Privacidad de datos (GDPR, CCPA).
+   - Sesgos en algoritmos y cómo mitigarlos.
+
+3. **Introducción a la ciencia de datos**:
+   - Ciclo de vida de un proyecto de ciencia de datos.
+   - Roles en ciencia de datos (científico de datos, ingeniero de datos).
+
+## Cursos que planeo hacer
+1. **Matemáticas**:
+   - Curso: "Mathematics for Machine Learning" (Coursera).
+   - Plataforma: Coursera.
+   - Duración: 6 semanas.
+
+2. **Ética en ciencia de datos**:
+   - Curso: "Ethics in Data Science" (LinkedIn Learning).
+   - Plataforma: LinkedIn Learning.
+   - Duración: 2 horas.
+
+3. **Introducción a la ciencia de datos**:
+   - Curso: "Introduction to Data Science" (edX).
+   - Plataforma: edX.
+   - Duración: 4 semanas.
+
+## Recursos adicionales
+- **Libros**:
+  - "Linear Algebra Done Right" de Sheldon Axler.
+  - "Probability and Statistics" de Morris H. DeGroot.
+- **Artículos**:
+  - "Understanding Bias in Machine Learning" (Medium).
+- **Videos**:
+  - Canal de YouTube: "3Blue1Brown" para matemáticas.
+
+## Aplicativos (Proyectos y cosas prácticas)
+1. **Proyecto 1: Análisis de distribuciones de probabilidad**:
+   - Descripción: Simular distribuciones de probabilidad y graficarlas.
+   - Herramientas: Python (NumPy, Matplotlib).
+   - Resultado: Gráficos de distribuciones.
+
+2. **Proyecto 2: Pruebas de hipótesis**:
+   - Descripción: Realizar pruebas de hipótesis en un dataset.
+   - Herramientas: Python (Scipy).
+   - Resultado: Informe estadístico.
+
+## Seguimiento y notas
+- **Notas importantes**: "Recordar el teorema de Bayes para problemas de probabilidad condicional".
+- **Seguimiento de progreso**:
+  | Curso/Proyecto | Estado     | Fecha de finalización |
+  |----------------|------------|-----------------------|
+  | Mathematics for Machine Learning | En progreso | - |
+  | Proyecto 1: Análisis de distribuciones | Completado | 20/10/2023 |

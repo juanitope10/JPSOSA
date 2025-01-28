@@ -1,0 +1,48 @@
+# Deployment and MLOps Roadmap
+
+## Temario
+1. **Despliegue de modelos**:
+   - Creación de APIs (Flask, FastAPI).
+   - Uso de contenedores (Docker).
+
+2. **MLOps**:
+   - Monitoreo de modelos en producción.
+   - Automatización del ciclo de vida de los modelos.
+
+## Cursos que planeo hacer
+1. **Despliegue de modelos**:
+   - Curso: "Machine Learning Engineering for Production (MLOps)" (Coursera).
+   - Plataforma: Coursera.
+   - Duración: 4 semanas.
+
+2. **MLOps**:
+   - Curso: "MLflow: Machine Learning Lifecycle Management" (DataCamp).
+   - Plataforma: DataCamp.
+   - Duración: 3 horas.
+
+## Recursos adicionales
+- **Libros**:
+  - "Building Machine Learning Powered Applications" de Emmanuel Ameisen.
+- **Artículos**:
+  - "Introduction to MLOps" (Medium).
+- **Videos**:
+  - Canal de YouTube: "MLOps Community".
+
+## Aplicativos (Proyectos y cosas prácticas)
+1. **Proyecto 1: Despliegue de un modelo con Flask**:
+   - Descripción: Crear una API para un modelo de machine learning.
+   - Herramientas: Python (Flask).
+   - Resultado: API funcional.
+
+2. **Proyecto 2: Monitoreo de modelos en producción**:
+   - Descripción: Configurar monitoreo para un modelo en producción.
+   - Herramientas: MLflow.
+   - Resultado: Sistema de monitoreo.
+
+## Seguimiento y notas
+- **Notas importantes**: "Recordar usar Docker para empaquetar aplicaciones".
+- **Seguimiento de progreso**:
+  | Curso/Proyecto | Estado     | Fecha de finalización |
+  |----------------|------------|-----------------------|
+  | Machine Learning Engineering for Production | En progreso | - |
+  | Proyecto 1: API con Flask | Completado | 20/11/2023 |

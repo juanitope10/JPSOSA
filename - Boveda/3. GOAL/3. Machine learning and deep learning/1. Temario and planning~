@@ -1,0 +1,60 @@
+# Machine Learning and Deep Learning Roadmap
+
+## Temario
+1. **Aprendizaje supervisado**:
+   - Regresión lineal, regresión logística.
+   - Árboles de decisión, Random Forest, Gradient Boosting.
+
+2. **Aprendizaje no supervisado**:
+   - Clustering (k-means, DBSCAN).
+   - Reducción de dimensionalidad (PCA, t-SNE).
+
+3. **Redes neuronales**:
+   - Perceptrones, redes convolucionales (CNN), redes recurrentes (RNN).
+
+4. **Optimización de modelos**:
+   - Regularización (L1, L2).
+   - Ajuste de hiperparámetros (Grid Search, Random Search).
+
+## Cursos que planeo hacer
+1. **Aprendizaje supervisado**:
+   - Curso: "Machine Learning" by Andrew Ng (Coursera).
+   - Plataforma: Coursera.
+   - Duración: 11 semanas.
+
+2. **Redes neuronales**:
+   - Curso: "Deep Learning Specialization" (Coursera).
+   - Plataforma: Coursera.
+   - Duración: 5 meses.
+
+3. **Optimización de modelos**:
+   - Curso: "Hyperparameter Tuning in Machine Learning" (Udemy).
+   - Plataforma: Udemy.
+   - Duración: 4 horas.
+
+## Recursos adicionales
+- **Libros**:
+  - "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" de Aurélien Géron.
+- **Artículos**:
+  - "Understanding Gradient Boosting" (Towards Data Science).
+- **Videos**:
+  - Canal de YouTube: "StatQuest" para ML.
+
+## Aplicativos (Proyectos y cosas prácticas)
+1. **Proyecto 1: Predicción de precios de viviendas**:
+   - Descripción: Usar regresión lineal para predecir precios.
+   - Herramientas: Python (Scikit-learn).
+   - Resultado: Modelo predictivo.
+
+2. **Proyecto 2: Clasificación de imágenes con CNN**:
+   - Descripción: Entrenar una red convolucional para clasificar imágenes.
+   - Herramientas: Python (TensorFlow, Keras).
+   - Resultado: Modelo de clasificación.
+
+## Seguimiento y notas
+- **Notas importantes**: "Recordar usar Grid Search para ajustar hiperparámetros".
+- **Seguimiento de progreso**:
+  | Curso/Proyecto | Estado     | Fecha de finalización |
+  |----------------|------------|-----------------------|
+  | Machine Learning by Andrew Ng | En progreso | - |
+  | Proyecto 1: Predicción de precios | Completado | 25/10/2023 |

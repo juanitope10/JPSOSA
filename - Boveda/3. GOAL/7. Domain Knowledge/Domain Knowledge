@@ -1,0 +1,33 @@
+# Domain Knowledge Roadmap
+
+## Temario
+1. **Casos de uso específicos**:
+   - Finanzas: Detección de fraudes, análisis de riesgo.
+   - Salud: Diagnóstico asistido por IA, análisis de imágenes médicas.
+
+2. **Colaboración con expertos del dominio**:
+   - Entrevistas con profesionales del sector.
+   - Análisis de problemas específicos.
+
+## Cursos que planeo hacer
+1. **Finanzas**:
+   - Curso: "Financial Engineering and Risk Management" (edX).
+   - Plataforma: edX.
+   - Duración: 12 semanas.
+
+2. **Salud**:
+   - Curso: "Data Science for Healthcare" (Coursera).
+   - Plataforma: Coursera.
+   - Duración: 6 semanas.
+
+## Recursos adicionales
+- **Libros**:
+  - "AI in Healthcare" de Kerrie L. Holley.
+- **Artículos**:
+  - "Applications of AI in Finance" (Towards Data Science).
+- **Videos**:
+  - Canal de YouTube: "AI in Healthcare".
+
+## Aplicativos (Proyectos y cosas prácticas)
+1. **Proyecto 1: Detección de fraudes en transacciones**:
+   - Descripción: Usar machine

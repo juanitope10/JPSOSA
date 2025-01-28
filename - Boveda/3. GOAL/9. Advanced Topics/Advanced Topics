@@ -1,0 +1,52 @@
+# Advanced Topics Roadmap
+
+## Temario
+1. **Reinforcement Learning**:
+   - Conceptos básicos y aplicaciones.
+   - Algoritmos (Q-learning, Deep Q-Networks).
+
+2. **Generative AI**:
+   - Modelos generativos (GANs, VAEs).
+   - Aplicaciones en creación de imágenes y texto.
+
+3. **Edge AI**:
+   - Implementación de modelos en dispositivos IoT.
+   - Optimización de modelos para hardware limitado.
+
+## Cursos que planeo hacer
+1. **Reinforcement Learning**:
+   - Curso: "Reinforcement Learning Specialization" (Coursera).
+   - Plataforma: Coursera.
+   - Duración: 5 meses.
+
+2. **Generative AI**:
+   - Curso: "Generative Adversarial Networks (GANs)" (Coursera).
+   - Plataforma: Coursera.
+   - Duración: 4 semanas.
+
+## Recursos adicionales
+- **Libros**:
+  - "Deep Reinforcement Learning Hands-On" de Maxim Lapan.
+- **Artículos**:
+  - "Introduction to GANs" (Towards Data Science).
+- **Videos**:
+  - Canal de YouTube: "Two Minute Papers".
+
+## Aplicativos (Proyectos y cosas prácticas)
+1. **Proyecto 1: Entrenamiento de un agente de RL**:
+   - Descripción: Entrenar un agente para jugar un juego simple.
+   - Herramientas: Python (OpenAI Gym).
+   - Resultado: Agente funcional.
+
+2. **Proyecto 2: Creación de imágenes con GANs**:
+   - Descripción: Entrenar una GAN para generar imágenes.
+   - Herramientas: Python (TensorFlow).
+   - Resultado: Imágenes generadas.
+
+## Seguimiento y notas
+- **Notas importantes**: "Recordar usar transfer learning en GANs para ahorrar tiempo".
+- **Seguimiento de progreso**:
+  | Curso/Proyecto | Estado     | Fecha de finalización |
+  |----------------|------------|-----------------------|
+  | Reinforcement Learning Specialization | En progreso | - |
+  | Proyecto 1: Agente de RL | Completado | 25/11/2023 |

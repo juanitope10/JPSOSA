@@ -1,0 +1,92 @@
+# Data Analysis Roadmap   2/9
+
+## Temario 
+[x] 1.  *Introducción a Data Analysis**:
+   - ¿Qué es el análisis de datos? [x]
+   - Ciclo de vida de un proyecto de análisis de datos. 
+   - Roles en el análisis de datos (analista de datos, científico de datos). [x]
+
+2. **Exploración de Datos (EDA)**:
+   - Limpieza de datos (manejo de valores nulos, outliers).
+   - Transformación de datos (normalización, estandarización).
+   - Análisis descriptivo (medidas de tendencia central, dispersión).
+
+3. **Visualización de Datos**:
+   - Gráficos básicos (histogramas, gráficos de dispersión, boxplots).
+   - Herramientas de visualización (Matplotlib, Seaborn, Plotly).
+   - Creación de dashboards (Tableau, Power BI).
+
+4. **Manejo de Datos Temporales**:
+   - Series de tiempo (análisis de tendencias, estacionalidad).
+   - Modelos ARIMA, SARIMA.
+
+5. **Herramientas y Tecnologías**:
+   - Excel (funciones avanzadas, tablas dinámicas).
+   - SQL (consultas, joins, subconsultas).
+   - Pandas y NumPy (Python) para manipulación de datos.
+
+6. **Análisis Estadístico**:
+   - Pruebas de hipótesis (t-test, chi-cuadrado).
+   - Correlación y regresión lineal.
+   - Análisis de varianza (ANOVA).
+
+## Cursos que planeo hacer 1/6
+[x] 1.  **Introducción a Data Analysis**:
+   - Curso: "Data Analytics" (Google).
+   - Plataforma: Coursera
+   - Duración: 6 meses.
+
+2. [] **Exploración de Datos (EDA)**:
+   - Curso: "Data Analysis with Python" (Coursera).
+   - Plataforma: Coursera.
+   - Duración: 5 semanas.
+
+3. [] **Visualización de Datos**:
+    - Curso: "Data Visualization with Python" (Coursera)
+
+   - Curso: "Data Visualization with Tableau" (Udemy).
+   - Plataforma: Udemy.
+   - Duración: 10 horas.
+
+4. [] **Manejo de Datos Temporales**:
+   - Curso: "Time Series Analysis" (DataCamp).
+   - Plataforma: DataCamp.
+   - Duración: 6 horas.
+
+5. **Herramientas y Tecnologías**:
+   - Curso: "SQL for Data Science" (Coursera).
+   - Plataforma: Coursera.
+   - Duración: 4 semanas.
+
+6. **Análisis Estadístico**:
+   - Curso: "Statistical Thinking for Data Science and Analytics" (edX).
+   - Plataforma: edX.
+   - Duración: 5 semanas.
+
+## Recursos adicionales
+- **Libros**:
+  - "Python for Data Analysis" de Wes McKinney.
+  - "Storytelling with Data" de Cole Nussbaumer Knaflic.
+- **Artículos**:
+  - "10 Tips for Effective Data Visualization" (Medium).
+- **Videos**:
+  - Canal de YouTube: "StatQuest" para estadística.
+
+## Aplicativos (Proyectos y cosas prácticas)
+1. **Proyecto 1: Análisis de Datos de Ventas**:
+   - Descripción: Analizar datos de ventas de una empresa para identificar tendencias.
+   - Herramientas: Excel, Python (Pandas, Matplotlib).
+   - Resultado: Dashboard interactivo en Tableau.
+
+2. **Proyecto 2: Limpieza y Transformación de Datos**:
+   - Descripción: Limpiar un dataset desordenado y transformarlo para análisis.
+   - Herramientas: Python (Pandas, NumPy).
+   - Resultado: Dataset listo para análisis.
+
+## Seguimiento y notas
+- **Notas importantes**: "Recordar usar `pd.merge()` para unir datasets en Pandas".
+- **Seguimiento de progreso**:
+  | Curso/Proyecto | Estado     | Fecha de finalización |
+  |----------------|------------|-----------------------|
+  | Data Analysis with Python | En progreso | - |
+  | Proyecto 1: Análisis de Ventas | Completado | 25/10/2023 |

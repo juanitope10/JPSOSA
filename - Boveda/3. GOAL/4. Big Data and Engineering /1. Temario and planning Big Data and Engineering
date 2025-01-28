@@ -1,0 +1,52 @@
+# Big Data and Engineering Roadmap
+
+## Temario
+1. **Procesamiento de grandes volúmenes de datos**:
+   - Hadoop (HDFS, MapReduce).
+   - Apache Spark (Spark SQL, MLlib).
+
+2. **Almacenamiento de datos**:
+   - Bases de datos NoSQL (MongoDB, Cassandra).
+   - Data lakes (Amazon S3, Google Cloud Storage).
+
+3. **Ingeniería de datos**:
+   - ETL (Extract, Transform, Load).
+   - Pipelines de datos (Airflow, Luigi).
+
+## Cursos que planeo hacer
+1. **Procesamiento de grandes volúmenes de datos**:
+   - Curso: "Big Data with Spark and Hadoop" (Coursera).
+   - Plataforma: Coursera.
+   - Duración: 4 semanas.
+
+2. **Ingeniería de datos**:
+   - Curso: "Data Engineering on Google Cloud" (Coursera).
+   - Plataforma: Coursera.
+   - Duración: 5 semanas.
+
+## Recursos adicionales
+- **Libros**:
+  - "Hadoop: The Definitive Guide" de Tom White.
+- **Artículos**:
+  - "Introduction to Apache Spark" (Medium).
+- **Videos**:
+  - Canal de YouTube: "Data Engineering Podcast".
+
+## Aplicativos (Proyectos y cosas prácticas)
+1. **Proyecto 1: Creación de un pipeline ETL**:
+   - Descripción: Construir un pipeline para extraer, transformar y cargar datos.
+   - Herramientas: Python (Airflow).
+   - Resultado: Pipeline funcional.
+
+2. **Proyecto 2: Análisis de datos con Spark**:
+   - Descripción: Usar Spark para analizar un dataset grande.
+   - Herramientas: Apache Spark.
+   - Resultado: Análisis de datos escalable.
+
+## Seguimiento y notas
+- **Notas importantes**: "Recordar usar particiones en Spark para mejorar el rendimiento".
+- **Seguimiento de progreso**:
+  | Curso/Proyecto | Estado     | Fecha de finalización |
+  |----------------|------------|-----------------------|
+  | Big Data with Spark and Hadoop | En progreso | - |
+  | Proyecto 1: Pipeline ETL | Completado | 30/10/2023 |

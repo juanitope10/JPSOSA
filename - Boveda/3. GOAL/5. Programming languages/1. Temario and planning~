@@ -1,0 +1,52 @@
+# Programming Languages Roadmap
+
+## Temario
+1. **Python**:
+   - Librerías esenciales (Pandas, NumPy, Scikit-learn).
+   - Visualización (Matplotlib, Seaborn).
+
+2. **SQL**:
+   - Consultas avanzadas (joins, subconsultas).
+   - Optimización de queries.
+
+3. **Bash scripting**:
+   - Automatización de tareas.
+   - Manejo de servidores.
+
+## Cursos que planeo hacer
+1. **Python**:
+   - Curso: "Python for Data Science and Machine Learning" (Udemy).
+   - Plataforma: Udemy.
+   - Duración: 25 horas.
+
+2. **SQL**:
+   - Curso: "SQL for Data Science" (Coursera).
+   - Plataforma: Coursera.
+   - Duración: 4 semanas.
+
+## Recursos adicionales
+- **Libros**:
+  - "Python Crash Course" de Eric Matthes.
+- **Artículos**:
+  - "10 SQL Tips for Data Scientists" (Medium).
+- **Videos**:
+  - Canal de YouTube: "Corey Schafer" para Python.
+
+## Aplicativos (Proyectos y cosas prácticas)
+1. **Proyecto 1: Automatización de tareas con Bash**:
+   - Descripción: Crear scripts para automatizar tareas repetitivas.
+   - Herramientas: Bash.
+   - Resultado: Scripts funcionales.
+
+2. **Proyecto 2: Análisis de datos con SQL**:
+   - Descripción: Realizar consultas complejas en una base de datos.
+   - Herramientas: SQL.
+   - Resultado: Informe de análisis.
+
+## Seguimiento y notas
+- **Notas importantes**: "Recordar usar `GROUP BY` en SQL para agregar datos".
+- **Seguimiento de progreso**:
+  | Curso/Proyecto | Estado     | Fecha de finalización |
+  |----------------|------------|-----------------------|
+  | Python for Data Science | En progreso | - |
+  | Proyecto 1: Automatización con Bash | Completado | 05/11/2023 |
