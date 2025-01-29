@@ -9,6 +9,15 @@
    - Consultas avanzadas (joins, subconsultas).
    - Optimización de queries.
 
+3. **R**:
+   - Librerías esenciales:
+     - dplyr: Manipulación de datos (filtrado, selección, transformación).
+     - tidyr: Limpieza y organización de datos (pivotar, separar, unir columnas).
+     - ggplot2: Visualización avanzada (gráficos personalizados, temas, facetas).
+   - Machine Learning:
+     - caret: Entrenamiento y evaluación de modelos.
+     - randomForest: Modelos de clasificación y regresión.
+
 3. **Bash scripting**:
    - Automatización de tareas.
    - Manejo de servidores.
@@ -45,5 +54,4 @@
 - **Seguimiento de progreso**:
   | Curso/Proyecto | Estado     | Fecha de finalización |
   |----------------|------------|-----------------------|
-  | Python for Data Science | En progreso | - |
-  | Proyecto 1: Automatización con Bash | Completado | 05/11/2023 |
+  | Applied data science with Python | En progreso | - |
