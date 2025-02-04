@@ -7,14 +7,14 @@
    - Roles en el análisis de datos (analista de datos, científico de datos). [x]
 
 2. **Exploración de Datos (EDA)**:
-   - Limpieza de datos (manejo de valores nulos, outliers).
-   - Transformación de datos (normalización, estandarización).
+   - Limpieza de datos (manejo de valores nulos, outliers). [x]
+   - Transformación de datos (normalización, estandarización). 
    - Análisis descriptivo (medidas de tendencia central, dispersión).
 
 3. **Visualización de Datos**:
    - Gráficos básicos (histogramas, gráficos de dispersión, boxplots).
    - Herramientas de visualización (Matplotlib, Seaborn, Plotly).
-   - Creación de dashboards (Tableau, Power BI).
+   - Creación de dashboards (Tableau, Power BI). 
 
 4. **Manejo de Datos Temporales**:
    - Series de tiempo (análisis de tendencias, estacionalidad).
@@ -80,7 +80,7 @@
 
 2. **Proyecto 2: Limpieza y Transformación de Datos**:
    - Descripción: Limpiar un dataset desordenado y transformarlo para análisis.
-   - Herramientas: Python (Pandas, NumPy).
+   - Herramientas: Python (Pandas, NumPy). 
    - Resultado: Dataset listo para análisis.
 
 ## Seguimiento y notas
