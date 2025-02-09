@@ -6,9 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Asegura que la página sea responsive -->
     <title>Más que un juego</title> <!-- Título de la página que aparece en la pestaña del navegador -->
     <link rel="stylesheet" href="../styles.css"> <!-- Enlace al archivo CSS para los estilos -->
+    <script>
+      if (localStorage.getItem("dark-mode") === "enabled") {
+          document.documentElement.classList.add("dark-mode");
+      } else {
+          document.documentElement.classList.remove("dark-mode");
+      }
+  </script>
+  
 </head>
 <body>
   <header>
+    <div class = "fila">
+      <label class="container">
+        <input type="checkbox" id="textColorToggle">
+        <div class="checkmark"></div>
+    </label>
+      <div class = "start">
+          <label class="switch">
+              <input type="checkbox" id="themeToggle">
+              <span class="slider"></span>
+          </label>
+      </div>
+      </div>
     <div class="tittle">
         <!-- Título principal de la página -->
         <h1><button class=" button"> MAS QUE UN JUEGO </button></h1>
@@ -98,12 +118,6 @@
       <!-- Pie de página -->
       <p>&copy; 2024 La come carne. Todos los derechos reservados.</p> <!-- Derechos reservados -->
     </footer>
-    <script>
-      // Función para mostrar/ocultar el menú en dispositivos móviles
-      function toggleMenu() {
-          const menu = document.getElementById("menu"); // Obtiene el menú por su ID
-          menu.classList.toggle("visible"); // Alterna la clase 'visible' para mostrar/ocultar el menú
-      }
-    </script>
+    <script src="../Script.js"></script>
 </body>
 </html>

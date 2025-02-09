@@ -1,5 +1,6 @@
 :root {
     --main-color: #003366; /* Color predeterminado */
+    --main-text: #333;
   }
   
   @media (max-width: 800px) {
@@ -20,6 +21,11 @@
     }
   }
 
+.dark-mode {
+    background-color: #3a3636;
+    --main-color: #2c2727;
+}
+
 
 /* General Styles */
 * {
@@ -33,7 +39,7 @@ body {
     font-size: 14px; /* Tamaño de fuente base */
     line-height: 1.6; /* Espaciado entre líneas */
     background-color: #f4f7fb; /* Fondo claro para la página */
-    color: #333; /* Color de texto principal */
+    color: var(--main-text); /* Color de texto principal */
     padding: 0; /* Sin padding extra */
     transition: background-color 0.3s ease; /* Suaviza los cambios de color de fondo */
 }
@@ -526,6 +532,7 @@ nav ul li a {
     margin: auto; /* Centra el título horizontalmente */
     text-align: center; /* Alinea el texto en el centro */
     align-items: center; /* Centra el contenido verticalmente */
+    padding: 20px 40px 10px 10px; /* Aumenta el padding-top */
 }
 
 .principal-navegation, .menu12 {
@@ -740,4 +747,129 @@ h1 {
   .button2:hover:before {
     background-color: #fff;
     width: 3rem;
+  }
+.fila{
+    display: flex;
+    width: 100%; /* Ocupar todo el ancho de la pantalla */
+}
+
+.start{
+    position: absolute; /* Para posicionar la div con precisión */
+    right: 12px; /* Espacio desde el borde derecho */
+    top: 12px; /* Espacio desde la parte superior */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    padding: 10px; /* Espaciado interno opcional */
+    
+}
+
+.switch {
+    --secondary-container: #00162c;
+    --primary:  #666060;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    width: 3.7em;
+    height: 1.8em;
+   }
+   
+   .switch input {
+    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
+   }
+   
+   .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #313033;
+    transition: .2s;
+    border-radius: 30px;
+   }
+   .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.2em;
+    bottom: 0.2em;
+    background-color: white;
+    transition: .1s;
+   }
+   
+   input:checked + .slider::before {
+    background-color: var(--primary);
+   }
+   
+   input:checked + .slider {
+    background-color: var(--secondary-container);
+   }
+   
+   input:focus + .slider {
+    box-shadow: 0 0 1px var(--secondary-container);
+   }
+   
+   input:checked + .slider:before {
+    transform: translateX(1.9em);
+   }
+/* Hide the default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background-color: var(--main-text);
+    border-radius: 100%;
+    background: #e8e8e8;
+    box-shadow: 3px 3px 5px #c5c5c5,
+                -3px -3px 5px #ffffff;
+    transition-duration: 0.5s;
+  }
+  
+  .container input:checked ~ .checkmark {
+    box-shadow: inset 3px 3px 5px #c5c5c5,
+                inset -3px -3px 5px #ffffff;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    opacity: 1;
+  }
+  
+  .container .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: var(--main-text);
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
   }

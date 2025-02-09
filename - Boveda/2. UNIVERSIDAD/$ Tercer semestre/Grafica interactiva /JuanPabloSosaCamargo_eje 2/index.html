@@ -5,9 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Come Carne</title>
     <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo de estilos CSS -->
+    <script>
+        if (localStorage.getItem("dark-mode") === "enabled") {
+            document.documentElement.classList.add("dark-mode");
+        } else {
+            document.documentElement.classList.remove("dark-mode");
+        }
+    </script>
+    
+    
 </head>
 <body>
     <header>
+        <div class = "fila">
+            <label class="container">
+                <input type="checkbox" id="textColorToggle">
+                <div class="checkmark"></div>
+            </label>
+        <div class = "start">
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+            
+        </div>
+        </div>
+        
         <div class="tittle">
             <h1><button class=" button"> LA COME CARNE </button></h1> <!-- Título principal del sitio web -->
         </div>
@@ -75,13 +98,7 @@
     <footer>
         <p>&copy; 2024 La Come Carne. Todos los derechos reservados.</p> <!-- Pie de página con derechos reservados -->
     </footer>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById("menu"); // Selección del menú por su ID
-            menu.classList.toggle("visible"); // Alterna la clase "visible" para mostrar/ocultar el menú
-        }
-    </script>
+    <script src="Script.js"></script>
 </body>
 </html>
 

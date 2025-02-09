@@ -9,9 +9,29 @@
     <!-- Título de la página -->
     <link rel="stylesheet" href="../styles.css">
     <!-- Vincula el archivo CSS externo para los estilos -->
+    <script>
+        if (localStorage.getItem("dark-mode") === "enabled") {
+            document.documentElement.classList.add("dark-mode");
+        } else {
+            document.documentElement.classList.remove("dark-mode");
+        }
+    </script>
+    
 </head>
 <body>
     <header>
+        <div class = "fila">
+            <label class="container">
+                <input type="checkbox" id="textColorToggle">
+                <div class="checkmark"></div>
+            </label>
+            <div class = "start">
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            </div>
         <div class="tittle">
             <!-- Título principal de la página -->
             <h1><button class=" button"> EL CORAZON </button></h1>
@@ -73,12 +93,6 @@
         <p>&copy; 2024 La Come Carne. Todos los derechos reservados.</p>
         <!-- Información de derechos de autor -->
     </footer>
-    <script>
-        function toggleMenu() {
-            // Función para mostrar u ocultar el menú
-            const menu = document.getElementById("menu");
-            menu.classList.toggle("visible");
-        }
-    </script>
+    <script src="../Script.js"></script>
 </body>
 </html>
