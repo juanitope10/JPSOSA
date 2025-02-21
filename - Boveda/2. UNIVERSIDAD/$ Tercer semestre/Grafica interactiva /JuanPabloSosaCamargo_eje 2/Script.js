@@ -61,3 +61,46 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem("main-text", newColor);
     });
 });
+// Cambio de imagen de fondo
+const button = document.getElementById('changeImageBtn');
+button.addEventListener('click', function() {
+    const root = document.documentElement;
+    const originalImage = "url('Imagenes/cancha.jpg')";
+    const newImage = "url('Imagenes/nueva_imagen4.jpg')";
+
+    // Obtener la imagen actual
+    const currentImage = getComputedStyle(root).getPropertyValue('--cancha-image').trim();
+
+    // Alternar entre las imágenes
+    if (currentImage === originalImage) {
+        root.style.setProperty('--cancha-image', newImage);
+    } else {
+        root.style.setProperty('--cancha-image', originalImage);
+    }
+});
+
+function mostrarInfo(infoId) {
+    // Ocultar todos los cuadros de información
+    const infos = document.querySelectorAll('.info');
+    infos.forEach(info => info.style.display = 'none');
+    
+    // Mostrar el cuadro de información correspondiente al botón presionado
+    document.getElementById(infoId).style.display = 'block';
+}
+
+document.getElementById("changeViewBtn").addEventListener("click", function() {
+    document.getElementById("cancha").classList.add("hidden");
+    document.getElementById("satelite").classList.remove("hidden");
+});
+
+document.getElementById("backToMapBtn").addEventListener("click", function() {
+    document.getElementById("cancha").classList.remove("hidden");
+    document.getElementById("satelite").classList.add("hidden");
+});
+
+function mostrarInfo(id) {
+    document.querySelectorAll('.info').forEach(function(info) {
+        info.style.display = 'none';
+    });
+    document.getElementById(id).style.display = 'block';
+}

@@ -1,0 +1,147 @@
+:root {
+    --cancha-image: url('Imagenes/cancha.jpg');
+}
+
+.controls {
+    margin: 10px 0;
+}
+
+.cancha {
+    position: relative;
+    width: 95%; /* Ocupa el 95% del ancho de la ventana */
+    height: auto; /* Altura automática para mantener la proporción */
+    background-image: var(--cancha-image); /* Usar la variable CSS */
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16 / 9; /* Ajusta la relación de aspecto según tu imagen */
+}
+
+.satelite {
+    width: 95%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.hidden {
+    display: none;
+}
+
+.jugador {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.jugador:hover::after {
+    content: attr(data-info);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+/* Posiciones de los jugadores */
+.portero {
+    top: 50%;
+    left: 14%;
+    transform: translate(-50%, -50%);
+}
+
+.defensa {
+    top: 30%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.defensa1 {
+    top: 60%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.medio {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.delantero {
+    top: 30%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.tienda {
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.gradas {
+    top: 96%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.casaAmigo {
+    top: 5%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.salidaEntrada {
+    top: 90%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+}
+
+.parqueadero {
+    top: 5%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+}
+.arbitro {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.camposTecnicos {
+    top: 5%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.info {
+    display: none;
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80vw;
+    line-height: 1.5;
+    font-size: 20px;
+    text-align: center;
+}
+
+.info::before {
+    content: "ℹ️ ";
+    font-size: 25px;
+}
