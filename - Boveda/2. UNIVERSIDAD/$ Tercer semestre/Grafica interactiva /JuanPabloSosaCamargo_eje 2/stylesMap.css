@@ -141,6 +141,18 @@
     text-align: center;
 }
 
+.info img {
+    max-width: 100%;
+    max-height: 420px; /* Máximo tamaño permitido */
+    min-width: 400px;  /* Mínimo ancho permitido */
+    min-height: 400px; /* Mínimo alto permitido */
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover; /* Ajusta la imagen para que se vea bien dentro de los límites */
+}
+
 .info::before {
     content: "ℹ️ ";
     font-size: 25px;
