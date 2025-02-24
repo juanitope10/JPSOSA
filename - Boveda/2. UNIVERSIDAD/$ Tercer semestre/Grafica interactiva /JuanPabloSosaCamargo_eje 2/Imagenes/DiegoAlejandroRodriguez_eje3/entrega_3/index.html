@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8"> <!-- Configuración del juego de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adaptación para dispositivos móviles -->
+    <title>Lista de Cards</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS externo -->
+</head>
+
+<body>
+    <header>
+        <div class="nav-container"> <!-- Contenedor principal para el encabezado y la navegación -->
+            <a href="#" class="logo">Malpelo</a> <!-- Logo con enlace -->
+            <ul class="nav-menu"> <!-- Menú principal para pantallas grandes -->
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/physical_space.html">Ubicación</a></li>
+                <li><a href="/population.html">Fauna</a></li>
+                <li><a href="/activity.html">Buceo y Otros</a></li>
+                <li><a href="/history.html">Legado</a></li>
+                <li><a href="/credit.html">Créditos</a></li>
+                <li><a href="/map.html">Mapa Interactivo</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div> <!-- Ícono del menú para pantallas pequeñas -->
+        </div>
+        <ul class="nav-menu-mobile" id="mobileMenu"> <!-- Menú desplegable para pantallas pequeñas -->
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/physical_space.html">Ubicación</a></li>
+            <li><a href="/population.html">Fauna</a></li>
+            <li><a href="/activity.html">Buceo y Otros</a></li>
+            <li><a href="/history.html">Legado</a></li>
+            <li><a href="/credit.html">Créditos</a></li>
+            <li><a href="/map.html">Mapa Interactivo</a></li>
+        </ul>
+    </header>
+
+    <h1 class="title">Malpelo</h1> <!-- Título principal de la página -->
+    <p class="centered-text-small">
+        Isla rocosa del Pacífico colombiano, a 506 km de la costa. 
+        Santuario natural y Patrimonio de la Humanidad, hogar de tiburones, aves marinas y especies únicas. 
+        Centro de investigación científica y buceo, con acceso regulado para conservar su biodiversidad.
+    </p>
+    
+    <!-- Contenedor de las tarjetas -->
+    <div class="card-container">
+        <!-- Tarjeta 1 -->
+        <div class="card">
+            <img src="assets/malpelo-4.jpg" alt="Card 1"> <!-- Imagen de la tarjeta -->
+            <div class="card-content">
+                <h3>Ubicación</h3>
+                <p>Malpelo es una isla rocosa del Pacífico colombiano, ubicada a 506 km de la costa, famosa por sus riscos y su biodiversidad marina.<br> <a href="/physical_space.html">Más +</a></p>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="card">
+            <img src="assets/Pared-del-Naufrago.jpg" alt="Card 2"> <!-- Imagen de la tarjeta -->
+            <div class="card-content">
+                <h3>Fauna</h3>
+                <p>La isla Malpelo alberga aves marinas, tiburones y especies únicas adaptadas a su entorno, sin población humana permanente.<br> <a href="/population.html">Más +</a></p>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="card">
+            <img src="assets/tiburon_martillo.jpg" alt="Card 3"> <!-- Imagen de la tarjeta -->
+            <div class="card-content">
+                <h3>Buceo y Otros</h3>
+                <p>En Malpelo se realizan investigaciones científicas, actividades de buceo controladas y esfuerzos de conservación ambiental.<br> <a href="/activity.html">Más +</a></p>
+            </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="card">
+            <img src="assets/tortuga.jpg" alt="Card 4"> <!-- Imagen de la tarjeta -->
+            <div class="card-content">
+                <h3>Legado</h3>
+                <p>Malpelo es un santuario natural protegido desde 1995 y Patrimonio de la Humanidad desde 2006, símbolo de conservación marina.<br> <a href="history.html">Más +</a> </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+    <script>
+        // Función para alternar el menú en pantallas pequeñas
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu"); // Selecciona el menú móvil por su ID
+            menu.classList.toggle("show"); // Añade o elimina la clase 'show' para mostrar/ocultar el menú
+        }
+    </script>
+</html>

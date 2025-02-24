@@ -1,0 +1,474 @@
+@charset "UTF-8";
+        /* Fuente principal */ 
+        @font-face {
+            font-family: Ancizar Sans-regular;
+            src: url('fonts/Ancizar Sans-Regular.otf');
+        }
+
+        /* Estilo de fondo de cada pagina */ 
+         body{
+            background-color: #cbc0b7;    /* Color generico de fondo */ 
+            background-repeat: no-repeat;  /* No repetir imagen de fondo */ 
+            background-size: 100% auto;   /* imagen de fondo ajustada 100% */ 
+            background-position: 0 80px;  /* imagen de fondo posicionada debajo del cabezal */ 
+            margin: 0; 
+            padding: 3%; /* Separación del texto */ 
+        }
+        body.inicio {  /* Fondo de inicio */
+            background-color: #cbc0b7; 
+            background-image: url(imagenes/Edificio1.jpg);
+        }
+
+        body.Lugar {   /* Fondo de lugar */
+            background-color: #e3dfdc;
+            background-image: url(imagenes/Edificio2.png);
+        }
+
+        body.Quienes {  /* Fondo de quienes */
+            background-color: #cbc0b7;
+            background-image: url(imagenes/Edificio3.jpg);
+        }
+
+        body.Actividades {  /* Fondo de actividades */
+            background-color: #e3dfdc;
+            background-image: url(imagenes/Edificio4.jpg);
+        }
+
+        body.Historia {  /* Fondo de historia */
+            background-color: #cbc0b7;
+            background-image: url(imagenes/Edificio5.jpg);
+        }
+
+        body.Creditos {  /* Fondo de creditos */
+            background-color: #e3dfdc;
+            background-image: url(imagenes/Edificio6.jpeg);
+        }
+
+        /* Cabezote fijo */
+        header {
+            position: fixed;  /* Posición fija */
+            top: 0;          
+            left: 0;
+            width: 100%;   /* ocupando todo el ancho de pantalla */
+            height: 80px;   /* Ancho */
+            background-color: #cbc0b7;
+            display: flex;
+            align-items: center;  /* Elementos centrados */
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+
+        /* Logo de la UNAL a la izquierda */
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        /* Contenedor del menú */
+        .menunav {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Botones del menú */
+        .botonMenu {
+            font-family: Ancizar Sans-regular;
+            color: #FFFFFF;
+            font-size: 14px;
+            text-align: center;
+            padding: 10px 15px;
+            background-color: #cbc0b7;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+        /* Botones del menú con cursor encima*/
+        .botonMenu:hover {
+            background-color: #d0cac5;
+            color: #FFFFFF;
+        }
+        
+        .menu-icon {
+            display: none; /* Oculto en pantallas grandes */
+            cursor: pointer;
+        }
+        /* Checkbox oculto */
+        .menu-toggle {
+            display: none;
+        }
+
+        /* Ajuste del contenido principal */
+        .contenido {
+            margin-top: 100px; /* Deja espacio para el cabezal fijo */
+            padding: 20px;
+        }
+
+        /* Título principal */
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 180px; /* Tamaño letra */
+            font-weight: bold; /* Texto grueso */
+            line-height: 1; /* Espaciado entre líneas */
+            text-align: left; /* Alineado a la izquierda */
+            margin: 90px 0; /* Margen superior e inferior */
+            color: #FFFFFF; /* Color del texto */
+        }
+            
+        h1 a {
+            text-decoration: none; /* Sin subrayado */
+            color: inherit; /* Usa el color del h1 */
+        }
+        
+        /* Ajuste de imagenes de la pagina Lugar */
+        .contenedor {
+            display: flex;
+            flex-direction: column; /* Cada item estará en una fila */
+            gap: 20px; /* Espaciado entre los items */
+            padding-left: 100px; /* Espaciado desde la izquierda */
+        }
+
+        /* item Lugar (imagen + texto) */
+        .item {
+            display: flex; /* Alinea la imagen y el texto en una fila */
+            align-items: center; /* Alinea verticalmente la imagen y el texto */
+            gap: 20px; /* Espaciado entre la imagen y el texto */
+        }
+
+        /* Estilos de las imagenes de lugar */
+        .item img {
+            width: 400px; /* Ajusta el tamaño de las imágenes */
+            height: auto; /* Mantiene la proporción de la imagen */
+            display: block; /* Elimina el espacio debajo de la imagen */
+            margin: 0; /* Elimina cualquier margen extra */
+        }
+
+        /* Estilo para la descripción de las imagenes de lugar*/
+        .descripcion {
+            font-size: 135px; /* Tamaño grande para el texto */
+            font-weight: bold; /* Texto en negrita */
+            color: #FFFFFF; /* Color blanco */
+            text-align: left; /* Alinea el texto a la izquierda */
+        }
+        /* Formatos de texto utilizados */
+        .uno {
+            font-family: 'Arial', sans-serif; 
+            font-size: 16px; /* Tamaño de letra 
+            line-height: 1.8; /* Espaciado entre líneas */
+            color: #333333; 
+            text-align: justify; /* Texto alineado a ambos lados */
+            margin: 15px 35px; /* Espaciado alrededor del párrafo */
+            word-wrap: break-word; /* Asegura que las palabras largas se ajusten al ancho */
+            overflow-wrap: break-word; 
+        }
+        .dos {
+            font-size: 16px; /* Tamaño de fuente */
+            line-height: 1; /* Espaciado entre líneas */
+            margin: 20px 30px; /* Espaciado vertical y lateral */
+            background-color: #f9f9f9; /* Fondo */
+            padding: 10px 15px; /* Espaciado interno */
+            border-left: 4px solid #007bff; /* Línea decorativa */
+            border-radius: 5px; /* Bordes redondeados */
+            overflow-wrap: break-word; /* Permite que las palabras largas se dividan */
+            word-wrap: break-word; 
+            overflow: hidden; /* Oculta contenido que excede los límites del bloque */
+            max-width: 95%; /* Evita que el bloque sea más ancho que su contenedor padre */
+            box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño total */
+        }
+        h2 {
+            font-size: 36px; /* Tamaño de la fuente */
+            color: #FFFFFF; /* Color blanco */
+            text-align: center; /* Centrado horizontal */
+            margin-top: 20px; /* Espacio superior */
+            font-weight: bold; /* Texto en negrita */
+        }
+        /* Estilo Tabla */
+        table.tabla {
+            width: 90%; /* Ajusta el ancho de la tabla */
+            margin: 20px auto; /* Centra la tabla en la página */
+            border-collapse: collapse; /* Elimina los espacios entre celdas */
+            background-color: #fff; /* Fondo blanco para la tabla */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+            border-radius: 5px; /* Esquinas redondeadas */
+            overflow: hidden; /* Asegura que el contenido respete el borde */
+        }
+
+        /* Estilo para los encabezados de la tabla */
+        table.tabla th {
+            background-color: #2c3e50; /* Color de fondo oscuro */
+            color: #fff; /* Texto blanco */
+            text-align: left; /* Alineación del texto */
+            padding: 10px; /* Espaciado interno */
+            font-size: 16px; /* Tamaño de fuente */
+        }
+
+        /* Estilo para las celdas de la tabla */
+        table.tabla td {
+            padding: 10px; /* Espaciado interno */
+            border-bottom: 1px solid #ddd; /* Línea divisoria entre filas */
+            vertical-align: top; /* Alineación vertical superior */
+        }
+
+        /* Alternar colores en las filas de la tabla*/
+        table.tabla tr:nth-child(even) {
+            background-color: #f9f9f9; /* Color claro para filas pares */
+        }
+
+        /* Elimina el borde inferior de la última fila de la tabla*/
+        table.tabla tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Estilo para listas dentro de celdas de la tabla */
+        table.tabla ul {
+            margin: 0;
+            padding-left: 20px; /* Indentación de las listas */
+        }
+ 
+        /* Contenedor del video */
+        .video-container {
+            width: 80%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9; /* Mantiene la proporción 16:9 */
+            margin: 0 auto; /* Centra el contenedor horizontalmente */
+            overflow: hidden;
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+        }
+
+        /* Iframe del video */
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Sin bordes */
+        }
+
+
+        /* centra el contenedor del mapa con Flexbox */
+        .map-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+        }
+
+        /* Contenedor del mapa */
+        .map-container {
+          position: relative; /* Para posicionar puntos y overlays dentro */
+          width: 80%;
+          max-width: 650px;
+          border: 2px solid #ccc;
+        }
+
+        /* Imagen del mapa: responsiva */
+        .map-image {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        /* Puntos de interés */
+        .map-point {
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          transform: translate(-50%, -50%);
+          background: url('imagenes/marker.png') no-repeat center center;
+          background-size: contain;
+        }
+
+        /* Caja de información */
+        .info-box {
+          position: absolute;
+          background: rgba(255, 255, 255, 0.95);
+          padding: 8px 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          display: none; /* Oculto por defecto */
+          pointer-events: none; /* Para no interferir con el cursor */
+          z-index: 9999; /* Encima de otros elementos */
+          max-width: 200px;
+          white-space: normal;
+          word-wrap: break-word;
+        }
+
+        /* Overlay para mostrar la imagen al hacer click */
+        .image-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.8);
+          display: none; /* Oculto por defecto */
+          z-index: 10000; /* Muy encima de todos los demás elementos */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        /* Imagen dentro del overlay */
+        .image-overlay .overlay-image {
+          max-width: 90%;
+          max-height: 90%;
+          border: 3px solid #fff;
+          border-radius: 4px;
+        }
+
+        /* Botón para cerrar el overlay */
+        .close-overlay {
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          font-size: 30px;
+          color: #fff;
+          cursor: pointer;
+        }
+
+@media only screen and (max-width: 800px){   /* Responsive para pantallas de maximo 800px */
+        .menu-icon {
+            display: block; /* Mostrar icono del menú desplegable*/
+            height: 30px;
+        }
+
+        .logo {
+            margin-left: auto; /* Mover logo a la derecha */
+        }
+        .logomenu{
+            width: 40px;
+            height: auto;
+        }
+
+        .menunav {
+            display: none; /* Ocultar menú por defecto */
+            flex-direction: column; /* Menú vertical */
+            position: absolute;
+            top: 80px; /* posción debajo del header */
+            left: 0;
+            width: 100%;
+            background-color: #cbc0b7;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+        }
+
+        .menunav a {
+            padding: 15px;  /* Añade un espacio interno de 15 píxeles alrededor del contenido del enlace */
+            border-bottom: 1px solid #aaa;  /* Añade una línea inferior de borde de 1 píxel con color gris  */
+            text-align: center;     /* Alinea el texto dentro del enlace al centro */
+        }
+
+        /* Mostrar menú cuando el checkbox esté activo */
+        .menu-toggle:checked ~ .menunav {
+            display: flex;
+        }
+    
+    
+        body{
+            background-color: #cbc0b7;  /* color de fondo */
+            background-position: 0 50px;
+
+        }
+        .logo {
+            width: 100px;  /* Tamaño */
+            height: auto;
+            margin-left: 20px; /* margen */
+        }
+        h1 {
+            font-size: 100px; /* Tamaño letra */
+            margin: 40px 0px 70px 0px; /* Margen superior e inferior */
+        }
+        h2 {
+            font-size: 28px; /* Tamaño de la fuente */
+            text-align: center; /* Centrado horizontal */
+            margin-top: 20px; /* Espacio superior */
+            font-weight: bold; /* Texto en negrita */
+        }
+        .dos {
+            font-size: 20px; /* Tamaño de fuente */
+            line-height: 2; /* Espaciado entre líneas */
+            padding: 10px 15px; /* Espaciado interno */
+            max-width: 90%; /* Evita que el bloque sea más ancho que su contenedor padre */
+        }
+        .uno {
+            font-size: 20px; /* Tamaño de letra 
+            line-height: 2.5; /* Espaciado entre líneas mejorado */
+            color: #333333; 
+            margin: 15px 25px; /* Espaciado alrededor del párrafo */
+        
+        }
+        .contenedor {
+            gap: 30px; /* Espaciado entre los items */
+            padding-left: 10px; /* Espaciado desde la izquierda */
+        }
+
+        /* Cada item (imagen + texto) */
+        .item {
+            gap: 10px; /* Espaciado entre la imagen y el texto */
+        }
+
+        /* Estilos de las imagenes */
+        .item img {
+            width: 230px; /* Ajusta el tamaño de las imágenes */
+        }
+
+        /* Estilo para la descripción de las imagenes*/
+        .descripcion {
+            font-size: 60px; /* Tamaño grande para el texto */
+        }
+}
+
+@media only screen and (max-width: 670px){ /* Responsive para pantallas de maximo 670px (necesario para que se vea bien) */
+         h1 {
+            font-size: 73px; /* Ajusta el texto para pantallas muy pequeñas */
+            margin: 60px 0px 70px 0px; /* Margen superior e inferior */
+        }
+
+}
+@media only screen and (min-width: 800px) and (max-width: 1200px) {  /* Responsive para pantallas de 800-1200px*/
+        h1 {
+            font-size: 120px; /* Tamaño letra */
+            margin: 70px 0px 70px 0px; /* Margen superior e inferior */
+        }
+        h2 {
+            font-size: 32px; /* Tamaño de la fuente */
+            text-align: center; /* Centrado horizontal */
+            margin-top: 20px; /* Espacio superior */
+            font-weight: bold; /* Texto en negrita */
+        }
+        .dos {
+            font-size: 18px; /* Tamaño de fuente */
+            border-left: 4px solid #fee315; /* Línea decorativa */
+            max-width: 90%; /* Evita que el bloque sea más ancho que su contenedor padre */
+        }
+        .uno {
+            font-size: 18px; /* Tamaño de letra 
+            line-height: 1.8; /* Espaciado entre líneas mejorado */
+            margin: 35px 25px; /* Espaciado alrededor del párrafo */
+        }
+        
+        .contenedor {
+            gap: 30px; /* Espaciado entre los items */
+            padding-left: 30px; /* Espaciado desde la izquierda */
+        }
+
+        /* Cada item (imagen + texto) */
+        .item {
+            gap: 20px; /* Espaciado entre la imagen y el texto */
+        }
+
+        /* Estilos de las imagenes */
+        .item img {
+            width: 300px; /* Ajusta el tamaño de las imágenes */
+        }
+
+        /* Estilo para la descripción de las imagenes*/
+        .descripcion {
+            font-size: 90px; /* Tamaño grande para el texto */
+
+        }
+}

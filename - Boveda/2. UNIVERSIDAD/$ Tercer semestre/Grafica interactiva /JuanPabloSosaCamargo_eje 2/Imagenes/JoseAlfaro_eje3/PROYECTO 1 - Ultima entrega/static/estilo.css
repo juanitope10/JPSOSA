@@ -1,0 +1,811 @@
+
+/* Sección principal que agrega un margen superior de 60px */
+
+main {
+  margin-top: 60px;
+  display: flex; /* Nuevo: Contenedor flexible */
+  flex-direction: column; /* Nuevo: Dirección vertical */
+  align-items: center; /* Nuevo: Centrar elementos horizontalmente */
+}
+
+/* Estilización del cuerpo del documento */
+body {
+  background-repeat: repeat; /* Repite el fondo */
+  background-size: 200px; /* Tamaño del fondo */
+  background-attachment: scroll; /* Fijar o no el fondo al scroll */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: #333; /* Color del texto */
+  background-color: #f4f4f4; /* Color de fondo */
+  display: flex; /* Nuevo: Contenedor flexible */
+  flex-direction: column; /* Nuevo: Dirección vertical */
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif; /* Fuente del texto */
+
+}
+
+/* Estilización de los encabezados H1 */
+h1 {
+  font-size: 40px; /* Tamaño de fuente */
+  margin-bottom: 20px; /* Espacio abajo */
+  color: #dad6d6; /* Color del texto */
+}
+
+/* Estilización de los encabezados H2 */
+h2 {
+  font-size: 30px; /* Tamaño de fuente */
+  margin-bottom: 20px; /* Espacio abajo */
+  color: #9d9d9d; /* Color del texto */
+}
+
+/* Estilización de las listas con clase "creditos" */
+.creditos li {
+  color: #dad6d6; /* Color del texto */
+}
+
+/* Estilización del menú de navegación */
+.menunav {
+  position: relative; /* Posición relativa para el diseño */
+  text-align: center; /* Alineación del texto al centro */
+  left: 10px; /* Desplazamiento hacia la derecha */
+  float: center; /* Alineación al centro */
+  margin: auto; /* Centrado automático */
+  margin-bottom: 30px; /* Espacio abajo */
+}
+
+/* Estilización de los botones del menú */
+.botonMenu {
+  font-size: 14px; /* Tamaño de fuente */
+  font-style: normal; /* Estilo de texto */
+  font-weight: normal; /* Peso del texto */
+  color: #666; /* Color del texto */
+  text-align: center; /* Alineación del texto */
+  width: 142px; /* Ancho del botón */
+  background-image: url("/IMAGENES/Boton menu.png"); /* Imagen de fondo */
+  padding: 5px 10px 6px 8px; /* Espaciado interno */
+  float: left; /* Alineación flotante */
+}
+
+/* Cambio de estilo cuando se pasa el mouse sobre el botón del menú */
+.botonMenu:hover {
+  color: #fff; /* Color del texto */
+  text-shadow: 1px 1px #000; /* Sombra de texto */
+  background-image: url("/IMAGENES/Boton menu.png"); /* Imagen de fondo */
+  cursor: pointer; /* Cursor de mano */
+}
+
+/* Ocultar el checkbox para el menú */
+#btn-menu {
+  display: none;
+}
+
+/* Estilización del header fijo en la parte superior */
+header {
+  position: fixed; /* Posición fija */
+  width: 100%; /* Ocupa toda la anchura del navegador */
+  z-index: 10; /* Superposición */
+  top: 0px; /* Posición desde la parte superior */
+}
+
+/* Estilización del label en el header */
+header label {
+  display: none; /* Oculta el label */
+  width: 30px; /* Ancho del label */
+  height: 30px; /* Alto del label */
+  position: absolute; /* Posición absoluta */
+  left: 20px; /* Desplazamiento hacia la izquierda */
+  top: 20px; /* Desplazamiento hacia arriba */
+}
+
+/* Cursor al pasar el mouse sobre el label */
+header label:hover {
+  cursor: pointer; /* Cursor de mano */
+}
+
+/* Estilización del menú deslizante */
+.menu ul {
+  margin-left: 20px; /* Márgen izquierdo */
+  list-style: none; /* Quitar estilo a las listas */
+  padding: 0; /* Quitar relleno */
+  display: flex; /* Disposición flex */
+}
+
+/* Contenedor principal con fondo y bordes */
+.contenedor {
+  margin: 20px auto; /* Márgen alrededor del contenedor */
+  background-color: #8e7b7b; /* Color de fondo */
+  padding: 20px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 10px; /* Esquinas redondeadas */
+  width: 70%; /* Ancho del contenedor */
+  max-width: 1200px;
+  justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+}
+
+/* Estilización de imágenes dentro del contenedor */
+.contenedor img {
+  width: 80%; /* Porcentaje del ancho */
+  height: auto; /* Mantener proporciones */
+  border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* Estilización de párrafos dentro del contenedor */
+.contenedor p {
+  margin: 10px; /* Márgen alrededor del párrafo */
+  font-size: 18px; /* Tamaño de fuente */
+  color: #ffffff; /* Color del texto */
+}
+
+/* Diseño flexbox para texto e imagen */
+.ImgText {
+  display: flex; /* Flex container */
+  align-items: center; /* Alineación de elementos */
+  gap: 15px; /* Espaciado entre elementos */
+}
+
+/* Estilización de imágenes dentro de ImgText */
+.ImgText img {
+  width: 400px; /* Ancho de la imagen */
+  height: auto; /* Mantener proporciones */
+}
+
+/* Estilización del texto dentro de ImgText */
+.ImgText p {
+  margin: 0; /* Sin márgenes */
+}
+
+/* Contenedor para tarjetas con diseño de flexbox */
+.contenedor-tarjetas {
+  display: flex; /* Flex container */
+  gap: 20px; /* Espaciado entre tarjetas */
+  overflow-x: auto; /* Scroll horizontal */
+  padding: 20px; /* Espaciado interno */
+  scroll-behavior: smooth; /* Desplazamiento suave */
+  justify-content: center; /* Nuevo: Centrar tarjetas horizontalmente */
+  flex-wrap: wrap; /* Nuevo: Permitir múltiples líneas */
+  
+}
+
+/* Contenedor de tarjetas verticales */
+.contenedor-tarjetas-verticales {
+  display: flex; /* Flex container */
+  flex-direction: column; /* Disposición en columna */
+  align-items: center; /* Nuevo: Centrar tarjetas verticales */
+  gap: 20px; /* Espaciado entre tarjetas */
+  overflow-y: auto; /* Scroll vertical */
+  padding: 20px; /* Espaciado interno */
+  justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+}
+
+/* Estilización de cada tarjeta */
+.tarjeta {
+  background-color: #f9f9f9; /* Color de fondo */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  overflow: hidden; /* Ocultar contenido fuera */
+  text-align: center; /* Alineación al centro */
+  width: 500px; /* Ancho de la tarjeta */
+  padding: 20px; /* Espaciado interno */
+  justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+}
+
+/* Estilización de tarjetas verticales */
+.tarjeta-vertical {
+  background-color: #f9f9f9; /* Color de fondo */
+  border-radius: 8px; /* Esquinas redondeadas */
+  display: flex; /* Flex container */
+  flex-direction: column; /* Disposición en columna */
+  overflow: visible; /* Permitir contenido que se sale */
+  padding: 20px; /* Espaciado interno */
+  flex-wrap: wrap;  
+  justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+}
+
+/* Estilización de imágenes dentro de tarjetas */
+.tarjeta img {
+  width: 100%; /* Ocupa todo el ancho */
+  height: auto; /* Mantener proporciones */
+
+}
+
+/* Estilización de imágenes verticales en tarjetas */
+.tarjeta-vertical img {
+  max-width: 300px; /* Ancho máximo */
+  max-height: 400px; /* Alto máximo */
+  height: auto; /* Mantener proporciones */
+  border-radius: 8px; /* Esquinas redondeadas */
+  margin: 20px; /* Márgen alrededor de la imagen */
+  justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+}
+
+/* Estilización de párrafos en tarjetas verticales */
+.tarjeta-vertical p {
+  margin: 5px; /* Márgen alrededor del párrafo */
+  color: #333; /* Color del texto */
+  line-height: 1.5; /* Espaciado entre líneas */
+  box-sizing: border-box; /* Contenido ajustado al borde */
+  justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+}
+
+/* Estilización de encabezados en tarjetas verticales */
+.tarjeta-vertical h2 {
+  color: #666; /* Color del texto */
+  margin: 20px; /* Márgen alrededor del texto */
+  justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+}
+
+/* Estilización de párrafos en tarjetas */
+.tarjeta p {
+  margin: 10px; /* Márgen alrededor del párrafo */
+  color: #333; /* Color del texto */
+  justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+}
+
+/* Estilización del texto general */
+p {
+  font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Estilización de listas en tarjetas */
+.tarjeta li {
+  font-size: 14px; /* Tamaño de fuente */
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    margin-left: 20px;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-left: 20px;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  /* Definición del fondo del cuerpo con una imagen de fondo */
+  body {
+    background-image: url("IMAGENES/iluminación.jpeg"); /* Imagen de fondo */
+    background-repeat: repeat; /* Repite la imagen del fondo */
+    background-size: auto; /* Tamaño automático de la imagen de fondo */
+    background-attachment: scroll; /* Fondo se mueve al hacer scroll */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #333; /* Color del texto */
+    background-color: #f4f4f4; /* Color de fondo */
+  }
+
+  /* Reescritura del tamaño del fondo del cuerpo */
+  body {
+    background-size: 100px; /* Tamaño del fondo */
+  }
+
+  /* Estilización de los ítems del menú */
+  .menu li {
+    background-image: url("/IMAGENES/Boton menu.png"); /* Imagen de fondo para cada item de menú */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    min-width: 100px; /* Ancho mínimo */
+    height: 30px; /* Altura */
+    font-size: 25px; /* Tamaño de fuente */
+    text-align: center; /* Alineación del texto */
+    color: #b0b0b0; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    margin-bottom: 10px; /* Espacio inferior */
+    margin-right: 30px; /* Espacio derecho */
+  }
+
+  /* Estilización del enlace dentro del menú */
+  .menu li a {
+    display: block; /* Hace que el enlace ocupe el espacio completo del elemento */
+    text-align: center; /* Alineación del texto */
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+  }
+
+  /* Estilización del enlace del menú cuando se pasa el mouse */
+  .menu li a:hover {
+    font-weight: 100; /* Hace que la fuente sea más ligera */
+    text-shadow: 1px 1px #000; /* Sombra de texto */
+    background-image: url("/IMAGENES/Boton menu.png"); /* Imagen de fondo */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    height: 30px; /* Altura */
+    padding-top: 6px; /* Espacio superior */
+  }
+
+  /* Estilización de los párrafos */
+  p {
+    font-size: 18px; /* Tamaño del texto */
+  }
+
+  /* Estilización de los elementos de lista dentro de las tarjetas */
+  .tarjeta li {
+    font-size: 18px; /* Tamaño del texto */
+  }
+
+  /* Estilización del contenedor principal */
+  .contenedor {
+    margin: 20px auto; /* Márgen alrededor del contenedor */
+    background-color: #8e7b7b; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 10px; /* Esquinas redondeadas */
+    width: 90%; /* Más ancho para mejor uso de espacio */
+    justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+  }
+
+  /* Estilización del contenedor de tarjetas */
+  .contenedor-tarjetas {
+    display: flex; /* Flex container */
+    flex-direction: column; /* Disposición en columna */
+    gap: 20px; /* Espaciado entre elementos */
+    padding: 20px; /* Espaciado interno */
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+  }
+
+  /* Estilización de las tarjetas */
+  .tarjeta {
+    width: 80%; /* Ocupa el 80% del ancho */
+    max-width: 100%; /* Ancho máximo */
+    background-color: #f9f9f9; /* Color de fondo */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    overflow: hidden; /* Ocultar contenido fuera del contenedor */
+    text-align: center; /* Alineación al centro */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Ajusta el contenido al borde */
+    justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+  }
+
+  /* Estilización de las imágenes dentro de las tarjetas */
+  .tarjeta img {
+    width: 100%; /* Ocupa todo el ancho */
+    height: auto; /* Mantener proporciones */
+    max-width: 300px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontalmente */
+    justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+  }
+
+  /* Estilización del contenedor de texto e imagen */
+  .ImgText {
+    flex-direction: column; /* Disposición en columna */
+    gap: 10px; /* Espaciado entre elementos */
+  }
+
+  /* Estilización de las imágenes dentro del contenedor ImgText */
+  .ImgText img {
+    width: 300px; /* Ancho de la imagen */
+    height: auto; /* Mantener proporciones */
+  }
+
+  /* Estilización del menú de navegación */
+  .menunav {
+    max-width: 600px; /* Ancho máximo */
+  }
+
+  /* Estilización del label dentro del header */
+  header label {
+    display: block; /* Hace que el label ocupe el espacio completo del elemento */
+  }
+
+  /* Estilización del menú fijo en la parte superior */
+  .menu {
+    position: fixed; /* Posición fija */
+    background: rgba(0.5, 0.5, 0.5, 0.7); /* Fondo semi transparente */
+    z-index: 30; /* Superposición */
+    width: 60%; /* Ancho del menú */
+    margin-left: -60%; /* Alineación a la izquierda */
+    margin-top: 4px; /* Espacio desde arriba */
+    transition: all 2s; /* Animación para las transiciones */
+  }
+
+  /* Estilización de la lista del menú */
+  .menu ul {
+    flex-direction: column; /* Disposición en columna */
+  }
+
+
+  /* Acción cuando se marca el checkbox */
+  #btn-menu:checked ~ .menu {
+    margin: 1px; /* Ajuste en el menú cuando el checkbox está marcado */
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 800px) {
+  /* Estilización de los encabezados H1 */
+  h1 {
+    margin-left: 20px; /* Margen izquierdo de 20px */
+    font-size: 40px; /* Tamaño de fuente de 40px */
+    margin-bottom: 20px; /* Margen inferior de 20px */
+    color: #000; /* Color del texto: negro */
+  }
+
+  /* Estilización de los encabezados H2 */
+  h2 {
+    margin-left: 20px; /* Margen izquierdo de 20px */
+    font-size: 30px; /* Tamaño de fuente de 30px */
+    margin-bottom: 20px; /* Margen inferior de 20px */
+    color: #000; /* Color del texto: negro */
+  }
+
+  /* Estilización de los elementos de lista dentro de créditos */
+  .creditos li {
+    color: #000; /* Color del texto: negro */
+  }
+
+  /* Fondo de la página con una imagen de fondo fijo que se repite */
+  body::before {
+    content: ""; /* Contenido vacío antes del cuerpo */
+    background-image: url("IMAGENES/FondoMandala.png"); /* Imagen de fondo */
+    background-repeat: repeat; /* Repetir la imagen de fondo */
+    background-size: 100px; /* Tamaño del fondo de la imagen */
+    background-attachment: scroll; /* Fondo se mueve al hacer scroll */
+    position: fixed; /* Posición fija */
+    top: 0; /* Top: al inicio del viewport */
+    left: 0; /* Left: al inicio del viewport */
+    right: 0; /* Right: al inicio del viewport */
+    bottom: 0; /* Bottom: al inicio del viewport */
+    z-index: -1; /* Fondo detrás de todos los elementos */
+    opacity: 0.5; /* Fondo semitransparente */
+  }
+
+  /* Estilización de los párrafos */
+  p {
+    font-size: 16px; /* Tamaño del texto para párrafos */
+  }
+
+  /* Estilización de los elementos de lista dentro de tarjetas */
+  .tarjeta li {
+    font-size: 16px; /* Tamaño del texto */
+  }
+
+  /* Contenedor de tarjetas, define cómo se organizan en columnas */
+  .contenedor-tarjetas {
+    display: flex; /* Contenedor flex */
+    flex-direction: column; /* Disposición en columna */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px; /* Espaciado interno */
+    width: 100%; /* Ocupa el 100% del ancho */
+  }
+
+  /* Estilización de las tarjetas */
+  .tarjeta {
+    width: 80%; /* Ocupa el 80% del ancho */
+    max-width: 100%; /* Ancho máximo */
+    background-color: #f9f9f9; /* Color de fondo de la tarjeta */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    overflow: hidden; /* Ocultar contenido fuera del contenedor */
+    text-align: center; /* Alineación al centro */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Ajusta el contenido al borde */
+  }
+
+  /* Imágenes dentro de las tarjetas */
+  .tarjeta img {
+    width: 100%; /* Ocupa todo el ancho */
+    height: auto; /* Mantiene proporciones */
+    max-width: 300px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontalmente */
+  }
+
+  /* Contenedor que combina texto e imagen */
+  .ImgText {
+    flex-direction: column; /* Disposición en columna */
+    gap: 10px; /* Espaciado entre elementos */
+  }
+
+  /* Imágenes dentro del contenedor ImgText */
+  .ImgText img {
+    width: 300px; /* Ancho de la imagen */
+    height: auto; /* Mantiene proporciones */
+  }
+
+  /* Estilización del menú navegacional */
+  .menunav {
+    max-width: 460px; /* Ancho máximo del menú */
+  }
+
+  /* Etiqueta del header, se muestra como bloque */
+  header label {
+    display: block; /* Muestra el label como un bloque */
+  }
+
+  /* Estilización del menú fijo en la parte superior */
+  .menu {
+    position: fixed; /* Posición fija */
+    background: rgba(0.5, 0.5, 0.5, 0.7); /* Fondo semi-transparente */
+    z-index: 30; /* Superposición */
+    width: 40%; /* Ancho del menú */
+    margin-left: -60%; /* Alineación a la izquierda */
+    margin-top: 4px; /* Espacio desde arriba */
+    transition: all 2s; /* Animación para las transiciones */
+  }
+
+  /* Estilización de la lista dentro del menú */
+  .menu ul {
+    flex-direction: column; /* Disposición en columna */
+  }
+
+  /* Acción cuando se marca el checkbox para el menú */
+  #btn-menu:checked ~ .menu {
+    margin: 1px; /* Ajuste de posición cuando el checkbox está marcado */
+  }
+
+  /* Estilización de los ítems del menú */
+  .menu li {
+    background-image: url("/IMAGENES/Boton menu negro.png"); /* Imagen de fondo del botón del menú */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    min-width: 100px; /* Ancho mínimo */
+    height: 30px; /* Altura */
+    font-size: 25px; /* Tamaño de fuente */
+    text-align: center; /* Alineación del texto */
+    color: #fff; /* Color del texto: blanco */
+    text-decoration: none; /* Sin subrayado */
+    margin-bottom: 10px; /* Espacio inferior */
+    margin-right: 30px; /* Espacio derecho */
+  }
+
+  /* Estilización del enlace dentro del menú */
+  .menu li a {
+    display: block; /* Hace que el enlace ocupe el espacio completo del elemento */
+    text-align: center; /* Alineación del texto */
+    color: #fff; /* Color del texto: blanco */
+    text-decoration: none; /* Sin subrayado */
+  }
+
+  /* Acción cuando se pasa el mouse sobre los enlaces del menú */
+  .menu li a:hover {
+    font-size: 20px; /* Tamaño de fuente cuando se pasa el mouse */
+    text-shadow: 1px 1px #000; /* Sombra del texto */
+    background-image: url("/IMAGENES/Boton menu negro.png"); /* Imagen de fondo */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    height: 30px; /* Altura */
+    padding-top: 6px; /* Espacio superior */
+  }
+
+  /* Imagen que se muestra en el label del menú */
+  label[for="btn-menu"] img {
+    content: url("IMAGENES/Boton menu negro.png"); /* Imagen asociada al botón del menú */
+  }
+
+  /* Estilización de los encabezados H3 dentro del contenedor */
+  .contenedor h3 {
+    color: #fff; /* Color del texto: blanco */
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main {
+    margin-top: 60px; /* Margen superior de 60px */
+  }
+
+  body {
+    background-image: url("IMAGENES/FondoMandalaNegro.png"); /* Imagen de fondo negro */
+    background-repeat: repeat; /* Repetir la imagen de fondo */
+    background-size: 100px; /* Tamaño de la imagen de fondo */
+    background-attachment: scroll; /* Fondo se mueve al hacer scroll */
+    margin: 0; /* Sin margen por defecto */
+    position: relative; /* Posición relativa */
+  }
+
+  body::before {
+    content: ""; /* Contenido vacío antes del cuerpo */
+    position: fixed; /* Posición fija */
+    top: 0; /* Arriba */
+    left: 0; /* Izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    z-index: 0; /* Detrás de todos los elementos */
+    pointer-events: none; /* Evita la interacción con el fondo */
+  }
+
+  header,
+  main,
+  footer {
+    position: relative; /* Posición relativa */
+    z-index: 1; /* Detrás del header y footer */
+  }
+
+  h1 {
+    margin-left: 20px; /* Margen izquierdo de 20px */
+    font-size: 40px; /* Tamaño de fuente de 40px */
+    margin-bottom: 20px; /* Margen inferior de 20px */
+    color: #fff; /* Color del texto: blanco */
+  }
+
+  h2 {
+    margin-left: 20px; /* Margen izquierdo de 20px */
+    font-size: 30px; /* Tamaño de fuente de 30px */
+    margin-bottom: 20px; /* Margen inferior de 20px */
+    color: #fff; /* Color del texto: blanco */
+  }
+
+  .creditos li {
+    color: #fff; /* Color del texto: blanco */
+  }
+
+  .menunav {
+    position: relative;
+    text-align: center;
+    left: 10px;
+    float: center;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  header {
+    position: fixed; /* Posición fija */
+    width: 100%; /* Ancho completo */
+    z-index: 10; /* Sobre el contenido principal */
+    top: 0px; /* Arriba del viewport */
+  }
+
+  header label {
+    display: none; /* No mostrar el label por defecto */
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+
+  header label:hover {
+    cursor: pointer;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Distribuir en fila */
+  }
+
+  .menu li {
+    background-image: url("/IMAGENES/Boton menu.png"); /* Imagen de fondo del botón menú */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    min-width: 100px; /* Ancho mínimo */
+    height: 30px; /* Altura */
+    font-size: 25px; /* Tamaño de fuente */
+    text-align: center;
+    color: #fff; /* Color del texto: blanco */
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin-right: 30px;
+  }
+
+  .menu li a {
+    display: block; /* Ocupa todo el espacio del li */
+    text-align: center;
+    color: #fff; /* Color del texto: blanco */
+    text-decoration: none;
+  }
+
+  .menu li a:hover {
+    font-size: 20px; /* Tamaño de fuente cuando se pasa el mouse */
+    text-shadow: 1px 1px #000; /* Sombra del texto */
+    background-image: url("/IMAGENES/Boton menu.png"); /* Imagen de fondo */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    height: 30px; /* Altura */
+    padding-top: 6px; /* Espacio superior cuando se pasa el mouse */
+  }
+
+  .contenedor {
+    margin: 20px auto; /* Mantener centrado */
+    background-color: #8e7b7b;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 90%;
+    color: #fff;
+  }
+
+  .contenedor img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .ImgText {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .ImgText img {
+    width: 400px;
+    height: auto;
+  }
+
+  .ImgText p {
+    margin: 0;
+  }
+
+  .contenedor-tarjetas {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-behavior: smooth;
+    justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+  }
+
+  .contenedor-tarjetas-verticales {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    padding: 20px;
+    justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+  }
+
+  .tarjeta {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 500px;
+    padding: 20px;
+  }
+
+  .tarjeta-vertical {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    padding: 20px;
+    justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+  }
+
+  .tarjeta img {
+    width: 100%;
+    height: auto;
+    justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+  }
+
+  .tarjeta-vertical img {
+    max-width: 300px;
+    max-height: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px;
+    justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+  }
+
+  .tarjeta-vertical p {
+    margin: 5px;
+    color: #333;
+    line-height: 1.5;
+    box-sizing: border-box;
+    justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+  }
+
+  .tarjeta-vertical h2 {
+    color: #666;
+    margin: 20px;
+    justify-content: center; /* Nuevo: Centrar contenido horizontalmente */
+  }
+
+  .contenedor p {
+    margin: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+
+  .tarjeta p {
+    margin: 10px;
+    color: #333;
+  }
+
+  p {
+    font-size: 14px; /* Tamaño del texto */
+  }
+
+  .tarjeta li {
+    font-size: 14px; /* Tamaño del texto */
+  }
+}
