@@ -8,7 +8,7 @@ from sklearn.preprocessing import PolynomialFeatures
 pygame.init()
 
 # Configuración de la ventana
-ANCHO_VENTANA = 1000
+ANCHO_VENTANA = 1300
 ALTO_VENTANA = 650
 ventana = pygame.display.set_mode((ANCHO_VENTANA, ALTO_VENTANA))
 pygame.display.set_caption("Dr. Data: Predicción de Precios de Apartamentos")
@@ -38,6 +38,10 @@ IMAGEN_APARTAMENTO = 'Images/apartamento.jpg'
 IMAGEN_VISITADO = 'Images/visitado1.png'
 IMAGEN_COMPUTADORA = 'Images/computadora.png'
 IMAGEN_LIBRETA = 'Images/libreta.png'
+IMAGENES_NUMERO = [f'Images/{i}.png' for i in range(1, 11)]  # Imágenes para los números del 1 al 10
+IMAGEN_Q = 'Images/11.png'
+IMAGEN_W = 'Images/12.png'
+IMAGEN_E = 'Images/13.png'
 
 # Cargar imágenes
 mapa = pygame.image.load(IMAGEN_MAPA)
@@ -50,18 +54,26 @@ apartamento_imagen = pygame.image.load(IMAGEN_APARTAMENTO)
 visitado_imagen = pygame.image.load(IMAGEN_VISITADO)
 computadora_imagen = pygame.image.load(IMAGEN_COMPUTADORA)
 libreta_imagen = pygame.image.load(IMAGEN_LIBRETA)
+imagenes_numero = [pygame.image.load(imagen) for imagen in IMAGENES_NUMERO]
+imagen_q = pygame.image.load(IMAGEN_Q)
+imagen_w = pygame.image.load(IMAGEN_W)
+imagen_e = pygame.image.load(IMAGEN_E)
 
-# Escalar imágenes
-mapa = pygame.transform.scale(mapa, (int(COLUMNAS * TAMANO_CELDA * ZOOM), int(FILAS * TAMANO_CELDA * ZOOM)))
-personaje_quieto = pygame.transform.scale(personaje_quieto, (TAMANO_OBJETO, TAMANO_OBJETO))
-personaje_abajo = pygame.transform.scale(personaje_abajo, (TAMANO_OBJETO, TAMANO_OBJETO))
-personaje_arriba = pygame.transform.scale(personaje_arriba, (TAMANO_OBJETO, TAMANO_OBJETO))
-personaje_derecha = pygame.transform.scale(personaje_derecha, (TAMANO_OBJETO, TAMANO_OBJETO))
-personaje_izquierda = pygame.transform.scale(personaje_izquierda, (TAMANO_OBJETO, TAMANO_OBJETO))
-apartamento_imagen = pygame.transform.scale(apartamento_imagen, (TAMANO_OBJETO, TAMANO_OBJETO))
-visitado_imagen = pygame.transform.scale(visitado_imagen, (TAMANO_OBJETO, TAMANO_OBJETO))
-computadora_imagen = pygame.transform.scale(computadora_imagen, (600, 400))
-libreta_imagen = pygame.transform.scale(libreta_imagen, (1400, 1300))
+# Escalar imágenes con suavizado
+mapa = pygame.transform.smoothscale(mapa, (int(COLUMNAS * TAMANO_CELDA * ZOOM), int(FILAS * TAMANO_CELDA * ZOOM)))
+personaje_quieto = pygame.transform.smoothscale(personaje_quieto, (TAMANO_OBJETO, TAMANO_OBJETO))
+personaje_abajo = pygame.transform.smoothscale(personaje_abajo, (TAMANO_OBJETO, TAMANO_OBJETO))
+personaje_arriba = pygame.transform.smoothscale(personaje_arriba, (TAMANO_OBJETO, TAMANO_OBJETO))
+personaje_derecha = pygame.transform.smoothscale(personaje_derecha, (TAMANO_OBJETO, TAMANO_OBJETO))
+personaje_izquierda = pygame.transform.smoothscale(personaje_izquierda, (TAMANO_OBJETO, TAMANO_OBJETO))
+apartamento_imagen = pygame.transform.smoothscale(apartamento_imagen, (TAMANO_OBJETO, TAMANO_OBJETO))
+visitado_imagen = pygame.transform.smoothscale(visitado_imagen, (TAMANO_OBJETO, TAMANO_OBJETO))
+computadora_imagen = pygame.transform.smoothscale(computadora_imagen, (600, 400))
+libreta_imagen = pygame.transform.smoothscale(libreta_imagen, (1400, 1300))
+imagenes_numero = [pygame.transform.smoothscale(imagen, (600, 600)) for imagen in imagenes_numero]
+imagen_q = pygame.transform.smoothscale(imagen_q, (600, 600))
+imagen_w = pygame.transform.smoothscale(imagen_w, (600, 600))
+imagen_e = pygame.transform.smoothscale(imagen_e, (600, 600))
 
 # Variables del juego
 posicion_personaje = [0, 0]
@@ -70,6 +82,10 @@ apartamentos_visitados = []
 informacion_apartamentos = []
 mostrar_libreta = False
 mostrar_computadora = False
+mostrar_imagen_numero = None  # Variable para mostrar una imagen basada en el número presionado
+mostrar_imagen_q = False
+mostrar_imagen_w = False
+mostrar_imagen_e = False
 velocidad_personaje = 8  # Velocidad en píxeles
 camara_x = 0
 camara_y = 0
@@ -163,6 +179,17 @@ while jugando:
                 mostrar_libreta = not mostrar_libreta
             if evento.key == pygame.K_p:
                 mostrar_computadora = not mostrar_computadora
+            if pygame.K_1 <= evento.key <= pygame.K_9:
+                numero = evento.key - pygame.K_1
+                mostrar_imagen_numero = numero if numero < len(imagenes_numero) else None
+            if evento.key == pygame.K_0:
+                mostrar_imagen_numero = 9
+            if evento.key == pygame.K_q:
+                mostrar_imagen_q = not mostrar_imagen_q
+            if evento.key == pygame.K_w:
+                mostrar_imagen_w = not mostrar_imagen_w
+            if evento.key == pygame.K_e:
+                mostrar_imagen_e = not mostrar_imagen_e
 
     keys = pygame.key.get_pressed()
     if keys[pygame.K_UP] and posicion_personaje[0] > 0:
@@ -203,6 +230,18 @@ while jugando:
     
     if mostrar_computadora:
         ventana.blit(computadora_imagen, ((ANCHO_VENTANA - computadora_imagen.get_width()) // 2, (ALTO_VENTANA - computadora_imagen.get_height()) // 2))
+    
+    if mostrar_imagen_numero is not None:
+        ventana.blit(imagenes_numero[mostrar_imagen_numero], ((ANCHO_VENTANA - imagenes_numero[mostrar_imagen_numero].get_width()) // 2, (ALTO_VENTANA - imagenes_numero[mostrar_imagen_numero].get_height()) // 2))
+
+    if mostrar_imagen_q:
+        ventana.blit(imagen_q, ((ANCHO_VENTANA - imagen_q.get_width()) // 2, (ALTO_VENTANA - imagen_q.get_height()) // 2))
+    
+    if mostrar_imagen_w:
+        ventana.blit(imagen_w, ((ANCHO_VENTANA - imagen_w.get_width()) // 2, (ALTO_VENTANA - imagen_w.get_height()) // 2))
+    
+    if mostrar_imagen_e:
+        ventana.blit(imagen_e, ((ANCHO_VENTANA - imagen_e.get_width()) // 2, (ALTO_VENTANA - imagen_e.get_height()) // 2))
 
     pygame.display.flip()
     pygame.time.Clock().tick(30)
@@ -212,4 +251,3 @@ pygame.quit()
 print("Apartamentos visitados:")
 for idx, apto in enumerate(apartamentos_visitados):
     print(f"Apto {idx + 1}: {apto[3]} hab, {apto[2]:.2f} m², ${apto[-1]:.2f}")
-

@@ -1,159 +1,548 @@
 :root {
-    --cancha-image: url('Imagenes/cancha.jpg');
+  --cancha-image: url('Imagenes/cancha.jpg'); /* Define la imagen de fondo para la cancha */
 }
 
 .controls {
-    margin: 10px 0;
+  margin: 10px 0; /* Espaciado vertical para los controles */
 }
 
 .cancha {
-    position: relative;
-    width: 95%; /* Ocupa el 95% del ancho de la ventana */
-    height: auto; /* Altura automática para mantener la proporción */
-    background-image: var(--cancha-image); /* Usar la variable CSS */
-    background-size: cover;
-    background-position: center;
-    aspect-ratio: 16 / 9; /* Ajusta la relación de aspecto según tu imagen */
+  position: relative; /* Posicionamiento relativo para la cancha */
+  width: 95%; /* Ocupa el 95% del ancho de la ventana */
+  height: auto; /* Altura automática para mantener la proporción */
+  background-image: var(--cancha-image); /* Usar la variable CSS para la imagen de fondo */
+  background-size: cover; /* Ajustar la imagen para cubrir todo el fondo */
+  background-position: center; /* Centrar la posición de la imagen de fondo */
+  aspect-ratio: 16 / 9; /* Ajusta la relación de aspecto según la imagen */
+}
+
+.section_hidden {
+  position: relative; /* Posicionamiento relativo para la sección oculta */
+  width: 95%; /* Ocupa el 95% del ancho de la ventana */
+  height: auto; /* Altura automática para mantener la proporción */
+  background-image: url("Imagenes/mapa10.png"); /* Imagen de fondo específica */
+  background-size: cover; /* Ajustar la imagen para cubrir todo el fondo */
+  background-position: center; /* Centrar la posición de la imagen de fondo */
+  aspect-ratio: 16 / 9; /* Ajusta la relación de aspecto según la imagen */
 }
 
 .satelite {
-    width: 95%;
-    height: auto;
-    aspect-ratio: 16 / 9;
+  width: 95%; /* Ocupa el 95% del ancho de la ventana */
+  height: auto; /* Altura automática para mantener la proporción */
+  aspect-ratio: 16 / 9; /* Ajusta la relación de aspecto según la imagen */
 }
 
 .hidden {
-    display: none;
+  display: none; /* Oculta el elemento */
 }
 
 .jugador {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
+  position: absolute; /* Posicionamiento absoluto para el jugador */
+  width: 2%; /* Ancho del jugador */
+  height: 4%; /* Altura del jugador */
+  background-color: rgb(255, 0, 0); /* Color de fondo rojo */
+  border-radius: 15%; /* Bordes redondeados */
+  display: flex; /* Flexbox para centrar el contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  color: rgb(255, 255, 255); /* Color del texto blanco */
+  font-size: 80%; /* Tamaño de fuente del texto */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el jugador */
+}
+
+.jugador1 {
+  position: absolute; /* Posicionamiento absoluto para el jugador */
+  width: 2%; /* Ancho del jugador */
+  height: 4%; /* Altura del jugador */
+  background-color: rgb(25, 0, 255); /* Color de fondo azul */
+  border-radius: 15%; /* Bordes redondeados */
+  display: flex; /* Flexbox para centrar el contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  color: rgb(255, 255, 255); /* Color del texto blanco */
+  font-size: 80%; /* Tamaño de fuente del texto */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el jugador */
 }
 
 .jugador:hover::after {
-    content: attr(data-info);
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    white-space: nowrap;
-    font-size: 14px;
+  content: attr(data-info); /* Muestra el atributo data-info al pasar el cursor */
+  position: absolute; /* Posicionamiento absoluto del tooltip */
+  top: -40px; /* Posición superior del tooltip */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Ajuste adicional para centrar */
+  background-color: #920808; /* Color de fondo del tooltip */
+  color: #fff; /* Color del texto del tooltip */
+  padding: 5px 10px; /* Espaciado interno del tooltip */
+  border-radius: 5px; /* Bordes redondeados del tooltip */
+  white-space: nowrap; /* Evita el salto de línea */
+  font-size: 130%; /* Tamaño de fuente del tooltip */
+}
+
+.jugador::before {
+  content: " "; /* Contenido vacío antes del jugador */
+  position: absolute; /* Posicionamiento absoluto del elemento */
+  top: -120px; /* Posición superior del elemento */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Ajuste adicional para centrar */
+  width: 70px; /* Ancho del elemento */
+  height: 70px; /* Altura del elemento */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el elemento */
+  background-position: center; /* Centra la imagen dentro del elemento */
+  border-radius: 0%; /* Bordes sin redondear */
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.3s ease-in-out; /* Transición suave para la opacidad */
+  z-index: 1000; /* Asegura que el elemento esté por encima de otros elementos */
+  animation: cambiarImagen 25s infinite steps(1); /* Animación de cambio de imagen */
+}
+
+.jugador:hover::before {
+  opacity: 1; /* Muestra el elemento antes del jugador al pasar el cursor */
+}
+
+/* Animación que cambia las imágenes en secuencia */
+@keyframes cambiarImagen {
+  0% { background-image: url('./Imagenes/informacion.png'); } /* Imagen en el 0% de la animación */
+  20% { background-image: url('./Imagenes/balon.png'); } /* Imagen en el 20% de la animación */
+  40% { background-image: url('./Imagenes/jogador.png'); } /* Imagen en el 40% de la animación */
+  60% { background-image: url('./Imagenes/porterazo.png'); } /* Imagen en el 60% de la animación */
+  80% { background-image: url('./Imagenes/champions.png'); } /* Imagen en el 80% de la animación */
+  100% { background-image: url('./Imagenes/cancha9.png'); } /* Imagen en el 100% de la animación */
 }
 
 /* Posiciones de los jugadores */
 .portero {
-    top: 50%;
-    left: 14%;
-    transform: translate(-50%, -50%);
+  top: 50%; /* Posición vertical del portero */
+  left: 14%; /* Posición horizontal del portero */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
 
 .defensa {
-    top: 30%;
-    left: 25%;
-    transform: translate(-50%, -50%);
+  top: 30%; /* Posición vertical del defensa */
+  left: 25%; /* Posición horizontal del defensa */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
 
 .defensa1 {
-    top: 60%;
-    left: 25%;
-    transform: translate(-50%, -50%);
+  top: 60%; /* Posición vertical del defensa */
+  left: 25%; /* Posición horizontal del defensa */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
 
 .medio {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  top: 50%; /* Posición vertical del medio */
+  left: 50%; /* Posición horizontal del medio */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
 
 .delantero {
-    top: 30%;
-    left: 75%;
-    transform: translate(-50%, -50%);
+  top: 30%; /* Posición vertical del delantero */
+  left: 75%; /* Posición horizontal del delantero */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
 
 .tienda {
-    top: 10%;
-    left: 10%;
-    transform: translate(-50%, -50%);
+  top: 20%; /* Posición vertical de la tienda */
+  left: 10%; /* Posición horizontal de la tienda */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
 
 .gradas {
-    top: 96%;
-    left: 70%;
-    transform: translate(-50%, -50%);
+  top: 96%; /* Posición vertical de las gradas */
+  left: 70%; /* Posición horizontal de las gradas */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
 
 .casaAmigo {
-    top: 5%;
-    left: 30%;
-    transform: translate(-50%, -50%);
+  top: 5%; /* Posición vertical de la casa del amigo */
+  left: 30%; /* Posición horizontal de la casa del amigo */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
 
 .salidaEntrada {
-    top: 90%;
-    left: 9%;
-    transform: translate(-50%, -50%);
+  top: 90%; /* Posición vertical de la salida/entrada */
+  left: 9%; /* Posición horizontal de la salida/entrada */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
 
 .parqueadero {
-    top: 5%;
-    left: 90%;
-    transform: translate(-50%, -50%);
+  top: 5%; /* Posición vertical del parqueadero */
+  left: 90%; /* Posición horizontal del parqueadero */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
+
 .arbitro {
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  top: 30%; /* Posición vertical del árbitro */
+  left: 50%; /* Posición horizontal del árbitro */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
 
 .camposTecnicos {
-    top: 5%;
-    left: 70%;
-    transform: translate(-50%, -50%);
+  top: 5%; /* Posición vertical de los campos técnicos */
+  left: 70%; /* Posición horizontal de los campos técnicos */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
+}
+
+.come_carne {
+  top: 69%; /* Posición vertical del come carne */
+  left: 37%; /* Posición horizontal del come carne */
+}
+
+/* Posiciones de los lugares en la segunda parte */
+.mercurio {
+  top: 2%; /* Posición vertical de Mercurio */
+  left: 3%; /* Posición horizontal de Mercurio */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
+}
+
+.deyvid {
+  top: 55%; /* Posición vertical de Deyvid */
+  left: 15%; /* Posición horizontal de Deyvid */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
+}
+
+.juanpa {
+  top: 30%; /* Posición vertical de Juanpa */
+  left: 40%; /* Posición horizontal de Juanpa */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
+}
+
+.thomas {
+  top: 40%; /* Posición vertical de Thomas */
+  left: 70%; /* Posición horizontal de Thomas */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
+}
+
+.colegio {
+  top: 80%; /* Posición vertical del colegio */
+  left: 60%; /* Posición horizontal del colegio */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
+}
+
+.tibanica {
+  top: 90%; /* Posición vertical de Tibanica */
+  left: 50%; /* Posición horizontal de Tibanica */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
+}
+
+.ventura {
+  top: 8%; /* Posición vertical de Ventura */
+  left: 70%; /* Posición horizontal de Ventura */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
+}
+
+.transmilenio {
+  top: 5%; /* Posición vertical de Transmilenio */
+  left: 20%; /* Posición horizontal de Transmilenio */
+  transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
 
 .info {
-    display: none;
-    margin-top: 30px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 80vw;
-    line-height: 1.5;
-    font-size: 20px;
-    text-align: center;
+  display: none; /* Oculta el elemento de información */
+  margin: 0 auto; /* Centra el elemento horizontalmente */
+  text-align: center; /* Centra el contenido del elemento, si aplica */
+  margin-top: 30px; /* Margen superior */
+  padding: 15px; /* Espaciado interno */
+  border: 1px solid #ddd; /* Borde del elemento */
+  background-color: #f9f9f9; /* Color de fondo */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra del elemento */
+  max-width: 80vw; /* Ancho máximo */
+  line-height: 1.5; /* Altura de línea */
+  font-size: 20px; /* Tamaño de fuente */
+  text-align: center; /* Centrado del texto */
 }
 
 .info img {
-    max-width: 100%;
-    max-height: 420px; /* Máximo tamaño permitido */
-    min-width: 400px;  /* Mínimo ancho permitido */
-    min-height: 400px; /* Mínimo alto permitido */
-    height: auto;
-    width: auto;
-    display: block;
-    margin: 0 auto;
-    object-fit: cover; /* Ajusta la imagen para que se vea bien dentro de los límites */
+  max-width: 100%; /* Ancho máximo de la imagen */
+  max-height: 420px; /* Altura máxima de la imagen */
+  min-width: 400px; /* Ancho mínimo de la imagen */
+  min-height: 400px; /* Altura mínima de la imagen */
+  height: auto; /* Altura automática */
+  width: auto; /* Ancho automático */
+  display: block; /* Muestra la imagen como bloque */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  object-fit: cover; /* Ajusta la imagen para que se vea bien dentro de los límites */
+  padding-top: 40px; /* Relleno superior */
 }
 
 .info::before {
-    content: "ℹ️ ";
-    font-size: 25px;
+  content: "ℹ️ "; /* Contenido antes del elemento de información */
+  font-size: 25px; /* Tamaño de fuente del ícono */
+}
+
+/* Estilo específico para el botón de cambio de sección */
+.toggle-part-button {
+  position: absolute; /* Posicionamiento absoluto */
+  width: 5%; /* Ancho del botón */
+  height: 5%; /* Altura del botón */
+  background-color: #1f4fec; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  border-radius: 15%; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-size: 14px; /* Tamaño de fuente del botón */
+  color: white; /* Color del texto del botón */
+  font-weight: bold; /* Texto en negrita */
+  display: flex; /* Flexbox para centrar el contenido */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra del botón */
+  transition: transform 0.2s ease, background-color 0.3s ease; /* Transición suave */
+}
+
+.toggle-part-button:hover {
+  background-color: #003cff; /* Cambia el color de fondo al pasar el cursor */
+  transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+}
+
+/* Posiciones específicas para los botones de cambio de sección */
+.first-part-button {
+  top: 92%; /* Posición superior */
+  left: 8%; /* Posición izquierda */
+  z-index: 1; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+.second-part-button {
+  top: 50%; /* Posición superior */
+  right: 50%; /* Posición derecha */
+  z-index: 1; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+.textfirst {
+  font-size: 160%; /* Tamaño de fuente */
+  text-align: center; /* Centra el texto */
+  color: #555; /* Color del texto */
+  font-family: 'Arial', sans-serif; /* Familia de fuente */
+  font-weight: normal; /* Peso de fuente */
+  margin-top: 10px; /* Margen superior */
+  line-height: 1.4; /* Altura de línea */
+}
+
+.part {
+  font-size: 220%; /* Tamaño de fuente */
+  text-align: center; /* Centra el texto */
+  font-weight: bold; /* Texto en negrita */
+  color: #333; /* Color del texto */
+  text-transform: uppercase; /* Mayúsculas */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  padding: 10px 20px; /* Relleno */
+  border-bottom: 3px solid #008cba; /* Línea decorativa */
+  margin-bottom: 20px; /* Margen inferior */
+  font-family: 'Arial', sans-serif; /* Familia de fuente */
+}
+
+.cssbuttons-io-button1, .cssbuttons-io-button {
+  background: #0000FF; /* Color de fondo */
+  color: white; /* Color del texto */
+  font-family: inherit; /* Hereda la familia de fuente */
+  padding: 0.35em; /* Relleno */
+  padding-left: 1.2em; /* Relleno izquierdo */
+  font-size: 17px; /* Tamaño de fuente */
+  font-weight: 500; /* Peso de fuente */
+  border-radius: 0.9em; /* Bordes redondeados */
+  border: none; /* Sin borde */
+  letter-spacing: 0.05em; /* Espaciado entre letras */
+  display: flex; /* Flexbox para centrar el contenido */
+  align-items: center; /* Centrar verticalmente */
+  box-shadow: inset 0 0 1.6em -0.6em #0000FF; /* Sombra interna */
+  overflow: hidden; /* Oculta el desbordamiento */
+  position: relative; /* Posicionamiento relativo */
+  height: 2.8em; /* Altura del botón */
+  padding-right: 3.3em; /* Relleno derecho */
+  position: absolute; /* Posicionamiento absoluto */
+  top: 60%; /* Posición superior */
+  left: 30%; /* Posición izquierda */
+}
+
+.cssbuttons-io-button1 {
+  top: 60%; /* Posición superior */
+  left: 30%; /* Posición izquierda */
+}
+
+.cssbuttons-io-button {
+  top: 80%; /* Posición superior */
+  left: 15%; /* Posición izquierda */
+}
+
+/* Estilos del ícono */
+.cssbuttons-io-button1 .icon, .cssbuttons-io-button .icon {
+  background: white; /* Color de fondo del ícono */
+  margin-left: 1em; /* Margen izquierdo */
+  position: absolute; /* Posicionamiento absoluto */
+  display: flex; /* Flexbox para centrar el contenido */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  height: 2.2em; /* Altura del ícono */
+  width: 2.2em; /* Ancho del ícono */
+  border-radius: 0.7em; /* Bordes redondeados */
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #0000FF; /* Sombra del ícono */
+  right: 0.3em; /* Posición derecha */
+  transition: all 0.3s; /* Transición suave */
+}
+
+/* Efectos al pasar el cursor */
+.cssbuttons-io-button1:hover .icon, .cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em); /* Ancho del ícono */
+}
+/* Estilo para los iconos SVG dentro de los botones con clases .cssbuttons-io-button1 y .cssbuttons-io-button */
+.cssbuttons-io-button1 .icon svg, .cssbuttons-io-button .icon svg {
+  width: 1.1em; /* Ancho del icono */
+  transition: transform 0.3s; /* Transición suave para transformaciones */
+  color: #0000FF; /* Color del icono */
+}
+
+/* Transformación al pasar el mouse sobre los botones */
+.cssbuttons-io-button1:hover .icon svg, .cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em); /* Mueve el icono ligeramente a la derecha */
+}
+
+/* Transformación al hacer clic en los botones */
+.cssbuttons-io-button1:active .icon, .cssbuttons-io-button:active .icon {
+  transform: scale(0.95); /* Reduce el tamaño del icono */
+}
+
+/* Ajustes en pantallas muy pequeñas */
+@media (max-width: 600px) {
+  .cssbuttons-io-button1, .cssbuttons-io-button {
+      font-size: 2vw; /* Reduce aún más el tamaño del texto */
+      height: 3vh; /* Reduce la altura */
+      width: 3vw; /* Reduce el ancho */
+      padding: 0.5vw 1vw; /* Reduce el padding */
+  }
+
+  .cssbuttons-io-button1 .icon, .cssbuttons-io-button .icon {
+      height: 1.8em; /* Reduce el tamaño del icono */
+      width: 1.8em;
+  }
+}
+
+/* Estilos generales para el botón con clase .btn-1 y sus elementos */
+.btn-1,
+.btn-1 *,
+.btn-1 :after,
+.btn-1 :before,
+.btn-1:after,
+.btn-1:before {
+  border: none; /* Sin borde */
+  box-sizing: border-box; /* Box-sizing para incluir padding y borde en el tamaño total */
+}
+
+.btn-1 {
+  scale: 0.8; /* Escala del botón */
+  -webkit-tap-highlight-color: transparent; /* Color de resaltado al tocar (para dispositivos táctiles) */
+  background-color: #0011fc; /* Color de fondo */
+  background-image: none; /* Sin imagen de fondo */
+  color: #fff; /* Color del texto */
+  font-family: /* Familias de fuentes */
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    Noto Sans,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
+  cursor: pointer; /* Cursor de puntero al pasar sobre el botón */
+  font-size: 100%; /* Tamaño de fuente */
+  line-height: 1.5; /* Altura de línea */
+  margin: 0; /* Sin margen */
+  padding: 2; /* Padding */
+}
+
+.btn-1:disabled {
+  cursor: default; /* Cursor por defecto cuando el botón está deshabilitado */
+}
+
+.btn-1:-moz-focusring {
+  outline: auto; /* Contorno automático al enfocarse (para navegadores Mozilla) */
+}
+
+.btn-1 svg {
+  display: block; /* Mostrar como bloque */
+  vertical-align: middle; /* Alineación vertical al medio */
+}
+
+.btn-1 [hidden] {
+  display: none; /* Ocultar elementos con el atributo hidden */
+}
+
+.btn-1 {
+  border: 1px solid; /* Borde sólido */
+  border-radius: 5%; /* Borde redondeado */
+  box-sizing: border-box; /* Box-sizing para incluir padding y borde en el tamaño total */
+  display: block; /* Mostrar como bloque */
+  font-weight: 900; /* Peso de la fuente */
+  overflow: hidden; /* Ocultar contenido desbordado */
+  padding: 1.2rem 3rem; /* Padding del botón */
+  position: relative; /* Posición relativa */
+  text-transform: uppercase; /* Transformar texto a mayúsculas */
+}
+
+/* Estilo para el contenido original del botón */
+.btn-1 .original {
+  background: #ffffff; /* Fondo blanco */
+  color: #000; /* Color del texto */
+  display: grid; /* Mostrar como grid */
+  inset: 0; /* Ocupa todo el espacio del botón */
+  place-content: center; /* Centrar el contenido */
+  position: absolute; /* Posicionamiento absoluto */
+  transition: transform 0.3s cubic-bezier(0.87, 0, 0.13, 1); /* Transición suave para transformaciones */
+}
+
+/* Transformación al pasar el mouse sobre el contenido original del botón */
+.btn-1:hover .original {
+  transform: translateY(100%); /* Mover hacia abajo fuera de la vista */
+}
+
+/* Estilo para las letras dentro del botón */
+.btn-1 .letters {
+  display: inline-flex; /* Mostrar como flex en línea */
+}
+
+/* Estilo para los spans dentro del botón */
+.btn-1 span {
+  opacity: 0; /* Span invisible por defecto */
+  transform: translateY(-15px); /* Mover hacia arriba */
+  transition:
+    transform 0.3s cubic-bezier(0.87, 0, 0.13, 1), /* Transición suave para transformaciones */
+    opacity 0.3s; /* Transición suave para la opacidad */
+}
+
+/* Transformación alternada para spans pares */
+.btn-1 span:nth-child(2n) {
+  transform: translateY(15px); /* Mover hacia abajo para spans pares */
+}
+
+/* Transformación al pasar el mouse sobre spans */
+.btn-1:hover span {
+  opacity: 1; /* Span visible */
+  transform: translateY(0); /* Mover a la posición original */
+}
+
+/* Retrasos en la transición para spans */
+.btn-1:hover span:nth-child(2) {
+  transition-delay: 0.1s; /* Retraso de 0.1s */
+}
+
+.btn-1:hover span:nth-child(3) {
+  transition-delay: 0.2s; /* Retraso de 0.2s */
+}
+
+.btn-1:hover span:nth-child(4) {
+  transition-delay: 0.3s; /* Retraso de 0.3s */
+}
+
+.btn-1:hover span:nth-child(5) {
+  transition-delay: 0.4s; /* Retraso de 0.4s */
+}
+
+.btn-1:hover span:nth-child(6) {
+  transition-delay: 0.5s; /* Retraso de 0.5s */
 }
