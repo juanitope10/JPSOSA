@@ -1,0 +1,875 @@
+:root {
+    --main-color: #003366; /* Color predeterminado */
+    --main-text: #333;
+  }
+  
+  @media (max-width: 800px) {
+    :root {
+      --main-color: #005cb8; /* Color para pantallas de teléfono */
+    }
+  }
+  
+  @media (min-width: 801px) and (max-width: 1200px) {
+    :root {
+      --main-color:  #01478d; /* Color para tabletas o portátiles sencillos */
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    :root {
+      --main-color: #003366; /* Color para pantallas de escritorio */
+    }
+  }
+
+.dark-mode {
+    background-color: #3a3636;
+    --main-color: #2c2727;
+}
+
+
+/* General Styles */
+* {
+    box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño total del elemento */
+    margin: 0; /* Resetea márgenes predeterminados */
+    padding: 0; /* Resetea padding predeterminado */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente principal de la página */
+    font-size: 14px; /* Tamaño de fuente base */
+    line-height: 1.6; /* Espaciado entre líneas */
+    background-color: #f4f7fb; /* Fondo claro para la página */
+    color: var(--main-text); /* Color de texto principal */
+    padding: 0; /* Sin padding extra */
+    transition: background-color 0.3s ease; /* Suaviza los cambios de color de fondo */
+}
+
+a {
+    text-decoration: none; /* Elimina subrayado predeterminado en enlaces */
+    color: inherit; /* Hereda el color del texto circundante */
+    transition: color 0.3s ease; /* Suaviza cambios de color en enlaces */
+}
+
+/*  */
+header {
+    background-color: var(--main-color); /* Fondo oscuro para el encabezado */
+    padding: 1.5rem 2rem; /* Espaciado interno del encabezado */
+    text-align: center; /* Centra el contenido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo del encabezado */
+    transition: background-color 0.3s ease; /* Suaviza cambios de color de fondo */
+}
+
+header h1 {
+    color: white; /* Texto blanco para el título */
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+    font-weight: 600; /* Negrita media */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    margin-bottom: 1rem; /* Margen inferior para separar del resto */
+}
+
+header nav ul {
+    list-style: none; /* Elimina viñetas de la lista */
+    padding: 0; /* Sin padding interno */
+    margin: 1rem 0; /* Margen vertical alrededor de la lista */
+    transform: scale(0.8); /* Reduce el tamaño del menú */
+}
+
+header nav ul li {
+    display: inline-block; /* Coloca los elementos de la lista en línea */
+    margin: 0 1.5rem; /* Espaciado horizontal entre enlaces */
+}
+
+header nav ul li a {
+    color: #fff; /* Color blanco para los enlaces */
+    font-size: 1.2rem; /* Tamaño de fuente de los enlaces */
+    font-weight: 500; /* Negrita ligera */
+    transition: color 0.3s ease; /* Suaviza cambios de color en enlaces */
+}
+
+header nav ul li a:hover {
+    color: #ff6600; /* Color naranja al pasar el cursor */
+}
+
+/* Main Content */
+main {
+    max-width: 85%; /* Ancho máximo del contenido principal */
+    margin: 2rem auto; /* Centra el contenido con márgenes verticales */
+    padding: 2rem; /* Espaciado interno del contenido */
+    background-color: #ffffff; /* Fondo blanco para el contenido */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Suaviza cambios en sombra y fondo */
+}
+
+main:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Aumenta sombra al pasar el cursor */
+}
+
+section h2 {
+    color: var(--main-color); /* Color azul oscuro para subtítulos */
+    font-size: 2.2rem; /* Tamaño grande para subtítulos */
+    font-weight: 700; /* Negrita fuerte */
+    text-align: center; /* Centra los subtítulos */
+    margin-bottom: 1.5rem; /* Espaciado inferior */
+}
+
+section p {
+    text-align: justify; /* Justifica el texto de los párrafos */
+    margin-bottom: 1.5rem; /* Espaciado inferior entre párrafos */
+    line-height: 1.8; /* Espaciado cómodo entre líneas */
+}
+
+/* Images */
+main img {
+    display: block; /* Centra la imagen */
+    margin: 2rem auto; /* Espaciado alrededor de la imagen */
+    max-width: 100%; /* Escala la imagen para que no desborde */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra alrededor de la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza transformaciones y cambios de sombra */
+}
+
+main img:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Incrementa sombra al pasar el cursor */
+}
+
+/* Grid for sections */
+#sections-grid {
+    display: grid; /* Activa diseño de cuadrícula */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el número de columnas automáticamente */
+    gap: 1.5rem; /* Espaciado entre los elementos de la cuadrícula */
+    margin: 2rem auto; /* Centra la cuadrícula con márgenes */
+    max-width: 1200px; /* Ancho máximo de la cuadrícula */
+    padding: 0 1rem; /* Padding interno para evitar que el contenido toque los bordes */
+}
+
+.grid-container {
+    text-align: center; /* Centra el texto dentro de los contenedores */
+}
+
+.grid-item {
+    position: relative; /* Posiciona elementos relativos al contenedor */
+    height: 250px; /* Altura fija para los ítems de la cuadrícula */
+    background-color: #ccc; /* Fondo gris claro */
+    background-size: cover; /* Escala la imagen de fondo para cubrir todo */
+    background-position: center; /* Centra la imagen de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex; /* Flexbox para centrar el contenido */
+    align-items: flex-end; /* Alinea el contenido al fondo */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Centra el texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza transformaciones y cambios de sombra */
+}
+
+.grid-item:hover {
+    transform: translateY(-10px); /* Desplaza hacia arriba al pasar el cursor */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más prominente al pasar el cursor */
+}
+
+.grid-item a {
+    color: white; /* Texto blanco para los enlaces */
+    font-size: 1.3rem; /* Tamaño de fuente para enlaces */
+    font-weight: 600; /* Negrita media */
+    text-decoration: none; /* Sin subrayado */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    padding: 0.5rem 1.2rem; /* Espaciado interno del enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Suaviza cambios de fondo y tamaño */
+}
+
+.grid-item a:hover {
+    background-color: rgba(255, 102, 0, 0.8); /* Fondo naranja semitransparente al pasar el cursor */
+    transform: scale(1.05); /* Incrementa tamaño ligeramente al pasar el cursor */
+}
+
+/* Explore More Button */
+.explore-button {
+    display: inline-block; /* Botón en línea con bloque */
+    padding: 12px 25px; /* Espaciado interno del botón */
+    background-color: #ff6600; /* Fondo naranja */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1.2rem; /* Tamaño de fuente del botón */
+    border-radius: 6px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    margin-top: 2rem; /* Margen superior para separarlo del resto */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Suaviza cambios de fondo y tamaño */
+}
+
+.explore-button:hover {
+    background-color: #e65c00; /* Fondo más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Incrementa tamaño ligeramente al pasar el cursor */
+}
+
+/* Footer */
+footer {
+    background-color: var(--main-color); /* Fondo oscuro para el pie de página */
+    padding: 1.5rem; /* Espaciado interno del pie de página */
+    text-align: center; /* Centra el texto */
+    color: white; /* Texto blanco */
+    margin-top: 3rem; /* Margen superior para separarlo del contenido */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra en la parte superior del pie de página */
+}
+
+footer p {
+    font-size: 1.1rem; /* Tamaño de fuente del texto del pie de página */
+    font-weight: 500; /* Negrita ligera */
+    margin: 0; /* Sin margen adicional */
+}
+
+/* Media Queries */
+
+/* Teléfono celular en sentido vertical (<800px) */
+@media only screen and (max-width: 800px) {
+    body {
+        font-size: 14px; /* Reduce el tamaño de fuente base */
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Reduce el tamaño del título */
+    }
+
+    main {
+        max-width: 90%; /* Ajusta el ancho máximo para pantallas pequeñas */
+        padding: 1rem; /* Reduce el padding interno */
+    }
+
+    #sections-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto del pie de página */
+    }
+}
+
+/* Tabletas o portátiles sencillos (800px - 1200px) */
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+    body {
+        font-size: 15px; /* Ajusta ligeramente el tamaño de fuente */
+    }
+
+    main {
+        max-width: 80%; /* Incrementa ligeramente el ancho máximo */
+        padding: 1.5rem; /* Ajusta el padding interno */
+    }
+
+    #sections-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+
+    header h1 {
+        font-size: 2.2rem; /* Reduce ligeramente el tamaño del título */
+    }
+}
+
+/* Pantallas de escritorio (>1200px) */
+@media only screen and (min-width: 1000px) {
+    body {
+        font-size: 16px; /* Tamaño de fuente estándar para escritorio */
+    }
+
+    main {
+        max-width: 85%; /* Ancho máximo para contenido principal */
+    }
+
+    #sections-grid {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    }
+}
+
+/* Contenedor de los botones */
+.button-container {
+    display: flex; /* Usa flexbox para organizar los botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Centra los botones verticalmente */
+    gap: 1rem; /* Espaciado de 1rem entre los botones */
+    flex-wrap: wrap; /* Permite que los botones se envuelvan a una nueva línea si es necesario */
+    margin-top: 2rem; /* Margen superior de 2rem */
+}
+
+/* Estilo general de los botones */
+button {
+    font-size: 1.5rem; /* Tamaño de fuente de 1.5rem */
+    font-weight: 700; /* Negrita en el texto */
+    color: white; /* Color del texto blanco */
+    background-color: var(--main-color); /* Color de fondo azul oscuro */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 1rem 2rem; /* Relleno interno de 1rem en la parte superior e inferior y 2rem a los lados */
+    min-width: 200px; /* Ancho mínimo de 200px */
+    max-width: 300px; /* Ancho máximo de 300px */
+    text-align: center; /* Alineación del texto en el centro */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave alrededor del botón */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave en el color de fondo, la transformación y la sombra */
+    background-size: cover; /* Asegura que las imágenes de fondo cubran todo el botón */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+/* Efectos al pasar el cursor por encima del botón */
+button:hover {
+    transform: scale(1.05); /* Aumenta el tamaño del botón ligeramente */
+}
+
+/* Media query para pantallas pequeñas (celulares y tabletas) */
+@media (max-width: 1000px) {
+    .button-container {
+        flex-direction: column; /* Coloca los botones en una columna */
+        align-items: center; /* Centra los botones horizontalmente */
+        gap: 1rem; /* Espaciado vertical entre los botones */
+    }
+
+    button {
+        width: 90%; /* Los botones ocupan el 90% del ancho en pantallas pequeñas */
+    }
+}
+
+/* Media query para pantallas medianas (tabletas y portátiles) */
+@media (min-width: 950px) and (max-width: 1200px) {
+    .button-container {
+        flex-direction: row; /* Mantiene los botones en una fila */
+        justify-content: center; /* Centra los botones horizontalmente */
+    }
+}
+
+/* Media query para pantallas grandes (escritorios) */
+@media (min-width: 1201px) {
+    .button-container {
+        justify-content: space-evenly; /* Espaciado uniforme entre los botones */
+    }
+
+    button {
+        width: auto; /* El ancho de los botones es automático */
+    }
+}
+
+/* Efectos al pasar el cursor sobre los botones (otra vez) */
+.button-container button:hover {
+    background-color: #ff6600; /* Cambia el color de fondo a naranja */
+    transform: scale(1.05); /* Aumenta el tamaño del botón ligeramente */
+    box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el cursor */
+}
+
+/* Efectos al enfocar los botones (cuando se hace clic o se navega hacia ellos) */
+.button-container button:focus {
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+    background-color: #e65c00; /* Fondo naranja más oscuro */
+    transform: scale(1.03); /* Ajusta ligeramente el tamaño */
+}
+
+/* Estilo específico para el botón de 'equipos locales' */
+.equipos-locales-btn {
+    background-image: url('Imagenes/WhatsApp Image 2024-12-01 at 4.33.02 PM (2).jpeg'); /* Establece una imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el área del botón */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+/* Estilo específico para el botón de 'torneos de microfútbol' */
+.torneos-microfutbol-btn {
+    background-image: url('Imagenes/WhatsApp Image 2024-12-01 at 1.53.33 PM.jpeg'); /* Establece una imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el área del botón */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+/* Contenedor para las secciones */
+#sections-grid {
+    display: flex; /* Usa flexbox para organizar el contenido */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    min-height: 50vh; /* Asegura que ocupe al menos el 50% de la altura de la ventana */
+    padding: 0.5rem; /* Relleno interno de 0.5rem */
+    background-color: #f9f9f9; /* Color de fondo gris claro */
+}
+
+/* Estilo de los títulos dentro del contenedor de secciones */
+#sections-grid h2 {
+    font-size: 2.5rem; /* Tamaño de fuente de 2.5rem */
+    margin-bottom: 2rem; /* Margen inferior de 2rem */
+    color: var(--main-color); /* Color de texto azul oscuro */
+    text-align: center; /* Alineación centrada del texto */
+}
+
+/* Estilo específico para los botones de 'equipos locales' y 'torneos de microfútbol' */
+.equipos-locales-btn, .torneos-microfutbol-btn {
+    background-size: cover; /* Mantiene el ajuste de la imagen de fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    width: 470px; /* Ancho fijo del botón */
+    height: 350px; /* Alto fijo del botón */
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Alinea el texto en el centro */
+    color: white; /* Color del texto blanco */
+    font-size: 1.2rem; /* Tamaño de fuente del texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+/* Contenedor de la cuadrícula */
+.grid-container {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    max-width: 1000px; /* Limita el ancho máximo a 1000px */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+    display: flex; /* Utiliza flexbox para organizar los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias filas si es necesario */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 2rem; /* Espaciado de 2rem entre los elementos */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del tamaño */
+    padding: 1rem; /* Espacio adicional alrededor del contenido */
+}
+
+/* Estilo de los elementos dentro de la cuadrícula */
+.grid-item {
+    width: 40%; /* Ancho de cada elemento del 40% del contenedor */
+    max-width: 2000px; /* Establece un ancho máximo de 2000px */
+    aspect-ratio: 3 / 4; /* Relación de aspecto ajustada de 3:4 */
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el área del elemento */
+    background-position: center; /* Centra la imagen de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave alrededor del elemento */
+    position: relative; /* Posicionamiento relativo para poder ubicar elementos dentro */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga del área del elemento */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave en la transformación y la sombra */
+}
+
+/* Efectos al pasar el cursor sobre el elemento */
+.grid-item:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del elemento */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el cursor */
+}
+
+/* Estilo para el enlace dentro de los elementos */
+.grid-item a {
+    position: absolute; /* Posicionamiento absoluto dentro del contenedor */
+    bottom: 0; /* Ubica el enlace en la parte inferior */
+    left: 0; /* Ubica el enlace en el borde izquierdo */
+    right: 0; /* Ubica el enlace en el borde derecho */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente negro */
+    color: white; /* Color del texto blanco */
+    text-align: center; /* Alinea el texto en el centro */
+    font-size: 1rem; /* Tamaño de la fuente del enlace */
+    padding: 0.5rem; /* Espacio alrededor del texto del enlace */
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    font-weight: bold; /* Pone el texto en negrita */
+    transition: background-color 0.3s ease; /* Transición suave en el color de fondo */
+}
+
+/* Efectos al pasar el cursor sobre el enlace */
+.grid-item a:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro al pasar el cursor */
+}
+
+/* Ajuste para tabletas (pantallas medianas) */
+@media (max-width: 1024px) {
+    .grid-container {
+        flex-direction: row; /* Asegura que los elementos mantengan el flujo horizontal */
+        justify-content: space-around; /* Distribuye los elementos con espacio alrededor */
+    }
+    .grid-item {
+        width: 100%; /* Los elementos ocupan el 100% del ancho en pantallas medianas */
+    }
+}
+
+/* Ajuste para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+    .grid-container {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+    .grid-item {
+        width: 100%; /* Los elementos ocupan el 100% del ancho en pantallas pequeñas */
+    }
+}
+
+/* Estilos generales para el menú de navegación */
+nav {
+    background-color: var(--main-color); /* Fondo azul oscuro para el menú */
+    color: white; /* Color blanco para el texto */
+    padding: 10px; /* Espacio alrededor del contenido del menú */
+}
+
+/* Estilo de la lista dentro del menú de navegación */
+nav ul {
+    list-style: none; /* Elimina los puntos de lista */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+/* Estilo de los elementos de la lista dentro del menú */
+nav ul li {
+    margin: 0; /* Elimina el margen entre los elementos de la lista */
+}
+
+/* Estilo de los enlaces dentro de los elementos de la lista */
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Color blanco para los enlaces */
+    display: block; /* Hace que el enlace ocupe todo el área del elemento */
+    padding: 10px; /* Espacio alrededor del texto del enlace */
+}
+
+/* Estilo del ícono del menú (solo para pantallas pequeñas) */
+.menu-icon {
+    display: none; /* Oculta el ícono del menú en pantallas grandes */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
+    font-size: 5px; /* Tamaño de la fuente del ícono */
+    color: white; /* Color blanco para el ícono */
+    background-color: var(--main-color); /* Fondo azul oscuro para el ícono */
+    padding: 7px; /* Espacio alrededor del ícono */
+    border-radius: 5px; /* Bordes redondeados para el ícono */
+}
+
+/* Estilo para el título de la sección */
+.tittle {
+    display: flex; /* Usa flexbox para organizar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    width: 100%; /* Ancho completo */
+    height: 60px; /* Altura fija para el título */
+    margin: auto; /* Centra el título horizontalmente */
+    text-align: center; /* Alinea el texto en el centro */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 20px 40px 10px 10px; /* Aumenta el padding-top */
+}
+
+.principal-navegation, .menu12 {
+    display: flex; /* Usa flexbox para organizar los elementos */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Alinea el texto en el centro */
+    align-items: center; /* Centra el contenido verticalmente */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    margin: 0 auto; /* Centra horizontalmente */
+    gap: 2000px; /* Añade espacio entre los botones */
+}
+
+
+/* Estilo para la navegación principal */
+
+@media (max-width: 1200px) {
+    .principal-navegation, .menu12 {
+        font-size: 0.9rem; /* Reduce un poco el tamaño del texto */
+    }
+}
+
+/* Estilo para el menú en pantallas pequeñas */
+#menu {
+    display: flex; /* Muestra el menú como una fila */
+    flex-direction: row; /* Organiza las opciones en una fila */
+    background-color: var(--main-color); /* Fondo azul oscuro para el menú */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    gap : 20px
+}
+
+
+.search-bar {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 50%;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.header {
+    background: linear-gradient(to right, #004080, #002850);
+    padding: 20px 0;
+    border-bottom: 3px solid #ffcc00; /* Un color contrastante */
+}
+h1 {
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.button {
+    --color: #ffffff;
+    padding: 0.8em 30em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 20px;
+    border: 0.2px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+}
+
+   
+.button {
+    --color: #ffffff;
+    padding: 1VW 29vw; /* El padding horizontal se ajusta al 5% del ancho de la pantalla */
+    background-color: transparent;
+    border-radius: 1VW;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 2.3vw; /* Ajusta el tamaño de la fuente según el ancho de la pantalla */
+    border: 0.2px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    text-align: center; /* Asegura que el texto esté centrado */
+    width: 100vw; /* El ancho del botón ocupa el 100% del ancho de la pantalla */
+    height: 10vh; /* Ajusta la altura del botón al 10% de la altura de la pantalla */
+    font-weight: 800;
+}
+
+/* Estilos responsive para pantallas más pequeñas */
+@media (max-width: 1000px) {
+    .menu-icon {
+        display: block; /* Muestra el ícono del menú en pantallas pequeñas */
+    }
+  
+    #menu {
+        display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+        flex-direction: column; /* Organiza las opciones en una columna cuando se muestre */
+        background-color: var(--main-color); /* Fondo azul oscuro para el menú desplegable */
+    }
+
+    #menu.visible {
+        display: flex; /* Muestra el menú cuando tiene la clase 'visible' */
+    }
+
+    #menu li {
+        border-bottom: 1px solid #004080; /* Agrega un separador entre las opciones */
+    }
+
+    .tittle {
+        width: 100%; /* Ancho completo para el título en pantallas pequeñas */
+    }
+    .button{
+        font-size: 3.6vw; /* Ajusta el tamaño de la fuente según el ancho de la pantalla */
+        padding: 0.5px 35vw; /* El padding horizontal se ajusta al 5% del ancho de la pantalla */
+        border-radius: 1VW;
+    }
+}
+@media (max-width: 800px){
+    .button{
+        font-size: 5vw; /* Ajusta el tamaño de la fuente según el ancho de la pantalla */
+        border-radius: 3VW;
+        padding: 0.5px 32vw;
+    }
+}
+
+
+.button::before, .button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 200%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1.5s ease;
+}
+
+.button::before {
+    top: -1em;
+    left: -1em;
+}
+
+.button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.button:hover::before, .button:hover::after {
+    height: 22vw;
+    width: 25vw;
+}
+
+.button:hover {
+    color: rgb(255, 255, 255);
+}
+
+.button:active {
+    filter: brightness(.8);
+}
+
+
+   .button2 {
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    padding: 1rem;
+  }
+  
+  .button2:before {
+    background-color: #fff;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    margin-right: 10px;
+    transition: all .42s cubic-bezier(.25,.8,.25,1);
+    width: 0;
+  }
+  
+  .button2:hover:before {
+    background-color: #fff;
+    width: 3rem;
+  }
+.fila{
+    display: flex;
+    width: 100%; /* Ocupar todo el ancho de la pantalla */
+}
+
+.start{
+    position: absolute; /* Para posicionar la div con precisión */
+    right: 12px; /* Espacio desde el borde derecho */
+    top: 12px; /* Espacio desde la parte superior */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    padding: 10px; /* Espaciado interno opcional */
+    
+}
+
+.switch {
+    --secondary-container: #00162c;
+    --primary:  #666060;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    width: 3.7em;
+    height: 1.8em;
+   }
+   
+   .switch input {
+    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
+   }
+   
+   .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #313033;
+    transition: .2s;
+    border-radius: 30px;
+   }
+   .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.2em;
+    bottom: 0.2em;
+    background-color: white;
+    transition: .1s;
+   }
+   
+   input:checked + .slider::before {
+    background-color: var(--primary);
+   }
+   
+   input:checked + .slider {
+    background-color: var(--secondary-container);
+   }
+   
+   input:focus + .slider {
+    box-shadow: 0 0 1px var(--secondary-container);
+   }
+   
+   input:checked + .slider:before {
+    transform: translateX(1.9em);
+   }
+/* Hide the default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background-color: var(--main-text);
+    border-radius: 100%;
+    background: #e8e8e8;
+    box-shadow: 3px 3px 5px #c5c5c5,
+                -3px -3px 5px #ffffff;
+    transition-duration: 0.5s;
+  }
+  
+  .container input:checked ~ .checkmark {
+    box-shadow: inset 3px 3px 5px #c5c5c5,
+                inset -3px -3px 5px #ffffff;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    opacity: 1;
+  }
+  
+  .container .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: var(--main-text);
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+  }

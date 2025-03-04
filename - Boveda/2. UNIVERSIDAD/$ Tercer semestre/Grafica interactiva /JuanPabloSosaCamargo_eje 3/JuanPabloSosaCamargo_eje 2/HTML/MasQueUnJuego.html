@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica de la página -->
+    <meta charset="UTF-8"> <!-- Define el conjunto de caracteres para la página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Asegura que la página sea responsive -->
+    <title>Más que un juego</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="../styles.css"> <!-- Enlace al archivo CSS para los estilos -->
+    <script>
+      if (localStorage.getItem("dark-mode") === "enabled") {
+          document.documentElement.classList.add("dark-mode");
+      } else {
+          document.documentElement.classList.remove("dark-mode");
+      }
+  </script>
+  
+</head>
+<body>
+  <header>
+    <div class = "fila">
+      <label class="container">
+        <input type="checkbox" id="textColorToggle">
+        <div class="checkmark"></div>
+    </label>
+      <div class = "start">
+          <label class="switch">
+              <input type="checkbox" id="themeToggle">
+              <span class="slider"></span>
+          </label>
+      </div>
+      </div>
+    <div class="tittle">
+        <!-- Título principal de la página -->
+        <h1><button class=" button"> MAS QUE UN JUEGO </button></h1>
+    </div>
+    <nav>
+      <ul>
+          <button class="button1" onclick="location.href='../index.html'">
+                   INICIO 
+          </button>
+      </ul>
+<!-- Ícono de menú para dispositivos móviles -->
+<div class="menu-icon" onclick="toggleMenu()"> <button class=" button1"> ☰ MENU </button></div>
+<div class="principal-navegation">
+  <ul id="menu" class="hidden">
+      <!-- Enlaces del menú de navegación -->
+       
+      <button class=" button2" onclick="location.href='ElCorazonDelBarrio.html'">
+          El Corazón del Barrio
+      </button>
+      <button class=" button2" onclick="location.href='LasEstrellasDelPavimento.html'">
+          Las Estrellas
+      </button>
+      <button class=" button2" onclick="location.href='MasQueUnJuego.html'">
+          Más Que un Juego
+      </button>
+      <button class=" button2" onclick="location.href='MemoriasDelCampo.html'">
+          Memorias del Campo
+      </button>
+      <button class=" button2" onclick="location.href='DetrasDelSilbato.html'">
+          Detrás del Silbato
+      </button>
+      <button class=" button2" onclick="location.href='map.html'">
+        Mapa
+    </button>
+      
+  </ul>
+  </div>
+</nav>
+</header>
+    
+    <main>
+        <section>
+           <!-- Contenido principal de la página -->
+            <h2>Un escenario de convivencia</h2><!-- Subtítulo de la sección -->
+            <p>
+                La cancha "La Come Carne" no es solo un espacio donde se practica deporte; es un lugar donde la vida del barrio cobra movimiento y sentido. Aunque inicialmente fue concebida como una cancha de microfútbol, con el paso de los años se ha convertido en un epicentro de actividades diversas que reflejan la riqueza cultural y social de la comunidad.
+              </p>
+              <p>
+                Aquí, el microfútbol sigue siendo el rey indiscutible, con partidos que reúnen tanto a los equipos organizados como a los amigos que deciden improvisar un encuentro. Los domingos por la mañana son un espectáculo vibrante, con gritos de gol, estrategias comentadas desde las gradas y la emoción de los penales que definen campeonatos de barrio. Pero "La Come Carne" no se queda ahí: en las tardes soleadas, las redes de voleibol aparecen, y jóvenes y adultos se agrupan para disfrutar de un deporte que combina precisión, agilidad y compañerismo.
+              </p>
+              <p>
+                El patinaje también tiene su lugar en este espacio. Las niñas y niños, con cascos y rodilleras, recorren la superficie lisa con entusiasmo, aprendiendo a deslizarse con destreza. Es habitual ver a los padres alentando a sus hijos desde las gradas, acompañados de sonrisas y palabras de ánimo. Por las noches, cuando las luces se encienden, los amantes del baloncesto toman el control de la cancha. Entre dribles, lanzamientos y encestes, este deporte llena el ambiente de una energía particular que une a jugadores y espectadores.
+              </p>
+              <p>
+                Sin embargo, lo que ocurre en "La Come Carne" va mucho más allá del simple acto de jugar. Para los habitantes del sector, este espacio representa un refugio de convivencia y aprendizaje. Aquí se forman amistades que duran toda la vida, se refuerzan valores como el respeto, la disciplina y el trabajo en equipo, y se construyen historias que se transmiten de generación en generación.
+              </p>
+              <p>
+                Además de los deportes, la cancha también es un lugar para eventos comunitarios. Ferias, presentaciones culturales y actividades al aire libre son frecuentes, convirtiendo este espacio en un motor de integración y desarrollo social. Incluso aquellos que no participan directamente en las actividades deportivas encuentran en las gradas un lugar para socializar, compartir historias y ser parte de la vida del barrio.
+              </p>
+              <p>
+                En "La Come Carne", un partido de microfútbol, un torneo de voleibol o una sesión de patinaje no son solo actividades recreativas. Son momentos que reflejan el espíritu de una comunidad que, a través del deporte, encuentra una manera de expresarse, de superar obstáculos y de reafirmar su identidad. Aquí, cada pase, cada enceste y cada caída en el asfalto cuentan una historia que dice: esto es más que un juego, es el corazón del barrio latiendo en conjunto.
+              </p>
+              <!-- Imagen destacada de la sección -->
+              <div class="imagenes-masqueunjuego"> 
+              <img src="../Imagenes/WhatsApp Image 2024-12-01 at 4.42.19 PM.jpeg" alt="Patinaje">
+              </div>
+            <h3>Deportes:</h3> <!-- Título para la lista de deportes -->   
+            <p>
+                El microfútbol es el deporte estrella de "La Come Carne". Cada semana, la cancha se llena de vida con apasionados partidos que enfrentan a equipos organizados o simplemente a amigos que deciden improvisar un juego. Las gradas vibran con los gritos de ánimo y los comentarios de los espectadores, mientras los jugadores dejan todo en la cancha en busca del gol decisivo. Es el deporte que ha marcado la identidad de este espacio desde sus inicios y que sigue siendo el preferido por muchos en el barrio.
+              </p>
+              <p>
+                El voleibol también ha encontrado su lugar en esta cancha. Las tardes soleadas suelen ser el escenario perfecto para que jóvenes y adultos instalen las redes y disfruten de este deporte que combina precisión, fuerza y trabajo en equipo. Los partidos de voleibol no solo son una oportunidad para competir, sino también para fortalecer amistades y compartir momentos de diversión con la comunidad.
+              </p>
+              <p>
+                El patinaje tiene un papel especial, sobre todo para los más pequeños. Con cascos, rodilleras y una gran dosis de entusiasmo, niñas y niños recorren la cancha aprendiendo a deslizarse con confianza. Este deporte no solo fomenta el equilibrio y la destreza, sino que también crea recuerdos imborrables para quienes dan sus primeros pasos sobre ruedas en este lugar.
+              </p>
+              <p>
+                Cuando cae la noche y las luces de la cancha se encienden, el baloncesto se adueña del espacio. Entre dribles, lanzamientos y encestes, los jugadores muestran su destreza mientras el público disfruta de la intensidad y la emoción del juego. Es un deporte que reúne a diferentes generaciones y que ha ganado un lugar importante en la agenda deportiva de "La Come Carne".
+              </p> 
+              <!-- Galería de imágenes relacionadas con las actividades deportivas -->
+              <div class="imagenes-masqueunjuego">  
+              <img src="../Imagenes/WhatsApp Image 2024-12-01 at 1.53.32 PM.jpeg" alt="Patinaje">
+              <img src="../Imagenes/WhatsApp Image 2024-12-01 at 4.45.44 PM.jpeg" alt="Voleibol">
+              <img src="../Imagenes/WhatsApp Image 2024-12-01 at 4.45.45 PM.jpeg" alt="Basket"> 
+              </div>
+        </section>
+    </main>
+    
+    <footer>
+      <!-- Pie de página -->
+      <p>&copy; 2024 La come carne. Todos los derechos reservados.</p> <!-- Derechos reservados -->
+    </footer>
+    <script src="../Script.js"></script>
+</body>
+</html>

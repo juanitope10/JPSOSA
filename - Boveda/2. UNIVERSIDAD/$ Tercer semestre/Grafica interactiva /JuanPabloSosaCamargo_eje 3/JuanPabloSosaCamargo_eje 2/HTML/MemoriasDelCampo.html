@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorias del campo</title>
+    <!-- Enlace al archivo de estilos CSS externo -->
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        if (localStorage.getItem("dark-mode") === "enabled") {
+            document.documentElement.classList.add("dark-mode");
+        } else {
+            document.documentElement.classList.remove("dark-mode");
+        }
+    </script>
+    
+</head>
+<body>
+    <header>
+        <div class = "fila">
+            <label class="container">
+                <input type="checkbox" id="textColorToggle">
+                <div class="checkmark"></div>
+            </label>
+            <div class = "start">
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            </div>
+        <div class="tittle">
+            <!-- Título principal de la página -->
+            <h1><button class=" button"> MEMORIAS DEL CAMPO </button></h1>
+        </div>
+        <nav>
+            <ul>
+                <button class="button1" onclick="location.href='../index.html'">
+                         INICIO 
+                </button>
+            </ul>
+      <!-- Ícono de menú para dispositivos móviles -->
+      <div class="menu-icon" onclick="toggleMenu()"> <button class=" button1"> ☰ MENU </button></div>
+      <div class="principal-navegation">
+        <ul id="menu" class="hidden">
+            <!-- Enlaces del menú de navegación -->
+             
+            <button class=" button2" onclick="location.href='ElCorazonDelBarrio.html'">
+                El Corazón del Barrio
+            </button>
+            <button class=" button2" onclick="location.href='LasEstrellasDelPavimento.html'">
+                Las Estrellas
+            </button>
+            <button class=" button2" onclick="location.href='MasQueUnJuego.html'">
+                Más Que un Juego
+            </button>
+            <button class=" button2" onclick="location.href='MemoriasDelCampo.html'">
+                Memorias del Campo
+            </button>
+            <button class=" button2" onclick="location.href='DetrasDelSilbato.html'">
+                Detrás del Silbato
+            </button>
+            <button class=" button2" onclick="location.href='map.html'">
+                Mapa
+            </button>
+            
+        </ul>
+        </div>
+</nav>
+</header>
+    
+    <main>
+        <section>
+            <!-- Encabezado de la sección principal -->
+            <h2>La Historia de la Cancha</h2>
+            <!-- Párrafo introductorio sobre la cancha -->
+            <p>En el corazón de la localidad de Soacha, en medio de un ambiente cargado de historias y anécdotas, se encuentra la emblemática cancha de microfútbol conocida como "La Come Carne". Este peculiar nombre, que despierta curiosidad en todos quienes lo escuchan, tiene su origen en los primeros años de la cancha, cuando su superficie de cemento era tan áspera y rugosa que, al caer, era prácticamente inevitable salir con raspones o heridas. Aunque con el tiempo el nombre quedó como una marca distintiva, refleja los inicios humildes y duros de este espacio deportivo.</p>
+
+            <!-- Historia inicial y contexto de construcción -->
+            <p>Construida en los primeros años de la década de 2000, la cancha fue diseñada como parte de un proyecto conjunto con el conjunto residencial cercano. Sin embargo, en su etapa inicial no contaba con las condiciones necesarias para ser un lugar cómodo ni mucho menos atractivo. Durante años, su pavimento rudimentario y la ausencia de gradas o iluminación adecuada la hacían un lugar funcional, pero limitado. Los deportistas del barrio no se dejaban intimidar por esas dificultades: las tardes de domingo se llenaban de apasionados partidos de microfútbol, donde las risas, los gritos de aliento y las inevitables caídas en el cemento áspero creaban recuerdos imborrables.</p> 
+
+            <!-- Imagen de la cancha antes de su renovación -->
+            <img src="../Imagenes/WhatsApp Image 2024-12-01 at 4.59.43 PM.jpeg" alt="2012">
+
+            <!-- Narrativa sobre el simbolismo de la cancha para la comunidad -->
+            <p>A pesar de sus carencias, "La Come Carne" se convirtió en un símbolo del barrio. Fue testigo de torneos improvisados, reuniones comunitarias y hasta eventos culturales organizados por los vecinos. Las paredes que delimitan la cancha estaban decoradas con grafitis que narraban historias del barrio, desde homenajes a equipos locales hasta mensajes de unión y resistencia. Era un lugar donde los más jóvenes aprendían a patear un balón y los mayores compartían anécdotas de cómo los partidos allí jugados fortalecían los lazos comunitarios.</p> 
+
+            <!-- Relato del proceso de renovación de la cancha -->
+            <p>El punto de inflexión llegó en el año 2021, cuando, tras años de solicitudes por parte de la comunidad, se dio luz verde a una reconstrucción completa de la cancha. La obra, aunque tardada, con un periodo de ejecución de aproximadamente un año y medio, transformó por completo el espacio. El cemento rugoso fue reemplazado por un pavimento más liso y adecuado para el juego, se construyeron gradas amplias para que los espectadores pudieran disfrutar cómodamente de los partidos, y se instalaron luminarias que permitieron extender las jornadas deportivas hasta la noche. La renovación no solo mejoró la funcionalidad del lugar, sino que también revitalizó el espíritu del barrio, dándole un nuevo sentido de pertenencia a la comunidad.</p>
+
+            <!-- Imagen de la cancha tras la renovación -->
+            <img src="../Imagenes/WhatsApp Image 2024-12-01 at 5.00.29 PM.jpeg" alt="Renovacion">
+
+            <!-- Reflexión sobre el impacto social y comunitario de la cancha -->
+            <p>Hoy en día, "La Come Carne" es mucho más que una cancha; es un punto de encuentro para jóvenes, adultos y niños. Además de los tradicionales partidos de microfútbol, el espacio es utilizado para actividades culturales, clases al aire libre y ferias comunitarias. El nombre, aunque mantiene su peculiaridad, ahora se pronuncia con orgullo, como un recordatorio de los tiempos difíciles que el barrio logró superar juntos.</p>
+            
+            <!-- Conclusión sobre el significado histórico y comunitario de la cancha -->
+            <p>"La Come Carne" no solo cuenta la historia de un espacio deportivo, sino también la de una comunidad que, a pesar de las adversidades, ha sabido construir identidad, unión y progreso en torno a un lugar que pertenece a todos.</p>
+            <p>A lo largo de los años, la cancha ha sido testigo de grandes momentos: campeonatos memorables, amistades que nacieron aquí, y hasta la visita de jugadores destacados que alguna vez jugaron en este mismo espacio.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Pie de página con derechos reservados -->
+        <p>&copy; 2024 El Primer Campeón. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../Script.js"></script>
+
+</body>
+</html>

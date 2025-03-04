@@ -14,6 +14,7 @@
   background-size: cover; /* Ajustar la imagen para cubrir todo el fondo */
   background-position: center; /* Centrar la posición de la imagen de fondo */
   aspect-ratio: 16 / 9; /* Ajusta la relación de aspecto según la imagen */
+  margin-top: 45px;
 }
 
 .section_hidden {
@@ -77,24 +78,24 @@
   padding: 5px 10px; /* Espaciado interno del tooltip */
   border-radius: 5px; /* Bordes redondeados del tooltip */
   white-space: nowrap; /* Evita el salto de línea */
-  font-size: 130%; /* Tamaño de fuente del tooltip */
+  font-size: 110%; /* Tamaño de fuente del tooltip */
 }
 
 .jugador::before {
-  content: " "; /* Contenido vacío antes del jugador */
+  content: "   "; /* Contenido vacío antes del jugador */
   position: absolute; /* Posicionamiento absoluto del elemento */
   top: -120px; /* Posición superior del elemento */
   left: 50%; /* Centrar horizontalmente */
   transform: translateX(-50%); /* Ajuste adicional para centrar */
-  width: 70px; /* Ancho del elemento */
-  height: 70px; /* Altura del elemento */
+  width: 60px; /* Ancho del elemento */
+  height: 60px; /* Altura del elemento */
   background-size: cover; /* Ajusta la imagen para cubrir todo el elemento */
   background-position: center; /* Centra la imagen dentro del elemento */
   border-radius: 0%; /* Bordes sin redondear */
   opacity: 0; /* Inicialmente invisible */
   transition: opacity 0.3s ease-in-out; /* Transición suave para la opacidad */
   z-index: 1000; /* Asegura que el elemento esté por encima de otros elementos */
-  animation: cambiarImagen 25s infinite steps(1); /* Animación de cambio de imagen */
+  animation: cambiarImagen 18s infinite steps(1); /* Animación de cambio de imagen */
 }
 
 .jugador:hover::before {
@@ -156,7 +157,7 @@
 
 .casaAmigo {
   top: 5%; /* Posición vertical de la casa del amigo */
-  left: 30%; /* Posición horizontal de la casa del amigo */
+  left: 10%; /* Posición horizontal de la casa del amigo */
   transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
 
@@ -297,10 +298,13 @@
 }
 
 /* Posiciones específicas para los botones de cambio de sección */
+
 .first-part-button {
   top: 92%; /* Posición superior */
   left: 8%; /* Posición izquierda */
   z-index: 1; /* Asegura que el botón esté por encima de otros elementos */
+  padding-block-end: 10px;
+  margin-bottom: 20px
 }
 
 .second-part-button {
@@ -407,7 +411,7 @@
   .cssbuttons-io-button1, .cssbuttons-io-button {
       font-size: 2vw; /* Reduce aún más el tamaño del texto */
       height: 3vh; /* Reduce la altura */
-      width: 3vw; /* Reduce el ancho */
+      width: 2vw; /* Reduce el ancho */
       padding: 0.5vw 1vw; /* Reduce el padding */
   }
 
@@ -480,7 +484,7 @@
   display: block; /* Mostrar como bloque */
   font-weight: 900; /* Peso de la fuente */
   overflow: hidden; /* Ocultar contenido desbordado */
-  padding: 1.2rem 3rem; /* Padding del botón */
+  padding: 1.6rem 4rem; /* Padding del botón */
   position: relative; /* Posición relativa */
   text-transform: uppercase; /* Transformar texto a mayúsculas */
 }

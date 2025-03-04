@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAPA INTERACTIVO</title>
+    <!-- Enlace al archivo de estilos CSS externo -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../stylesMap.css">
+    <script>
+        // Verifica si el modo oscuro está habilitado en el almacenamiento local y ajusta la clase en el elemento raíz
+        if (localStorage.getItem("dark-mode") === "enabled") {
+            document.documentElement.classList.add("dark-mode");
+        } else {
+            document.documentElement.classList.remove("dark-mode");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="fila">
+            <label class="container">
+                <input type="checkbox" id="textColorToggle">
+                <div class="checkmark"></div>
+            </label>
+            <div class="start">
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        <div class="tittle">
+            <!-- Título principal de la página -->
+            <h1><button class="button">MAPA INTERACTIVO</button></h1>
+        </div>
+        <nav>
+            <ul>
+                <button class="button1" onclick="location.href='../index.html'">INICIO</button>
+            </ul>
+            <!-- Ícono de menú para dispositivos móviles -->
+            <div class="menu-icon" onclick="toggleMenu()"><button class="button1">☰ MENU</button></div>
+            <div class="principal-navegation">
+                <ul id="menu" class="hidden">
+                    <!-- Enlaces del menú de navegación -->
+                    <button class="button2" onclick="location.href='ElCorazonDelBarrio.html'">El Corazón del Barrio</button>
+                    <button class="button2" onclick="location.href='LasEstrellasDelPavimento.html'">Las Estrellas</button>
+                    <button class="button2" onclick="location.href='MasQueUnJuego.html'">Más Que un Juego</button>
+                    <button class="button2" onclick="location.href='MemoriasDelCampo.html'">Memorias del Campo</button>
+                    <button class="button2" onclick="location.href='DetrasDelSilbato.html'">Detrás del Silbato</button>
+                    <button class="button2" onclick="location.href='map.html'">Mapa</button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="sections">
+            <div class="section" id="first-part">
+                <p class="part"> Mapa de la cancha microfutbol</p>
+                <div class="controls">
+                    <!-- Botón para cambiar la imagen -->
+                    <button class="btn-1" id="changeImageBtn">
+                        <div class="original">Cambiar Imagen</div>
+                        <div class="letters">
+                          <span>C</span>
+                          <span>A</span>
+                          <span>M</span>
+                          <span>B</span>
+                          <span>I</span>
+                          <span>A</span>
+                          <span>R</span>
+                          <span>&nbsp;</span>
+                          <span>I</span>
+                          <span>M</span>
+                          <span>A</span>
+                          <span>G</span>
+                          <span>E</span>
+                          <span>N</span>
+                        </div>
+                    </button>
+                </div>
+                <div class="cancha" id="cancha">
+                    <!-- Posiciones de jugadores en la cancha con información emergente al hacer clic -->
+                    <div class="jugador portero" data-info="Portero: Defensa principal" onclick="mostrarInfo('info-portero')">1</div>
+                    <div class="jugador defensa" data-info="Defensa: Protección del área" onclick="mostrarInfo('info-defensa')">2</div>
+                    <div class="jugador defensa1" data-info="Defensa: Apoyo defensivo" onclick="mostrarInfo('info-defensa1')">3</div>
+                    <div class="jugador medio" data-info="Medio: Control del juego" onclick="mostrarInfo('info-medio')">4</div>
+                    <div class="jugador delantero" data-info="Delantero: Principal atacante" onclick="mostrarInfo('info-delantero')">5</div>
+                    <div class="jugador tienda" data-info="Tienda del vecino" onclick="mostrarInfo('info-tienda')">6</div>
+                    <div class="jugador gradas" data-info="Gradas" onclick="mostrarInfo('info-gradas')">7</div>
+                    <div class="jugador casaAmigo" data-info="Casa de nuestro amigo más cercano" onclick="mostrarInfo('info-casaAmigo')">8</div>
+                    <div class="jugador salidaEntrada" data-info="Salida y entrada de la cancha" onclick="mostrarInfo('info-salidaEntrada')">9</div>
+                    <div class="jugador parqueadero" data-info="Parqueadero de motos" onclick="mostrarInfo('info-parqueadero')">10</div>
+                    <div class="jugador camposTecnicos" data-info="Ubicación campos técnicos" onclick="mostrarInfo('info-camposTecnicos')">11</div>
+                    <div class="jugador arbitro" data-info="Árbitro: Responsable de hacer cumplir las reglas del juego" onclick="mostrarInfo('info-arbitro')">12</div>
+                    <!-- Botón para salir al barrio -->
+                    <button class="cssbuttons-io-button" onclick="mostrarSegundaParte()"> SALIR AL BARRIO
+                        <div class="icon">
+                          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                          </svg>
+                        </div>
+                    </button>
+                </div>
+                <p class="textfirst">Clickear lugares para mas informacion</p>
+                <!-- Información emergente para cada posición en la cancha -->
+                <div id="info-portero" class="info">
+                    <p>Portero: Defensa principal. Su función es evitar que el balón entre en la portería.</p>
+                    <img src="../Imagenes/portero.png" alt="Portero">
+                </div>
+                <div id="info-defensa" class="info">
+                    <p>Defensa 1: Protección del área. Su tarea es bloquear y desviar los ataques del equipo contrario.</p>
+                    <img src="../Imagenes/defensa.png" alt="Defensa">
+                </div>
+                <div id="info-defensa1" class="info">
+                    <p>Defensa 2: Apoyo defensivo. Ayuda al primer defensa a mantener el área segura.</p>
+                    <img src="../Imagenes/defensa2.png" alt="Defensa 2">
+                </div>
+                <div id="info-medio" class="info">
+                    <p>Medio: Control del juego. Su función es distribuir el balón y mantener el control del juego en el medio campo.</p>
+                    <img src="../Imagenes/medio.png" alt="Medio">
+                </div>
+                <div id="info-delantero" class="info">
+                    <p>Delantero: Principal atacante. Su principal responsabilidad es marcar goles.</p>
+                    <img src="../Imagenes/delantero.png" alt="Delantero">
+                </div>
+                <div id="info-tienda" class="info">
+                    <p>Tienda del vecino. Lugar donde puedes comprar snacks y bebidas.</p>
+                    <img src="../Imagenes/tienda.jpeg" alt="Tienda del vecino">
+                </div>
+                <div id="info-gradas" class="info">
+                    <p>Gradas. Área donde los espectadores pueden sentarse y ver el partido.</p>
+                    <img src="../Imagenes/gradas.png" alt="Gradas">
+                </div>
+                <div id="info-casaAmigo" class="info">
+                    <p>Casa de nuestro amigo más cercano. Punto de reunión antes y después de los partidos.</p>
+                    <img src="../Imagenes/casaAmigo.png" alt="Casa de nuestro amigo más cercano">
+                </div>
+                <div id="info-salidaEntrada" class="info">
+                    <p>Salida y entrada de la cancha. Punto de acceso principal al campo de juego.</p>
+                    <img src="../Imagenes/salidaEntrada.png" alt="Salida y entrada de la cancha">
+                </div>
+                <div id="info-parqueadero" class="info">
+                    <p>Parqueadero de motos. Área designada para estacionar motocicletas.</p>
+                    <img src="../Imagenes/parqueadero.jpg" alt="Parqueadero de motos">
+                </div>
+                <div id="info-camposTecnicos" class="info">
+                    <p>Ubicación campos técnicos. Zona de los entrenadores y el personal técnico.</p>
+                    <img src="../Imagenes/camposTecnicos.png" alt="Ubicación campos técnicos">
+                </div>
+                <div id="info-arbitro" class="info">
+                    <p>Árbitro: Responsable de hacer cumplir las reglas del juego.</p>
+                    <img src="../Imagenes/arbitro.png" alt="Árbitro">
+                </div>
+            </div>
+            <div class="section hidden" id="second-part">
+                <p class="part"> Mapa del barrio</p>
+                <div class="mapa-interactivo section_hidden" id="mapa">
+                    <!-- Posiciones de lugares en el barrio con información emergente al hacer clic -->
+                    <div class="jugador mercurio" data-info="Centro Comercial Mercurio" onclick="mostrarInfo('info-mercurio')">1</div>
+                    <div class="jugador deyvid" data-info="Casa de Deyvid" onclick="mostrarInfo('info-deyvid')">2</div>
+                    <div class="jugador juanpa" data-info="Casa de Juanpa (Yo)" onclick="mostrarInfo('info-juanpa')">3</div>
+                    <div class="jugador thomas" data-info="Casa de Thomas" onclick="mostrarInfo('info-thomas')">4</div>
+                    <div class="jugador colegio" data-info="Colegio del que nos graduamos todos" onclick="mostrarInfo('info-colegio')">5</div>
+                    <div class="jugador tibanica" data-info="Cancha Tibanica" onclick="mostrarInfo('info-tibanica')">6</div>
+                    <div class="jugador ventura" data-info="Centro Comercial Ventura" onclick="mostrarInfo('info-ventura')">7</div>
+                    <div class="jugador transmilenio" data-info="Estación de Transmilenio Terreros" onclick="mostrarInfo('info-transmilenio')">8</div>
+                    <div class="jugador1 come_carne">9</div>
+                    <!-- Botón para regresar a la primera parte -->
+                    <button class="cssbuttons-io-button1" onclick="mostrarPrimeraParte()"> COME CARNE
+                        <div class="icon">
+                          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                          </svg>
+                        </div>
+                    </button>
+                </div>
+                <div class="important">
+                <p class="textfirst">Clickear lugares para mas informacion</p>
+                <!-- Información emergente para cada lugar en el barrio -->
+                <div id="info-mercurio" class="info">
+                    <p>Centro Comercial Mercurio. Un lugar popular para hacer compras y pasar tiempo.</p>
+                    <img src="../Imagenes/mercurio.png" alt="Centro Comercial Mercurio">
+                </div>
+                <div id="info-deyvid" class="info">
+                    <p>Casa de Deyvid. Un lugar donde solíamos reunirnos.</p>
+                    <img src="../Imagenes/deyvid.png" alt="Casa de Deyvid">
+                </div>
+                <div id="info-juanpa" class="info">
+                    <p>Casa de Juanpa (Yo). Mi hogar y punto de encuentro para muchas actividades.</p>
+                    <img src="../Imagenes/juanpa.png" alt="Casa de Juanpa">
+                </div>
+                <div id="info-thomas" class="info">
+                    <p>Casa de Thomas. Un lugar donde pasamos mucho tiempo juntos.</p>
+                    <img src="../Imagenes/thomas.png" alt="Casa de Thomas">
+                </div>
+                <div id="info-colegio" class="info">
+                    <p>Colegio del que nos graduamos todos. Un lugar lleno de recuerdos.</p>
+                    <img src="../Imagenes/colegio.png" alt="Colegio">
+                    <img src="../Imagenes/WhatsApp Image 2024-12-01 at 2.41.08 PM.jpeg" alt="Colegio">
+                </div>
+                <div id="info-tibanica" class="info">
+                    <p>Cancha Tibanica. Un lugar donde jugamos muchos partidos de fútbol.</p>
+                    <img src="../Imagenes/tibanica.png" alt="Cancha Tibanica">
+                </div>
+                <div id="info-ventura" class="info">
+                    <p>Centro Comercial Ventura. Otro lugar popular para hacer compras y pasar tiempo.</p>
+                    <img src="../Imagenes/ventura.png" alt="Centro Comercial Ventura">
+                </div>
+                <div id="info-transmilenio" class="info">
+                    <p>Estación de Transmilenio Terreros. Un punto clave de transporte.</p>
+                    <img src="../Imagenes/transmilenio.png" alt="Estación de Transmilenio Terreros">
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- Pie de página con derechos reservados -->
+        <p>&copy; 2025 El Primer Campeón. Todos los derechos reservados.</p>
+    </footer>
+    <!-- Enlace al archivo de script JavaScript externo -->
+    <script src="../Script.js"></script>
+</body>
+</html>
