@@ -9,7 +9,7 @@
 
 
 
-Relaciones 
+Relaciones - Integridad referencial
 Tabla 1
 Tabla 2 
 Foreign Key: Conectar dos bases de datos relacionales, donde se saquen requerimientos de una unica llave.
