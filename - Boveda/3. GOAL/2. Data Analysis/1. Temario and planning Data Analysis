@@ -3,7 +3,7 @@
 ## Temario 
 [x] 1.  *Introducción a Data Analysis**:
    - ¿Qué es el análisis de datos? [x]
-   - Ciclo de vida de un proyecto de análisis de datos. 
+   - Ciclo de vida de un proyecto de análisis de datos. [x]
    - Roles en el análisis de datos (analista de datos, científico de datos). [x]
 
 2. **Exploración de Datos (EDA)**:
@@ -44,33 +44,11 @@
 3. [] **Visualización de Datos**:
     - Curso: "Data Visualization with Python" (Coursera)
 
-   - Curso: "Data Visualization with Tableau" (Udemy).
-   - Plataforma: Udemy.
-   - Duración: 10 horas.
-
-4. [] **Manejo de Datos Temporales**:
-   - Curso: "Time Series Analysis" (DataCamp).
-   - Plataforma: DataCamp.
-   - Duración: 6 horas.
-
-5. **Herramientas y Tecnologías**:
-   - Curso: "SQL for Data Science" (Coursera).
-   - Plataforma: Coursera.
-   - Duración: 4 semanas.
-
-6. **Análisis Estadístico**:
-   - Curso: "Statistical Thinking for Data Science and Analytics" (edX).
-   - Plataforma: edX.
-   - Duración: 5 semanas.
 
 ## Recursos adicionales
 - **Libros**:
-  - "Python for Data Analysis" de Wes McKinney.
-  - "Storytelling with Data" de Cole Nussbaumer Knaflic.
 - **Artículos**:
-  - "10 Tips for Effective Data Visualization" (Medium).
 - **Videos**:
-  - Canal de YouTube: "StatQuest" para estadística.
 
 ## Aplicativos (Proyectos y cosas prácticas)
 1. **Proyecto 1: Análisis de Datos de Ventas**:
