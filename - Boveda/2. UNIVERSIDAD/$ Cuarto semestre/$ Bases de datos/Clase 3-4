@@ -7,6 +7,10 @@ Encabezados
 Area libre 
 Formularios
 Consultas: Una consulta es un objeto de la BBSS, muestran informacion de las tablas que tienen una BBSS y no son informacion propia.
+Tipos de consultas: 
+Consultas de seleccion:
+Consultas de accion: 
+
 Informes 
 R.L.F
 R.L.V
