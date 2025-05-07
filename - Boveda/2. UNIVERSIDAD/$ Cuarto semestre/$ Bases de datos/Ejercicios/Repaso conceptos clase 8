@@ -1,0 +1,274 @@
+Conceptos clave:
+Una base de datos (BD) es una colección organizada de datos estructurados que pueden ser fácilmente accesados, gestionados y actualizados.
+
+Un DBMS (Database Management System) es el software que permite crear, mantener y manipular las bases de datos.
+
+Clase 2: Modelo relacional y estructuras
+Modelo Relacional:
+Es el modelo más usado en bases de datos. Organiza los datos en tablas que tienen:
+
+Atributos (columnas): Describen propiedades de los datos.
+
+Registros (filas): Representan cada instancia o entrada de datos.
+
+Clave primaria (Primary Key): Identifica de forma única cada registro. Puede ser:
+
+Natural: Se basa en atributos reales del mundo (como número de cédula).
+
+No natural (surrogate key): Usualmente un número autogenerado (como un ID).
+
+Relaciones y claves:
+Clave foránea (Foreign Key): Un campo en una tabla que referencia la clave primaria de otra, estableciendo una relación entre ambas.
+
+Relaciones uno a uno, uno a muchos, muchos a muchos.
+
+Integridad Referencial:
+Asegura la coherencia entre las tablas relacionadas. Impide que se inserten, actualicen o eliminen datos de forma que rompan las relaciones entre tablas.
+
+Acciones comunes:
+CASCADE: Cambios se propagan.
+
+SET NULL: Establece a NULL si se elimina/actualiza la clave referenciada.
+
+RESTRICT: Impide cambios si hay dependencias.
+
+Ejemplo clásico: Clientes y Pedidos.
+
+✅ Respuestas a preguntas clave:
+❓ ¿Qué es una base de datos con un modelo relacional?
+Una base de datos relacional organiza la información en tablas conectadas entre sí por claves primarias y foráneas. Facilita mantener la consistencia, realizar consultas complejas y trabajar con grandes volúmenes de datos de manera estructurada.
+
+❓ ¿Qué otras estructuras puedo agregar al modelo?
+Índices: Mejoran la velocidad de búsqueda.
+
+Vistas: Consultas predefinidas que actúan como tablas virtuales.
+
+Procedimientos almacenados: Código SQL reutilizable almacenado en el servidor.
+
+Triggers (Disparadores): Acciones automáticas ante eventos (INSERT, UPDATE, DELETE).
+
+Secuencias: Generan valores únicos automáticamente.
+
+Restricciones: Validan reglas como NOT NULL, UNIQUE, CHECK, FOREIGN KEY.
+
+
+�� Clase 3: Componentes y tipos de datos en una base de datos
+�� Tipos de datos:
+En una base de datos, los tipos de datos definen el tipo de valor que puede almacenar cada campo o columna. Algunos tipos comunes:
+
+Texto / Cadena (VARCHAR, CHAR): Para nombres, descripciones, etc.
+
+Numérico (INT, FLOAT, DECIMAL): Para valores matemáticos.
+
+Fecha y hora (DATE, TIME, DATETIME): Para fechas y horas.
+
+Booleano (TRUE/FALSE): Para valores lógicos.
+
+�� Estructura de una base de datos Access (o similar):
+Bloques: Secciones que agrupan datos y metadatos internamente.
+
+Encabezados: Contienen información del archivo o de las tablas, como el número de registros, propiedades, etc.
+
+Área libre: Espacio disponible para nuevos datos o expansión.
+
+Objetos principales de la base de datos:
+
+Tablas: Donde se almacenan los datos.
+
+Formularios: Interfaz gráfica para ingresar o visualizar información.
+
+Consultas: Permiten obtener, filtrar y combinar datos de las tablas.
+
+Informes (Reportes): Representación visual e impresa de la información.
+
+�� Consultas:
+Una consulta es un objeto de la base de datos que permite obtener información a partir de una o más tablas, pero no almacena datos propios, solo muestra lo que ya está guardado.
+
+�� Tipos de consultas:
+Consultas de selección: Recuperan datos según criterios establecidos.
+
+Consultas de acción: Modifican datos (insertan, actualizan o eliminan).
+
+Ejemplos: INSERT INTO, UPDATE, DELETE.
+
+�� Informes (Reports):
+Muestran los datos de forma organizada para impresión o presentación.
+
+Se pueden crear manualmente o mediante asistentes.
+
+Tipos:
+R.L.F (Reporte listado fijo): Estructura fija, común en reportes estándar.
+
+R.L.V (Reporte listado variable): Basado en parámetros o filtros variables.
+
+�� Lenguajes SQL:
+SQL se divide en varios subconjuntos según el tipo de operación:
+
+Sigla	Significado	Función principal
+DCL	Data Control Language	Control de acceso a datos (GRANT, REVOKE)
+DML	Data Manipulation Language	Manipulación de datos (SELECT, INSERT, UPDATE, DELETE)
+DDL	Data Definition Language	Definición de estructuras (CREATE, ALTER, DROP)
+TCL	Transaction Control Language	Control de transacciones (COMMIT, ROLLBACK)
+
+�� Programación almacenada:
+Instrucciones SQL guardadas en la base de datos para automatizar tareas.
+
+Incluye:
+
+Procedimientos almacenados (Stored Procedures)
+
+Funciones
+
+Triggers (Disparadores)
+
+✅ Tarea clase 3:
+Crear:
+
+7 Tablas
+
+5 Formularios
+
+5 Informes
+
+5 Consultas (2 simples y 3 compuestas)
+
+��️ Clase 4: Integración de fuentes externas
+✅ Tarea clase 4:
+Crear dos tipos de objetos tomando como fuente datos externos:
+
+Archivo Excel
+
+Archivo TXT
+
+Otra base de datos Access
+
+Esto te enseña a importar datos desde otras fuentes hacia una base de datos, una habilidad clave en la integración de sistemas de información.
+
+�� Clase 5: Diseño de bases de datos y metodología
+��️ Diseño de bases de datos
+Metodología Top-Down ("Divide y vencerás")
+Esta metodología parte de lo general hacia lo específico:
+
+Procesos: Entender qué hace la organización.
+
+Análisis organizacional: Estudio de cómo fluye la información entre las áreas.
+
+Grupos de información: Identificar los conjuntos de datos relevantes que se manejarán.
+
+�� Modelo generalizado
+El modelo generalizado es una representación abstracta que permite identificar cómo están compuestos los datos y cómo se relacionan entre sí antes de crear la base de datos. Es una forma previa al modelo entidad-relación.
+
+�� Modelo Entidad/Relación (ER)
+Es un modelo de diseño que permite representar gráficamente las estructuras de datos y las relaciones entre ellas.
+
+�� Entidad
+Representa objetos del mundo real o conceptos abstractos o concretos.
+
+Cada entidad tiene atributos, que son propiedades o características.
+
+Ejemplos de entidades:
+
+Departamento
+
+Ciudad
+
+Lugar turístico
+
+Templo
+
+Tipos de entidades:
+Concretas: Físicas o tangibles (Ej: Ciudad, Templo).
+
+Abstractas: Conceptuales o intangibles (Ej: Evento, Servicio).
+
+�� Relación
+Es un vínculo entre dos o más entidades.
+
+Su objetivo principal es representar cómo las entidades interactúan o intercambian información.
+
+�� Cardinalidad
+Indica cuántas instancias de una entidad pueden asociarse con cuántas instancias de otra entidad.
+
+Tipos comunes:
+
+1 a 1 (1:1): Un empleado tiene un solo número de identificación.
+
+1 a muchos (1:N): Un departamento tiene muchos empleados.
+
+Muchos a muchos (M:N): Muchos estudiantes pueden tomar muchos cursos.
+
+�� Power Designer
+Herramienta para diseñar visualmente modelos de datos (como el modelo entidad/relación).
+
+Pasos de la metodología en Power Designer:
+Paso 0: Subdividir el problema en partes manejables.
+
+Paso 1: Definir las entidades.
+
+Paso 2: Verificar que lo definido sea una entidad real (mediante matriz de relación).
+
+Paso 3: Establecer relaciones y cardinalidades.
+
+Paso 4: Determinar el tipo de cardinalidad definitiva (1:1, 1:N, M:N).
+
+Paso 5: Asignar atributos a las entidades (nombre, código, descripción, etc.).
+
+�� Clase 6: Aplicación práctica
+�� Tareas:
+Crear dos archivos en Excel con estructura de modelo generalizado o entidad/relación.
+
+Realizar un modelo CDM (Conceptual Data Model) en Power Designer o herramienta equivalente.
+
+�� Enfoque de estudio sugerido para el quiz:
+Diferenciar entre modelo generalizado y modelo entidad/relación.
+
+Saber identificar una entidad (abstracta o concreta) y sus atributos.
+
+Reconocer cuándo se está hablando de una relación y cómo se representa.
+
+Comprender cardinalidades y saber representarlas correctamente (ejemplo: 1:N).
+
+Relacionar los pasos de la metodología con ejemplos (por ejemplo, definir entidades como "Ciudad" y "Templo").
+
+Los pasos que mencionas pertenecen a la metodología de diseño de bases de datos basada en el enfoque Top-Down y están muy alineados con el proceso de modelado conceptual a lógico y físico, como se usa en herramientas como PowerDesigner. Esta metodología se sigue para construir una base de datos desde cero, empezando por el análisis y terminando con su implementación.
+
+Aquí te explico a qué etapa del diseño pertenece cada paso:
+
+�� Etapa 1: Análisis y diseño conceptual
+En esta etapa se definen qué datos se van a manejar y cómo se relacionan, sin preocuparse aún por la tecnología.
+
+Paso 0: Subdividir el problema
+→ Pertenece al análisis general del sistema. Se divide el sistema en partes lógicas más pequeñas para facilitar su modelado.
+
+Paso 1: Definir las posibles entidades
+→ Se identifican los objetos importantes que deben representarse en el sistema (personas, cosas, lugares, conceptos, etc.).
+
+Paso 2: Definir la matriz entidad a entidad
+→ Se establece cómo se relacionan las entidades entre sí. Aquí se crea una matriz que ayuda a identificar todas las relaciones posibles entre las entidades detectadas.
+
+Paso 3: Determinar la cardinalidad
+→ Se especifica cuántas veces una entidad puede relacionarse con otra (1:1, 1:N, M:N).
+
+Paso 4: Determinar los atributos de la entidad
+→ Se añaden las características específicas de cada entidad (ej: nombre, ID, fecha, etc.).
+
+Paso 5: Definir el modelo CDM (Modelo Conceptual de Datos)
+→ Aquí ya se tiene el modelo entidad-relación completo, con entidades, relaciones, cardinalidades y atributos. Es el resultado del análisis conceptual.
+
+�� Etapa 2: Transformación a modelo lógico
+En esta etapa se transforma el diseño conceptual en una versión lógica más cercana a cómo funcionará en un SGBD (Sistema de Gestión de Base de Datos).
+
+Paso 6: Transformar las relaciones o atributos nuevos
+→ Algunas relaciones (especialmente M:N) deben transformarse en entidades intermedias. También se ajustan los atributos para que encajen con las reglas del modelo relacional.
+
+�� Etapa 3: Diseño físico
+Aquí se detalla cómo se implementará la base de datos en un motor específico (como Oracle, MySQL, SQL Server).
+
+Paso 7: Diseñar el modelo lógico y físico
+→ Se define la estructura final: tipos de datos, índices, claves primarias y foráneas, restricciones, normalización, y estructuras optimizadas para rendimiento.
+
+✅ Resumen de etapas:
+Etapa	Pasos involucrados
+Diseño conceptual	Paso 0, 1, 2, 3, 4, 5
+Diseño lógico	Paso 6
+Diseño físico	Paso 7
