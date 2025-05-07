@@ -272,3 +272,133 @@ Etapa	Pasos involucrados
 Diseño conceptual	Paso 0, 1, 2, 3, 4, 5
 Diseño lógico	Paso 6
 Diseño físico	Paso 7
+
+
+Conceptos:
+
+🔹 Registro
+Un registro es una fila en una tabla de base de datos. Representa una unidad completa de información.
+📌 Ejemplo: Un registro en la tabla "Estudiantes" puede contener los datos de un solo estudiante: nombre, ID, edad, carrera.
+
+🔹 ID
+"ID" es un campo usado comúnmente para identificar de forma única un registro.
+📌 Ejemplo: ID de estudiante = 102.
+
+🔹 PK (Primary Key / Clave primaria)
+Es un campo o combinación de campos que identifica de manera única cada registro en una tabla. No puede repetirse ni estar vacío.
+📌 Ejemplo: id_estudiante en la tabla Estudiantes.
+
+🔹 Llave foránea (Foreign Key)
+Es un campo que conecta una tabla con otra. Hace referencia a la clave primaria de otra tabla para mantener la integridad referencial.
+📌 Ejemplo: id_ciudad en la tabla "Lugares turísticos", que referencia a "Ciudad".
+
+🔹 Unicidad
+Es una restricción que asegura que los valores en una columna o conjunto de columnas no se repitan.
+📌 Ejemplo: El correo electrónico de un usuario debe ser único.
+
+🔹 Integridad por valor
+Consiste en que los valores de los campos deben cumplir ciertas reglas internas o formatos válidos, como tipo, longitud, o valores permitidos.
+📌 Ejemplo: Un campo "edad" solo debe aceptar números positivos.
+
+🔹 Integridad por referencia
+Es lo mismo que integridad referencial: garantiza que las claves foráneas apunten a registros existentes en otras tablas.
+📌 Ejemplo: No puedes asignar a un pedido un cliente que no existe.
+
+🔹 Llave natural
+Una llave natural es un atributo real del mundo que ya identifica de forma única al registro.
+📌 Ejemplo: Número de cédula, número de matrícula.
+
+🔹 Llave no natural (artificial)
+Es un identificador creado artificialmente porque no hay un campo natural que sea único.
+📌 Ejemplo: id_usuario autogenerado.
+
+🔹 Regla de validación
+Es una condición o restricción que verifica los datos ingresados, asegurando que sean correctos o permitidos según la lógica del sistema.
+📌 Ejemplo: Que un campo "correo" tenga el formato usuario@dominio.com.
+
+🔹 SQL (Structured Query Language)
+Lenguaje estándar para gestionar bases de datos relacionales. Permite crear tablas, insertar, modificar, consultar y eliminar datos.
+📌 Ejemplo: SELECT * FROM Estudiantes;
+
+🔹 Indexación (Índices)
+Mecanismo que acelera la búsqueda de datos en una tabla, similar a un índice de un libro.
+📌 Ejemplo: Indexar una columna "nombre" para buscar más rápido por nombre.
+
+🔹 Power Designer
+Es una herramienta de modelado de bases de datos que permite diseñar modelos conceptuales, lógicos y físicos, generando diagramas y código SQL. Muy usada en ingeniería de software y sistemas.
+
+🔹 RDBMS (Relational DataBase Management System)
+Es un sistema de gestión de bases de datos relacional, donde los datos se almacenan en tablas con relaciones entre ellas.
+📌 Ejemplos: Oracle, MySQL, PostgreSQL, SQL Server.
+
+
+TOP DOWN 
+
+🧠 ¿Qué es la Metodología Top-Down?
+La metodología Top-Down (de arriba hacia abajo) es un enfoque de diseño que parte desde lo más general hasta llegar a lo más específico.
+En bases de datos, significa comenzar por una visión global del sistema y dividirlo progresivamente en partes más pequeñas y manejables hasta llegar al modelo físico.
+
+🧩 ¿Para qué se usa?
+Para diseñar bases de datos de forma estructurada y ordenada.
+
+Para analizar requerimientos complejos y descomponerlos en entidades y relaciones.
+
+Para construir modelos conceptuales, lógicos y físicos paso a paso.
+
+🪜 Etapas de la Metodología Top-Down
+Paso	Acción	Objetivo
+0	Subdividir el problema	Entender el contexto general del sistema. Separar por áreas o procesos.
+1	Definir las posibles entidades	Identificar objetos clave (abstractos o concretos) del sistema.
+2	Definir la matriz entidad a entidad	Analizar cómo se relacionan las entidades entre sí.
+3	Determinar la cardinalidad de las relaciones	Establecer cuántos elementos se relacionan entre sí (1:1, 1:N, N:M).
+4	Determinar los atributos de cada entidad	Asignar propiedades a las entidades (ej. nombre, fecha, ID).
+5	Diseñar el modelo conceptual (CDM)	Crear el diagrama entidad-relación con entidades, relaciones y atributos.
+6	Transformar relaciones o atributos nuevos si aparecen	Ajustar el modelo conceptual si hay nuevos requerimientos.
+7	Diseñar el modelo lógico y físico	Crear el modelo lógico (tablas, claves) y luego físico (scripts SQL).
+
+📘 Conceptos clave en Top-Down
+🔹 Entidad
+Objeto real o abstracto sobre el cual se necesita guardar información.
+
+Ejemplo: Estudiante, Departamento, Lugar turístico.
+
+🔹 Relación
+Vínculo entre dos o más entidades. Indica cómo interactúan entre ellas.
+
+Ejemplo: “Estudiante cursa Asignatura”, “Ciudad tiene Lugar turístico”.
+
+🔹 Cardinalidad
+Número de ocurrencias de una entidad que puede relacionarse con otra.
+
+1:1 → Una ciudad tiene un solo alcalde.
+
+1:N → Una ciudad tiene muchos templos.
+
+N:M → Muchos estudiantes cursan muchas materias.
+
+🔹 Atributo
+Propiedad que describe una entidad o relación.
+
+Ejemplo: nombre, edad, fecha_creación.
+
+🛠 Herramientas usadas con Top-Down
+Power Designer: Para crear los modelos CDM, LDM y PDM (conceptual, lógico y físico).
+
+Access / SQL Developer / Oracle: Para implementar los modelos en bases reales.
+
+Excel o TXT: Para importar datos o estructurar tablas preliminarmente.
+
+🧾 Ejemplo Aplicado (simplificado)
+Supongamos que quieres modelar un sistema para una guía turística:
+
+Etapa	Acción
+Paso 0	Subdividir: Sistema Turístico → Ciudades, Lugares, Eventos
+Paso 1	Entidades: Ciudad, Lugar Turístico, Evento
+Paso 2	Matriz: Ciudad — Lugar Turístico, Ciudad — Evento
+Paso 3	Cardinalidad: Ciudad 1:N Lugar, Evento N:M Ciudad
+Paso 4	Atributos: Ciudad(nombre, población), Lugar(nombre, tipo)
+Paso 5	Modelo CDM en Power Designer
+Paso 6	Detectas que un evento puede ser en varios lugares → relación nueva
+Paso 7	Transformas a modelo lógico (tablas, claves) y físico (script SQL)
+
+Modelo relacional m-n entidad-relacion con entidades asociativas 
