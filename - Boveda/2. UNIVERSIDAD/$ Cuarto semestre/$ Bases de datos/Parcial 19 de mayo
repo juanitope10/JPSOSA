@@ -1,77 +1,44 @@
-📚 Videos Recomendados por Tema
-1. Modelo Entidad-Relación (E-R)
-✅ Introducción al Modelo E-R
-🔗 https://www.youtube.com/watch?v=7L4l7lVUCp0
+## 🗂 Checklist Avanzada - Bases de Datos
 
-✅ Notación Barker vs. Chen
-🔗 https://www.youtube.com/watch?v=ZjZ6Zk5dk5M
+### 🔍 **Conceptos Clave**
+- [ ] Entiendo diferencias entre modelo conceptual/lógico/físico
+- [ ] Sé explicar el proceso de normalización con ejemplos
+- [ ] Puedo identificar dependencias funcionales
+- [ ] Dominio de álgebra relacional (proyección, selección, joins)
+- [ ] Conozco los tipos de JOIN (INNER, LEFT, RIGHT, FULL)
 
-✅ Cómo derivar tablas desde un E-R
-🔗 https://www.youtube.com/watch?v=5Qj0Z6E3XWU
+### 💻 **MS Access - Nivel Avanzado**
+- [ ] Creación de consultas parametrizadas
+- [ ] Uso de expresiones en criterios de consultas
+- [ ] Diseño de formularios con subformularios
+- [ ] Creación de informes agrupados
+- [ ] Implementación de macros básicas
+- [ ] Validación con expresiones regulares
 
-2. MS Access (Implementación Práctica)
-✅ Crear tablas y relaciones en Access
-🔗 https://www.youtube.com/watch?v=G3h4-v8a0Wk
+### 📐 **Casos de Estudio Recurrentes**
+- [ ] Sistemas hospitalarios (Paciente-Médico)
+- [ ] Sistemas de vivienda (Condominios-Viviendas)
+- [ ] Control de emisiones (CO₂ por país)
+- [ ] Sistemas de transporte (Metro-Trenes)
+- [ ] Gestión académica (Estudiantes-Convocatorias)
 
-✅ Consultas con JOIN en Access
-🔗 https://www.youtube.com/watch?v=GkH6Pq5Zv7Q
+### 🛠 **Troubleshooting**
+- [ ] Sé resolver problemas de integridad referencial
+- [ ] Puedo optimizar consultas lentas
+- [ ] Conozco técnicas para evitar redundancia
+- [ ] Sé manejar casos de herencia en modelos E-R
+- [ ] Puedo documentar un modelo de bases de datos
 
-✅ Formularios e informes en Access
-🔗 https://www.youtube.com/watch?v=4H5I_0yY4nM
+### ✨ **Extra Points**
+- [ ] Practiqué con bases de datos de examen anteriores
+- [ ] Creé mi propio "banco de preguntas"
+- [ ] Sé estimar tiempos por tipo de pregunta
+- [ ] Preparé respuestas para preguntas teóricas frecuentes
+- [ ] Tengo notas sobre "errores comunes a evitar"
 
-3. Integridad de Datos
-✅ Integridad referencial en Access
-🔗 https://www.youtube.com/watch?v=KzY5zYJ5J5w
-
-✅ Validación por valor (rangos, formatos)
-🔗 https://www.youtube.com/watch?v=QkZ4X1xX5Jk
-
-4. Atomicidad y Normalización
-✅ Qué es atomicidad en bases de datos
-🔗 https://www.youtube.com/watch?v=WZ5M3Yv6d5U
-
-✅ Normalización (1FN, 2FN, 3FN)
-🔗 https://www.youtube.com/watch?v=fg7k2oZ-4Y4
-
-5. Metodología CDM → LDM → PDM
-✅ Modelado conceptual vs. lógico
-🔗 https://www.youtube.com/watch?v=9Z1XH2J8_8A
-
-✅ Ejemplo práctico: Proyecto de BD
-🔗 https://www.youtube.com/watch?v=7L4l7lVUCp0
-
-✔ Checklist de Estudios
-📌 Modelado de Datos
-Entiendo la notación Barker y Chen.
-
-Sé identificar errores en un modelo E-R.
-
-Puedo convertir un E-R a tablas en Access.
-
-📌 MS Access
-Sé crear tablas con claves primarias/foráneas.
-
-Puedo diseñar consultas con JOIN.
-
-He practicado la creación de formularios.
-
-📌 Conceptos Teóricos
-Expliqué con ejemplos la integridad referencial.
-
-Sé aplicar atomicidad.
-
-Entiendo las reglas de normalización.
-
-📌 Proyectos Prácticos
-Practiqué con un caso similar al "Control de CO₂".
-
-Seguí la metodología CDM → LDM → PDM.
-
-🔍 Tips Adicionales
-Copia y pega los enlaces en tu documento para acceder rápido.
-
-Prioriza los temas con ❌ en la checklist.
-
-Usa los parciales antiguos como simulacros (ej: modelo de "VIVIENDA-CONDOMINIO").
-
-¡Con esto estarás 100% preparado! 📘✨
+## 📅 **Plan de Acción Final**
+- [ ] Repaso intensivo 2 días antes
+- [ ] Simulacro de examen cronometrado
+- [ ] Lista de dudas para consultar al profesor
+- [ ] Preparación de materiales permitidos
+- [ ] Checklist de items a llevar al examen
