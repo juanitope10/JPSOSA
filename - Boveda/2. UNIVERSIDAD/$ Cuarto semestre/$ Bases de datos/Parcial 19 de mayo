@@ -1,0 +1,77 @@
+📚 Videos Recomendados por Tema
+1. Modelo Entidad-Relación (E-R)
+✅ Introducción al Modelo E-R
+🔗 https://www.youtube.com/watch?v=7L4l7lVUCp0
+
+✅ Notación Barker vs. Chen
+🔗 https://www.youtube.com/watch?v=ZjZ6Zk5dk5M
+
+✅ Cómo derivar tablas desde un E-R
+🔗 https://www.youtube.com/watch?v=5Qj0Z6E3XWU
+
+2. MS Access (Implementación Práctica)
+✅ Crear tablas y relaciones en Access
+🔗 https://www.youtube.com/watch?v=G3h4-v8a0Wk
+
+✅ Consultas con JOIN en Access
+🔗 https://www.youtube.com/watch?v=GkH6Pq5Zv7Q
+
+✅ Formularios e informes en Access
+🔗 https://www.youtube.com/watch?v=4H5I_0yY4nM
+
+3. Integridad de Datos
+✅ Integridad referencial en Access
+🔗 https://www.youtube.com/watch?v=KzY5zYJ5J5w
+
+✅ Validación por valor (rangos, formatos)
+🔗 https://www.youtube.com/watch?v=QkZ4X1xX5Jk
+
+4. Atomicidad y Normalización
+✅ Qué es atomicidad en bases de datos
+🔗 https://www.youtube.com/watch?v=WZ5M3Yv6d5U
+
+✅ Normalización (1FN, 2FN, 3FN)
+🔗 https://www.youtube.com/watch?v=fg7k2oZ-4Y4
+
+5. Metodología CDM → LDM → PDM
+✅ Modelado conceptual vs. lógico
+🔗 https://www.youtube.com/watch?v=9Z1XH2J8_8A
+
+✅ Ejemplo práctico: Proyecto de BD
+🔗 https://www.youtube.com/watch?v=7L4l7lVUCp0
+
+✔ Checklist de Estudios
+📌 Modelado de Datos
+Entiendo la notación Barker y Chen.
+
+Sé identificar errores en un modelo E-R.
+
+Puedo convertir un E-R a tablas en Access.
+
+📌 MS Access
+Sé crear tablas con claves primarias/foráneas.
+
+Puedo diseñar consultas con JOIN.
+
+He practicado la creación de formularios.
+
+📌 Conceptos Teóricos
+Expliqué con ejemplos la integridad referencial.
+
+Sé aplicar atomicidad.
+
+Entiendo las reglas de normalización.
+
+📌 Proyectos Prácticos
+Practiqué con un caso similar al "Control de CO₂".
+
+Seguí la metodología CDM → LDM → PDM.
+
+🔍 Tips Adicionales
+Copia y pega los enlaces en tu documento para acceder rápido.
+
+Prioriza los temas con ❌ en la checklist.
+
+Usa los parciales antiguos como simulacros (ej: modelo de "VIVIENDA-CONDOMINIO").
+
+¡Con esto estarás 100% preparado! 📘✨
