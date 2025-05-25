@@ -2,6 +2,10 @@
 
 ### 🔍 **Conceptos Clave**
 - [ ] Entiendo diferencias entre modelo conceptual/lógico/físico
+- Diferencias: Conceptual mas enfocado en identidades y sus posibles relaciones (No incluye atributos ni tipos de datos)
+                        Logico: Abarcamos el uso de atributos para nuestras identidades (Define atributos, claves primarias/foráneas y tipos de datos básicos (ej.: VARCHAR, INT).)
+                        Fisico: Se utiliza mas que todo al procesar todo en lenguaje sql y es como una union de la base de datos final. (Donde se implementa el esquema lógico en un sistema gestor de bases de datos (SGBD) )
+                        
 - [ ] Sé explicar el proceso de normalización con ejemplos
 - [ ] Puedo identificar dependencias funcionales
 - [ ] Dominio de álgebra relacional (proyección, selección, joins)
