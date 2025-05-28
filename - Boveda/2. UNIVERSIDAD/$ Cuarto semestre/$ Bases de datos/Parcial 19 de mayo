@@ -20,11 +20,11 @@
 - [ ] Validación con expresiones regulares
 
 ### 📐 **Casos de Estudio Recurrentes**
-- [ ] Sistemas hospitalarios (Paciente-Médico)
-- [ ] Sistemas de vivienda (Condominios-Viviendas)
-- [ ] Control de emisiones (CO₂ por país)
-- [ ] Sistemas de transporte (Metro-Trenes)
-- [ ] Gestión académica (Estudiantes-Convocatorias)
+- [ x] Sistemas hospitalarios (Paciente-Médico)
+- [ x] Sistemas de vivienda (Condominios-Viviendas)
+- [ x] Control de emisiones (CO₂ por país)
+- [ x] Sistemas de transporte (Metro-Trenes)
+- [ x] Gestión académica (Estudiantes-Convocatorias)
 
 ### 🛠 **Troubleshooting**
 - [ ] Sé resolver problemas de integridad referencial
