@@ -701,8 +701,6 @@ install.packages(c("sf", "ggplot2", "dplyr", "rgeoboundaries"))
 
 # Librerías necesarias
 library(sf)
-library(ggplot2)
-library(dplyr)
 library(rgeoboundaries)
 
 # Mapa de Colombia con sus subdivisiones administrativas (departamentos)
@@ -720,13 +718,14 @@ ggplot(colombia) +
   theme(legend.position = "none")  # Oculta leyenda de colores aleatorios
 
 
-# Punto 10 ------------
+# Decimo punto ------------
 
 
-# Punto 11 ------------
+# Onceavo punto  ------------
 
 
-# Punto 12 ------------
+## Punto 12 ------------
+## Markdown ##
 
 
 # Punto 13 ------------
