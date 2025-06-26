@@ -692,10 +692,10 @@ promedios <- Noviembre %>%
 plot_ly(promedios, x=~as.factor(DPTOR4), y=~PromFOB,
         type='bar', color=~as.factor(DPTOR4))
 
-# Punto 8 -------------
+# Octavo punto -------------
 
 
-# Punto 9 ------------
+# Noveno punto ------------
 
 install.packages(c("sf", "ggplot2", "dplyr", "rgeoboundaries"))
 
