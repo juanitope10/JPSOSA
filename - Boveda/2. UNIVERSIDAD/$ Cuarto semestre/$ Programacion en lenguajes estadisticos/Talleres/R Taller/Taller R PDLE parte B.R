@@ -693,35 +693,97 @@ plot_ly(promedios, x=~as.factor(DPTOR4), y=~PromFOB,
         type='bar', color=~as.factor(DPTOR4))
 
 # Octavo punto -------------
+## Google colab ##
+
+# Noveno punto Y decimo punto------------
+
+# ------------------------------
+# Instalar paquetes necesarios
+# ------------------------------
+
+# Instalar 'remotes' si no está
+if (!requireNamespace("remotes", quietly = TRUE)) {
+  install.packages("remotes")
+}
+
+# Instalar 'rgeoboundaries' desde GitHub
+
+remotes::install_github("wmgeolab/rgeoboundaries")
 
 
-# Noveno punto ------------
+# Instalar otros paquetes desde CRAN
+install.packages("ggplot2")
 
-install.packages(c("sf", "ggplot2", "dplyr", "rgeoboundaries"))
+# ------------------------------
+# Cargar librerías
+# ------------------------------
+install.packages("hoardr")
 
-# Librerías necesarias
 library(sf)
 library(rgeoboundaries)
+library(ggplot2)
 
-# Mapa de Colombia con sus subdivisiones administrativas (departamentos)
+# ------------------------------
+# Descargar datos geoespaciales
+# ------------------------------
+
+# Obtener los límites de los departamentos de Colombia (ADM1)
 colombia <- gb_adm1("Colombia")
 
-# Colores aleatorios a cada departamento
-set.seed(123)  # Para reproducibilidad
-colombia$color <- sample(colors(), nrow(colombia), replace = TRUE)
+# ------------------------------
+# Asignar colores aleatorios
+# ------------------------------
 
-# Mapa
-ggplot(colombia) +
+set.seed(12345)  # Semilla para reproducibilidad
+colombia$color <- sample(colors(), nrow(colombia), replace = FALSE)
+
+# ------------------------------
+# Graficar el mapa
+# ------------------------------
+
+ggplot(data = colombia) +
   geom_sf(aes(fill = color), color = "black") +
-  labs(title = "Mapa de Colombia con departamentos coloreados") +
+  labs(
+    title = "Mapa de Colombia con departamentos coloreados aleatoriamente",
+    caption = "Fuente: rgeoboundaries.org"
+  ) +
   theme_minimal() +
-  theme(legend.position = "none")  # Oculta leyenda de colores aleatorios
+  theme(
+    legend.position = "none",  # Oculta la leyenda
+    plot.title = element_text(hjust = 0.5, size = 16, face = "bold")
+  )
 
 
-# Decimo punto ------------
+# Onceavo punto ------------
 
+# Cargar librerías
+library(wordcloud)
+library(tm)
+library(RColorBrewer)
+library(readr)
 
-# Onceavo punto  ------------
+# Cargar la base de datos
+SuperMarket <- read_csv("Desktop/JPSOSA/- Boveda/2. UNIVERSIDAD/$ Cuarto semestre/$ Programacion en lenguajes estadisticos/Talleres/R Taller/Data/SuperMarket.csv")
+
+# Usar la columna correcta "Product line"
+texto <- SuperMarket$`Product line`
+
+# Unir todas las palabras en un solo texto
+texto_unido <- paste(texto, collapse = " ")
+
+# Crear corpus y limpiar texto
+corpus <- Corpus(VectorSource(texto_unido))
+corpus <- tm_map(corpus, content_transformer(tolower))
+corpus <- tm_map(corpus, removePunctuation)
+corpus <- tm_map(corpus, removeNumbers)
+corpus <- tm_map(corpus, removeWords, stopwords("english"))
+
+# Crear nube de palabras
+wordcloud(corpus,
+          min.freq = 1,
+          max.words = 100,
+          random.order = FALSE,
+          colors = brewer.pal(8, "Dark2"))
 
 
 ## Punto 12 ------------
@@ -729,10 +791,10 @@ ggplot(colombia) +
 
 
 # Punto 13 ------------
-
+## Quarto ##
 
 # Punto 14 ------------
-
+## Shiny ## 
 
 
 
