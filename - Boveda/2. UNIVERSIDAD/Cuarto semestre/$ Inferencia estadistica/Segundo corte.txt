@@ -1,0 +1,6 @@
+# Inferencia estadistica: Juan Camilo Sosa Martinez
+https://sites.google.com/view/juansosa/statistical-inference?authuser=0
+
+## Ejercicios:
+[] Estimacion puntual de parametros.
+[] Evaluacion de estimadores

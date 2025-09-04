@@ -1,0 +1,78 @@
+# Proceso estocastico 
+
+## ¿Que es un proceso estocastico?
+
+### Teorica: 
+
+- Los procesos estocásticos son los modelos matemáticos que estudian los fenómenos aleatorios que evolucionan en el tiempo.
+- Más precisamente, un proceso estocástico es una colección de variables aleatorias, definidas sobre un espacio de probabilidad común (Ω, ℑ, P), que está indexada por un parámetro, como por ejemplo, el tiempo.
+
+- Los valores que toman las variables aleatorias X(t) se llaman estados,y el conjunto de todos los posibles valores constituye el espacio de estados del proceso. El espacio de estados es discreto si es finito o numerable, en otro caso se dice que es continuo. Por comodidad, representaremos a los procesos discretos por {Xn , n = 0, 1, 2...}. En el caso continuo se usará indistintamente cualquiera de las dos siguientes representaciones: {Xt ,  t ∈ T} y {X(t), t ∈ T}.
+
+### Probabilistica:
+
+- Un proceso estocástico es una familia de v.a X = {Xt , t ∈ T} definidas sobre un espacio de probabilidad común (Ω, ℑ, P) y con valores en un espacio medible (S, S) llamado espacio de estados. El conjunto de parámetros T se llama dominio de definición del proceso.
+
+## Clasificacion 
+
+### Tiempos - Estado
+
+1. Tiempo discreto, espacio de estados discreto (PDED).
+2. Tiempo discreto, espacio de estados continuo (PDEC).
+3. Tiempo continuo, espacio de estados discreto (PCEC).
+4. Tiempo continuo, espacio de estados continuo (PCEC)
+
+### Tipos de procesos
+
+1. Decimos que X es real si las v.a. Xt son de valor real para todo t∈T
+2. Decimos que X es complejo si las v.a. Xt son de valor complejo para todo t ∈ T
+3. Si T = N0 = {0, 1, 2, . . .} entonces el proceso se llama proceso estocástico con parámetro de tiempo discreto.
+4. Si T es un intervalo de la recta real entonces el proceso se denomina proceso con parámetro de tiempo continuo.
+5. Si T ⊆ Rn con n > 1 entonces el proceso se denomina campo aleatorio.
+
+
+
+
+## Definiciones para proceso estocastico ---------
+
+### Matematicas --------
+
+#### Funcion de distribucion finito dimensional de procesos 
+- Sea X = {Xt , t ∈ T} un proceso estocástico real y {t1 , t2 , . . . , tn } ⊂ T donde t1 < t2 < . . . < tn entonces la función Ft1 ...tn (x1 , . . . , xn ) := P(Xt1 ≤ x1 , . . . , Xtn ≤ xn )
+	"Es la funcion que determina que para algun t ∈ T, la probabilidad de que Xtn sea menor o igual a Xi, que se escogen simultaneamente"
+	
+#### Ecuación de Chapman-Kolmogorov
+- 	
+	
+### Teoricas -------
+
+#### Clasificacion comparativa de dos procesos estocasticos.
+
+- Sean X = {Xt , t ∈ T} y Y = {Yt , t ∈ T} dos procesos estocásticos definidos sobre el mismo espacio de probabilidad (Ω, ℑ, P), decimos:
+1. X y Y son iguales si Xt (ω) = Yt (ω) para todo t ∈ T y para todo ω ∈ Ω.
+	"Dos procesos que para todo t ∈ T y para todo ω ∈ Ω son iguales, si las comparamos con sus matrices estocasticas, ambas matrices son iguales"
+2. X y Y son estocásticamente equivalentes si P(Xt = Yt ) = 1 para todo t ∈ T.
+	" "
+3. X y Y son estocásticamente equivalentes en el sentido amplio si para cada n = 1, 2, . . ., para todo {t1 , . . . , tn } ⊂ T y {B1 , . . . , Bn } ⊂ 2Ω se satisface: P(Xt1 ∈ B1 , Xt2 ∈ B2 , · · · , Xtn ∈ Bn ) = P(Yt1 ∈ B1 , Yt2 ∈ B2 , · · · , Ytn ∈ Bn ) Es claro que ii) implica iii) (¿Porqué?)
+	" "
+4. X y Y se dicen indistinguibles si casi todas sus trayectorias coinciden, esto es, P(Xt = Yt , t ∈ T) = 1.
+	" "
+	
+#### Clasificacion unitaria:
+  	
+##### Incrementos independientes
+- 
+	
+### Estadisticas --------
+
+
+# Proceso de markov
+
+- Si {X(t), t ∈ T} es un proceso estocástico tal que dado el valor de X(s), el valor de X(t), t > s, no depende de los valores de X(u), u < s, entonces el proceso se llama proceso de Markov. Un proceso de Markov con parámetro de tiempo discreto se llama cadena de Markov. A grosso modo se tiene que un proceso de Markov es un procesoestocástico con la propiedad de que dado el valor de Xt , los valores de Xu para u > t, no dependen de Xs para s < t. Esto es, si se conoce de manera exacta el presente entonces el conocimiento del pasado no tiene ninguna influencia en la estructura probabilística del futuro.
+
+
+
+
+
+
+

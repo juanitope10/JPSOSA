@@ -1,0 +1,61 @@
+- Clase 1:
+Metodologia:
+40 % Parciales
+30 % Proyecto final 
+20 % Talleres monitor
+10 % Quices
+
+| Primer corte | Segundo corte                    | Tercer corte          | Cuarto corte  | Quinto corte    |
+|-------------------|------------------------------------|-------------------------|--------------------|---------------------|
+| Intro              | Diseño de bases de datos | Teoria relacional | Sql                   | RDBMS Oracle |
+| 2 Sem            | 3 - 4 Sem                             | 2-3 Sem                |2 Sem              | 2 - 3 Sem         |
+                                                                Primer parcial                                  Segundo parcial
+
+- Clase 2:
+
+# Relativas 
+## Tablas 
+### Atributos 
+### Registros 
+
+### Unicidad 
+- No natural 
+- Natural
+
+Relaciones - Integridad referencial:
+La integridad referencial es una regla en bases de datos relacionales que asegura que las relaciones entre las tablas sean coherentes. Es decir, garantiza que las claves foráneas (que vinculan tablas entre sí) siempre apunten a registros válidos y existentes en otras tablas.
+En otras palabras, si una tabla A tiene una clave foránea que referencia a una clave primaria en una tabla B, la integridad referencial asegura que:
+No se pueda agregar una clave foránea en A que no exista como clave primaria en B. Por ejemplo, si un registro en la tabla de "Pedidos" tiene un campo "ID de cliente", este ID debe existir previamente en la tabla de "Clientes".
+No se pueda eliminar un registro de la tabla B (por ejemplo, eliminar un cliente) si hay registros en la tabla A (como pedidos) que dependan de él.
+Existen acciones de integridad referencial que se pueden aplicar al eliminar o actualizar registros:
+CASCADE: Si se elimina o actualiza un registro en la tabla principal, los registros relacionados en la tabla secundaria también se eliminan o actualizan automáticamente
+SET NULL: Si se elimina o actualiza un registro en la tabla principal, las claves foráneas en la tabla secundaria se establecen a NULL.
+RESTRICT: No permite la eliminación o actualización de un registro en la tabla principal si hay registros dependientes en la tabla secundaria.
+La integridad referencial es fundamental para mantener la coherencia y consistencia de los datos en una base de datos relacional.
+
+Tabla 1 - Tabla 2 
+Foreign Key: Conectar dos bases de datos relacionales, donde se saquen requerimientos de una unica llave.
+
+
+Tareas:
+- Acabar el modelo de power acces 5 placas con 10 mantenimientos 
+
+- Responder preguntas:
+
+ ¿Que es una base de datos con un modelo relacionado?
+Rta: 
+Una base de datos con un modelo relacional organiza los datos en tablas. Cada tabla tiene filas (registros) y columnas (atributos). Las tablas se conectan entre sí usando claves:
+Clave primaria: Identifica de manera única cada registro en una tabla.
+Clave foránea: Enlaza una tabla con otra.
+Este modelo permite guardar datos de forma organizada y facilita hacer consultas complejas. Se usa mucho porque garantiza que los datos sean consistentes y fáciles de manejar.
+
+- Que mas estructuras de datos puedo agregar al modelo 
+Rta: 
+En un modelo de base de datos relacional, además de las tablas, puedes utilizar otras estructuras de datos para organizar, optimizar y mejorar la flexibilidad de las consultas y el manejo de la información. Algunas de las estructuras adicionales que se pueden agregar son:
+Índices: Son estructuras que mejoran la velocidad de las búsquedas en las tablas. Actúan como un índice en un libro, permitiendo encontrar los registros más rápidamente.
+Vistas: Son consultas predefinidas que actúan como tablas virtuales. Permiten acceder a los datos de una manera más sencilla, mostrando solo la información que se necesita sin tener que escribir la consulta cada vez.
+Procedimientos almacenados: Son fragmentos de código (normalmente SQL) almacenados en la base de datos que pueden ser ejecutados de forma repetida. Ayudan a automatizar tareas o realizar operaciones complejas de manera eficiente.
+Disparadores (Triggers): Son acciones automáticas que se ejecutan en respuesta a ciertos eventos en la base de datos, como cuando se inserta, actualiza o elimina un registro.
+Secuencias: Son objetos que generan números únicos de forma secuencial, útiles para generar claves primarias de forma automática.
+Restricciones: Son reglas que se imponen a las tablas y columnas para asegurar la integridad de los datos. Ejemplos son las restricciones de único, no nulo, check (validación de valores) y referenciales (como las claves foráneas).
+Estas estructuras de datos adicionales permiten que la base de datos sea más poderosa, flexible y eficiente en la gestión de información.

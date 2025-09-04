@@ -1,0 +1,50 @@
+Clase 5 - 6:
+Clase 5: 
+
+Diseño: 
+Metodologia Tod - Down 
+Divide y venceras
+
+1. Procesos 
+
+2. Analisis organizacional 
+
+3. Grupos de info
+
+
+
+# Conceptos: 
+
+Modelo generalizado 
+Modelo entidad / relacion
+
+## Entidad: 
+Objeto:  - Abstracto - Concreto 
+Describen atributos 
+
+## Relacion: Vinculo entre dos o mas entidades, proposito principal es intercambiar informacion
+
+## Cardinalidad: Grado presente en la relacion entre entidades 1 --- 1   1 --- N    1 --- M
+
+
+Power Designer 
+
+Metodologia 
+Paso 0: Subdividir el problema 
+Paso 1: Definir entidades 
+Paso 2: Entidad es entidad (Matriz de relacion)
+Paso 3: Definir cardinalidad
+Paso 4: Que tipo definitiva de cardinalidad tenemos
+Paso 5: Definir atributos presentes propios 
+
+Entidad 1 
+
+Departamento 
+Ciudad 
+Lugar turistico 
+Templo 
+
+Clase 6
+
+Hacer los dos archivos en excel y tipo cdm
+

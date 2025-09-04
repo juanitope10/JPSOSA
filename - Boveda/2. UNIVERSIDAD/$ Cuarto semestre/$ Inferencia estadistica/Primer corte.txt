@@ -1,6 +1,0 @@
-Inferencia estadistica: Juan Camilo Sosa Martinez
-https://sites.google.com/view/juansosa/statistical-inference?authuser=0
-
-Ejercicios:
-[] Introduccion
-[] Distribuciones muestrales asociadas con la Normal
